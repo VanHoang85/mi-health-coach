@@ -1,0 +1,2438 @@
+{
+    "d35_u2": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "",
+        "client_utt": "Hi, Dawn. Nice to meet you.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Nice to meet you, too. Thanks for coming in today.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d35_u4": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Hi, Dawn. Nice to meet you.",
+        "therapist_prev_utt": "Nice to meet you, too. Thanks for coming in today.",
+        "client_utt": "Thanks for having me.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Yeah. Tell me a little bit about yourself.",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": "Tell me a little bit about yourself."
+        }
+    },
+    "d35_u6": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Thanks for having me.",
+        "therapist_prev_utt": "Yeah. Tell me a little bit about yourself.",
+        "client_utt": "So I am, um, 28. And I moved out to Arizona about six months ago. Um, I really enjoy spending time with my family and hanging out with friends whenever I can. Work keeps me pretty busy. Um, But I'm really, um, looking to kind of make some changes to my diet and physical activity. I'm not really happy with where my weight's at right now, and, uh, so I thought it'd be good to come and talk with you about some of that stuff.",
+        "client_mov": "change-low",
+        "therapist_utt": "Yeah, you're feeling a little bit dissatisfied with your health patterns?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d35_u8": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "So I am, um, 28. And I moved out to Arizona about six months ago. Um, I really enjoy spending time with my family and hanging out with friends whenever I can. Work keeps me pretty busy. Um, But I'm really, um, looking to kind of make some changes to my diet and physical activity. I'm not really happy with where my weight's at right now, and, uh, so I thought it'd be good to come and talk with you about some of that stuff.",
+        "therapist_prev_utt": "Yeah, you're feeling a little bit dissatisfied with your health patterns?",
+        "client_utt": "Yeah. Um, I'm really starting to notice how I feel more sluggish and just not-- My mood is shifted a lot too, which at first, I thought was because it's getting colder outside, um, but I do also think it maybe has some relation to my activity, or lack thereof, and also kind of the foods that I'm eating.",
+        "client_mov": "change-medium",
+        "therapist_utt": "Okay, so you're feeling some low energy and you know, in the past, when you've been more active and eating differently, you've had more energy?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d35_u10": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Yeah. Um, I'm really starting to notice how I feel more sluggish and just not-- My mood is shifted a lot too, which at first, I thought was because it's getting colder outside, um, but I do also think it maybe has some relation to my activity, or lack thereof, and also kind of the foods that I'm eating.",
+        "therapist_prev_utt": "Okay, so you're feeling some low energy and you know, in the past, when you've been more active and eating differently, you've had more energy?",
+        "client_utt": "Right. Yeah. Especially during times when I'm more active is when I noticed the biggest cha-change in energy and mood.",
+        "client_mov": "change-high",
+        "therapist_utt": "Yeah. Tell me more about that, those previous times that you've been active.",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d35_u12": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Right. Yeah. Especially during times when I'm more active is when I noticed the biggest cha-change in energy and mood.",
+        "therapist_prev_utt": "Yeah. Tell me more about that, those previous times that you've been active.",
+        "client_utt": "Yeah. Um, well, I played sports in college, so that kept me pretty busy, and that was really fun, um, and I just think back now to, as much that I would cram into a 24 -hour period, and like, wonder how I did that, but I think that part of it was because I was so active physically, um, I just had way more energy throughout the day, mentally and physically to, um, you know, go to school full-time and-and still socialize with friends and do all that stuff. Um, so when I think back to like, probably like the peak of my life of when I felt my best physically, mentally it was that time.",
+        "client_mov": "change-medium",
+        "therapist_utt": "You had energy, and you were like the Energizer Bunny, just keep going and going and going.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d35_u14": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Yeah. Um, well, I played sports in college, so that kept me pretty busy, and that was really fun, um, and I just think back now to, as much that I would cram into a 24 -hour period, and like, wonder how I did that, but I think that part of it was because I was so active physically, um, I just had way more energy throughout the day, mentally and physically to, um, you know, go to school full-time and-and still socialize with friends and do all that stuff. Um, so when I think back to like, probably like the peak of my life of when I felt my best physically, mentally it was that time.",
+        "therapist_prev_utt": "You had energy, and you were like the Energizer Bunny, just keep going and going and going.",
+        "client_utt": "Yeah, yeah, exactly. And now it's not so much the same. Um, like when I get home from work, I'm pretty exhausted, uh, it takes a lot for me to want to be physically active when I've spent all day staring at a computer and thinking and working. And so, um, yeah, that's probably been my biggest, uh, issue is like when work ends, going home and not really doing anything. Um, just trying to like unwind by watching Netflix or something else, right?",
+        "client_mov": "neutral-low",
+        "therapist_utt": "So your days are just as full now that you're working and a career person, um, and your energy level isn't what it used to be. What-- Do you have any ideas about why that might have shifted?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": "Do you have any ideas about why that might have shifted?",
+            "reflection-simple": "So your days are just as full now that you're working and a career person, um, and your energy level isn't what it used to be."
+        }
+    },
+    "d35_u16": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Yeah, yeah, exactly. And now it's not so much the same. Um, like when I get home from work, I'm pretty exhausted, uh, it takes a lot for me to want to be physically active when I've spent all day staring at a computer and thinking and working. And so, um, yeah, that's probably been my biggest, uh, issue is like when work ends, going home and not really doing anything. Um, just trying to like unwind by watching Netflix or something else, right?",
+        "therapist_prev_utt": "So your days are just as full now that you're working and a career person, um, and your energy level isn't what it used to be. What-- Do you have any ideas about why that might have shifted?",
+        "client_utt": "Um, well, I think part of it is that when I was in college, it wasn't really an option to go, like, I had to go to practice or I had to do those things because that was, in a sense, my job that was paying for school, um, and now there's not that same commitment to other people or to scholarship money. So that definitely has shifted, um, but I-I do feel like a-an urgency to go it just doesn't seem that like the step that's missing is for me to actually go to a gym or somewhere to be more active. Like, I think I want to it's just the doing it that seems to not happen.",
+        "client_mov": "change-low",
+        "therapist_utt": "Right. So in the past, it wasn't up to you whether you had the choice to go be physically active. Now it is up to you, and-and you're looking back at the last few years and saying, I wanna do things differently. I want to be more physically active than I've been.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d35_u20": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Um, well, I think part of it is that when I was in college, it wasn't really an option to go, like, I had to go to practice or I had to do those things because that was, in a sense, my job that was paying for school, um, and now there's not that same commitment to other people or to scholarship money. So that definitely has shifted, um, but I-I do feel like a-an urgency to go it just doesn't seem that like the step that's missing is for me to actually go to a gym or somewhere to be more active. Like, I think I want to it's just the doing it that seems to not happen.",
+        "therapist_prev_utt": "Right. So in the past, it wasn't up to you whether you had the choice to go be physically active. Now it is up to you, and-and you're looking back at the last few years and saying, I wanna do things differently. I want to be more physically active than I've been.",
+        "client_utt": "Yeah, yeah, I think so. Um, that's not to say like, I wanna go run a marathon but I do think that it would help me a lot in terms of just having a better outlook on life, um, and better energy to- if I were to pick up some type of activity.",
+        "client_mov": "change-low",
+        "therapist_utt": "Great. And you've noticed a mood enhancement effect of exercise. Tell me more about that. What do you notice specifically about your mood on the days you're physically active?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "reflection-simple": "Great. And you've noticed a mood enhancement effect of exercise.",
+            "question-open-evoking": "Tell me more about that. What do you notice specifically about your mood on the days you're physically active?"
+        }
+    },
+    "d35_u24": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Yeah, yeah, I think so. Um, that's not to say like, I wanna go run a marathon but I do think that it would help me a lot in terms of just having a better outlook on life, um, and better energy to- if I were to pick up some type of activity.",
+        "therapist_prev_utt": "Great. And you've noticed a mood enhancement effect of exercise. Tell me more about that. What do you notice specifically about your mood on the days you're physically active?",
+        "client_utt": "Just, I'm-I'm just happier and more upbeat and I think that even my outlook is more positive. So like, if I'm sitting in traffic, and I haven't been physically active, I'll probably grumble about it but if I'm sitting in traffic, and I have been, it's like, I just have a different outlook on things and I already feel like I've gotten something accomplished that day. So it just kind of like helps with that ripple effect into my day of like getting more things done.",
+        "client_mov": "change-low",
+        "therapist_utt": "Yeah, you feel more accomplished and-and you feel less irritated by the small stuff.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d35_u26": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Just, I'm-I'm just happier and more upbeat and I think that even my outlook is more positive. So like, if I'm sitting in traffic, and I haven't been physically active, I'll probably grumble about it but if I'm sitting in traffic, and I have been, it's like, I just have a different outlook on things and I already feel like I've gotten something accomplished that day. So it just kind of like helps with that ripple effect into my day of like getting more things done.",
+        "therapist_prev_utt": "Yeah, you feel more accomplished and-and you feel less irritated by the small stuff.",
+        "client_utt": "Mm-hmm. Yeah, exactly.",
+        "client_mov": "change-high",
+        "therapist_utt": "Great. Well, let me see if I've got this all. You came to Arizona six months ago, you're trying to figure out new rhythms and patterns for yourself. You're looking back at the past few years, and in college, you were real active because you were an athlete, and now it's more up to you about making that choice of physical activity, and you're discovering that, um, not being active has affected your energy level and your mood, and that's something you're looking for more of, both of those things, energy and-and a mood booster.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "summarise": ""
+        }
+    },
+    "d35_u28": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Mm-hmm. Yeah, exactly.",
+        "therapist_prev_utt": "Great. Well, let me see if I've got this all. You came to Arizona six months ago, you're trying to figure out new rhythms and patterns for yourself. You're looking back at the past few years, and in college, you were real active because you were an athlete, and now it's more up to you about making that choice of physical activity, and you're discovering that, um, not being active has affected your energy level and your mood, and that's something you're looking for more of, both of those things, energy and-and a mood booster.",
+        "client_utt": "Yeah. And then also to, um, like I mentioned, I'm not totally happy with my weight, um, and so hoping too that that would have some impact there and-and maybe help me, um, if my activity kind of gets resolved or improves, then my nutrition also, maybe would go along with it and get better.",
+        "client_mov": "change-low",
+        "therapist_utt": "Yeah. Tell me more about your weight concerns. When did you start feeling dissatisfied with your body?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d35_u30": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Yeah. And then also to, um, like I mentioned, I'm not totally happy with my weight, um, and so hoping too that that would have some impact there and-and maybe help me, um, if my activity kind of gets resolved or improves, then my nutrition also, maybe would go along with it and get better.",
+        "therapist_prev_utt": "Yeah. Tell me more about your weight concerns. When did you start feeling dissatisfied with your body?",
+        "client_utt": "Uh, probably about three, four months ago. Um, yeah, just my clothes started fitting tighter, which wasn't as comfortable, and, um, yeah, just not really super happy with my appearance, which has never really been an issue, um, in my life up until now. I've usually been pretty okay with that, and then in the last three months, I just feel, um, like I've had a lot more of a negative outlook on it.",
+        "client_mov": "change-low",
+        "therapist_utt": "Mm-hmm. Okay, so it sounds like a sort of a vicious cycle and-and maybe the lacking physical activity has made you feel less confident in yourself. I wonder if that's also a piece of this puzzle since you mentioned that's been a big difference from what was happening in the past.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d35_u32": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Uh, probably about three, four months ago. Um, yeah, just my clothes started fitting tighter, which wasn't as comfortable, and, um, yeah, just not really super happy with my appearance, which has never really been an issue, um, in my life up until now. I've usually been pretty okay with that, and then in the last three months, I just feel, um, like I've had a lot more of a negative outlook on it.",
+        "therapist_prev_utt": "Mm-hmm. Okay, so it sounds like a sort of a vicious cycle and-and maybe the lacking physical activity has made you feel less confident in yourself. I wonder if that's also a piece of this puzzle since you mentioned that's been a big difference from what was happening in the past.",
+        "client_utt": "Yeah, I think- I think the activity piece and then also to like, the foods that I'm eating, I don't think are that great. So that also kind of does the same thing, I think, to my appearance or the way that I viewed myself.",
+        "client_mov": "change-low",
+        "therapist_utt": "Okay. So you had a pretty strong self-confidence, pretty strong body image all the way up until a few months ago and, um, you're hoping to kind of get back to that place where you feel good about yourself.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d120_u0": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "",
+        "client_utt": "",
+        "client_mov": "",
+        "therapist_utt": "Well, I'm glad we figured that out and I think you'll feel better over the next few days.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d120_u2": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "Well, I'm glad we figured that out and I think you'll feel better over the next few days.",
+        "client_utt": "Oh, thanks so much doctor. I'll just take it easy for a couple of days.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Well, since I have you here and we still have a few minutes left, I'd like to bring up another topic. I noticed that your blood pressure and your weight have been climbing a bit over the past few years. We haven't really had time to talk about this much before and I may be able to offer some useful strategies. Would it be okay if we discussed weight and health for a few minutes?",
+        "main_behaviour": "seek-collaboration",
+        "sub_behaviours": {
+            "seek-collaboration": ""
+        }
+    },
+    "d120_u4": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Oh, thanks so much doctor. I'll just take it easy for a couple of days.",
+        "therapist_prev_utt": "Well, since I have you here and we still have a few minutes left, I'd like to bring up another topic. I noticed that your blood pressure and your weight have been climbing a bit over the past few years. We haven't really had time to talk about this much before and I may be able to offer some useful strategies. Would it be okay if we discussed weight and health for a few minutes?",
+        "client_utt": "Yeah, I suppose. I know my weight is a problem, but every time I try to take it off, I end up gaining it back. I don't know what to do.",
+        "client_mov": "change-low",
+        "therapist_utt": "I know how you feel. Managing weight can be frustrating. Maybe we can just start trying to figure it out together and I'll be here to help you through the challenges.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "affirm": "I know how you feel. Managing weight can be frustrating.",
+            "persuade": "Maybe we can just start trying to figure it out together and I'll be here to help you through the challenges."
+        }
+    },
+    "d120_u6": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Yeah, I suppose. I know my weight is a problem, but every time I try to take it off, I end up gaining it back. I don't know what to do.",
+        "therapist_prev_utt": "I know how you feel. Managing weight can be frustrating. Maybe we can just start trying to figure it out together and I'll be here to help you through the challenges.",
+        "client_utt": "Okay, thank you doctor, but I'm just concerned about how I can possibly lose weight now since work is so busy and the kids take up so much of my time.",
+        "client_mov": "sustain-medium",
+        "therapist_utt": "Yeah, that's certainly understandable. We both know that there's a lot that plays into weight management, but there's no need to figure it all out today, especially since things are so busy for you right now. Maybe we could put our heads together and think about something small that fits reasonably into your life and then we can take further steps when you're ready.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d120_u8": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Okay, thank you doctor, but I'm just concerned about how I can possibly lose weight now since work is so busy and the kids take up so much of my time.",
+        "therapist_prev_utt": "Yeah, that's certainly understandable. We both know that there's a lot that plays into weight management, but there's no need to figure it all out today, especially since things are so busy for you right now. Maybe we could put our heads together and think about something small that fits reasonably into your life and then we can take further steps when you're ready.",
+        "client_utt": "Okay, that sounds great. So, what should I do?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Well, let's see. One of the things that's involved in managing weight and health is being active. Physical activity benefits the whole body. It's healthy for our joints, our stress levels, and especially for weight management. Perhaps we could talk about some ways of adding activity that fit into your life.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": "One of the things that's involved in managing weight and health is being active. Physical activity benefits the whole body. It's healthy for our joints, our stress levels, and especially for weight management.",
+            "persuade": "Perhaps we could talk about some ways of adding activity that fit into your life."
+        }
+    },
+    "d120_u10": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Okay, that sounds great. So, what should I do?",
+        "therapist_prev_utt": "Well, let's see. One of the things that's involved in managing weight and health is being active. Physical activity benefits the whole body. It's healthy for our joints, our stress levels, and especially for weight management. Perhaps we could talk about some ways of adding activity that fit into your life.",
+        "client_utt": "I knew you were gonna say that, but I don't have time in my schedule. I can't afford to take an hour to go to the gym every day.",
+        "client_mov": "sustain-high",
+        "therapist_utt": "Well, I understand that. I don't have an hour to go to the gym every day either, but one of the great things about physical activity is that any amount in any type of activity can be very helpful. For example, let's think about some activities that you enjoy doing.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": "I don't have an hour to go to the gym every day either, but one of the great things about physical activity is that any amount in any type of activity can be very helpful.",
+            "persuade": "For example, let's think about some activities that you enjoy doing."
+        }
+    },
+    "d120_u12": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "I knew you were gonna say that, but I don't have time in my schedule. I can't afford to take an hour to go to the gym every day.",
+        "therapist_prev_utt": "Well, I understand that. I don't have an hour to go to the gym every day either, but one of the great things about physical activity is that any amount in any type of activity can be very helpful. For example, let's think about some activities that you enjoy doing.",
+        "client_utt": "I like to walk.",
+        "client_mov": "change-medium",
+        "therapist_utt": "Me too. Walking is great exercise.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": "Walking is great exercise."
+        }
+    },
+    "d120_u14": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "I like to walk.",
+        "therapist_prev_utt": "Me too. Walking is great exercise.",
+        "client_utt": "Wait a minute, isn't walking too mild to help you lose weight, though?",
+        "client_mov": "sustain-medium",
+        "therapist_utt": "Actually, even just a few minutes of walking is really healthy and worthwhile, and then when you have time to do even more, that's great. Walking is also great because you can do it anywhere, it doesn't need to be at the gym.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d120_u16": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Wait a minute, isn't walking too mild to help you lose weight, though?",
+        "therapist_prev_utt": "Actually, even just a few minutes of walking is really healthy and worthwhile, and then when you have time to do even more, that's great. Walking is also great because you can do it anywhere, it doesn't need to be at the gym.",
+        "client_utt": "Oh, wow, that sounds good. You know what? Come to think of it, I have some time before I have to go back to work and I saw a nice park on the way over here, maybe I can take a short walk after this appointment.",
+        "client_mov": "change-medium",
+        "therapist_utt": "That sounds great.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d120_u18": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Oh, wow, that sounds good. You know what? Come to think of it, I have some time before I have to go back to work and I saw a nice park on the way over here, maybe I can take a short walk after this appointment.",
+        "therapist_prev_utt": "That sounds great.",
+        "client_utt": "And you know what? I used to really love to dance, but I haven't done that in such a long time.",
+        "client_mov": "change-medium",
+        "therapist_utt": "Well, dancing is a great exercise, especially because it's fun.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d120_u20": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "And you know what? I used to really love to dance, but I haven't done that in such a long time.",
+        "therapist_prev_utt": "Well, dancing is a great exercise, especially because it's fun.",
+        "client_utt": "Hmm. And I know my family would support me if I could just find some place where I can go dancing.",
+        "client_mov": "change-medium",
+        "therapist_utt": "Oh, that's great to hear that your family is so supportive. And I bet there's a dance class somewhere around where you live or maybe even a dance fitness class at the gym.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d120_u22": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Hmm. And I know my family would support me if I could just find some place where I can go dancing.",
+        "therapist_prev_utt": "Oh, that's great to hear that your family is so supportive. And I bet there's a dance class somewhere around where you live or maybe even a dance fitness class at the gym.",
+        "client_utt": "Yeah, and you know what? I really like to try that.",
+        "client_mov": "change-high",
+        "therapist_utt": "Would you like to do some research on this and give it a shot?",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d120_u24": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Yeah, and you know what? I really like to try that.",
+        "therapist_prev_utt": "Would you like to do some research on this and give it a shot?",
+        "client_utt": "Actually, I really would. I'm kind of excited about it. What else you got?",
+        "client_mov": "change-high",
+        "therapist_utt": "Well, small steps can go a long way. So, even things like taking the stairs instead of the elevator every once in a while or parking just a bit further from the door when you go to a store can be ways to increase movement in your day.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d120_u26": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Actually, I really would. I'm kind of excited about it. What else you got?",
+        "therapist_prev_utt": "Well, small steps can go a long way. So, even things like taking the stairs instead of the elevator every once in a while or parking just a bit further from the door when you go to a store can be ways to increase movement in your day.",
+        "client_utt": "Mm-hmm. I can do that.",
+        "client_mov": "change-medium",
+        "therapist_utt": "How about we start there and let's plan to follow up in a few weeks so we can see how it's going and then maybe talk about some other strategies that might help.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d120_u28": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Mm-hmm. I can do that.",
+        "therapist_prev_utt": "How about we start there and let's plan to follow up in a few weeks so we can see how it's going and then maybe talk about some other strategies that might help.",
+        "client_utt": "Diet, the D word.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Not necessarily. What we eat is certainly important for weight and health, but just like we did today, we can talk about some small steps that can fit into your life, and especially ones that you feel good about.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d120_u30": {
+        "topic": "more exercise / increasing activity; weight loss",
+        "client_prev_utt": "Diet, the D word.",
+        "therapist_prev_utt": "Not necessarily. What we eat is certainly important for weight and health, but just like we did today, we can talk about some small steps that can fit into your life, and especially ones that you feel good about.",
+        "client_utt": "Yeah, I like that. Okay, I'll make an appointment and I'll start dancing right away, doc.",
+        "client_mov": "change-medium",
+        "therapist_utt": "That's great. I'll see you soon",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d54_u2": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "",
+        "client_utt": "Hi.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Um, we were talking a little bit earlier, and you said you wanted to talk about exercising.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d54_u4": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Hi.",
+        "therapist_prev_utt": "Um, we were talking a little bit earlier, and you said you wanted to talk about exercising.",
+        "client_utt": "I do.",
+        "client_mov": "change-medium",
+        "therapist_utt": "What's going on with that?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d54_u6": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I do.",
+        "therapist_prev_utt": "What's going on with that?",
+        "client_utt": "Well, I just can't seem to get back in the gym. I don't wanna-- I-I used to work out quite a bit, and in the last, I dunno, couple of years I've just-- I stopped going. I got busy, and now I'm out of the habit, and I-I really, I dunno, I feel like I need to get back.",
+        "client_mov": "change-low",
+        "therapist_utt": "Well, I mean, I think you just need to maybe sit down and write down a list of reasons why you need to get back to the gym, and then on the other side of the list, put down, you know, um, ideas about what's going to help you get there.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d54_u8": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, I just can't seem to get back in the gym. I don't wanna-- I-I used to work out quite a bit, and in the last, I dunno, couple of years I've just-- I stopped going. I got busy, and now I'm out of the habit, and I-I really, I dunno, I feel like I need to get back.",
+        "therapist_prev_utt": "Well, I mean, I think you just need to maybe sit down and write down a list of reasons why you need to get back to the gym, and then on the other side of the list, put down, you know, um, ideas about what's going to help you get there.",
+        "client_utt": "Okay. Um. All right. Um",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "What gym do you belong to?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d54_u10": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Okay. Um. All right. Um",
+        "therapist_prev_utt": "What gym do you belong to?",
+        "client_utt": "Uh, I belong to the-the Sport Fitness Center.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Okay. And-and how far away is it from your house?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d54_u12": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Uh, I belong to the-the Sport Fitness Center.",
+        "therapist_prev_utt": "Okay. And-and how far away is it from your house?",
+        "client_utt": "Just a couple of miles.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Just a couple of miles. Mm. So you-- you know, you could, like, ride your bike or walk there, and it would be good too.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "reflection-simple": "Just a couple of miles.",
+            "persuade": "you know, you could, like, ride your bike or walk there, and it would be good too."
+        }
+    },
+    "d54_u14": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Just a couple of miles.",
+        "therapist_prev_utt": "Just a couple of miles. Mm. So you-- you know, you could, like, ride your bike or walk there, and it would be good too.",
+        "client_utt": "If I walked that far, I probably wouldn't even need to go to the gym, right?",
+        "client_mov": "neutral-low",
+        "therapist_utt": "Well, I don't know about that. Um. That-- you know, it's really important that you get your, um, not just your cardiovascular-- that's a good idea for the cardiovascular, but also, you know, your, um, weightlifting,",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d54_u18": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "If I walked that far, I probably wouldn't even need to go to the gym, right?",
+        "therapist_prev_utt": "Well, I don't know about that. Um. That-- you know, it's really important that you get your, um, not just your cardiovascular-- that's a good idea for the cardiovascular, but also, you know, your, um, weightlifting,",
+        "client_utt": "It-it-it would be important.",
+        "client_mov": "change-medium",
+        "therapist_utt": "Yeah. So why-why do you want to-- what do you wanna do with that? You want to look different, or--?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d54_u22": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "It-it-it would be important.",
+        "therapist_prev_utt": "Yeah. So why-why do you want to-- what do you wanna do with that? You want to look different, or--?",
+        "client_utt": "Well, I would feel better. I'd be able to wear more my clothes. I've been growing around the middle and I'd like to, uh, you know, go back to where I was, you know, get into a 34, 36 waist, you know. I'm more comfortable-- I feel better. I think that's the main thing.",
+        "client_mov": "change-low",
+        "therapist_utt": "Okay. Yeah, because your-your health really, to me, it's more important than your-your looks. I mean, don't get me wrong, I understand what you're saying, but, you know, it'd be great to get back in those jeans, but",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d54_u24": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, I would feel better. I'd be able to wear more my clothes. I've been growing around the middle and I'd like to, uh, you know, go back to where I was, you know, get into a 34, 36 waist, you know. I'm more comfortable-- I feel better. I think that's the main thing.",
+        "therapist_prev_utt": "Okay. Yeah, because your-your health really, to me, it's more important than your-your looks. I mean, don't get me wrong, I understand what you're saying, but, you know, it'd be great to get back in those jeans, but",
+        "client_utt": "Yeah, yeah. I'm not getting any younger than I was before",
+        "client_mov": "change-medium",
+        "therapist_utt": "Mm-hmm. Well, I think you know what to do. You've done it before. Yeah. Just a matter-- You just gotta do it.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": "Well, I think you know what to do. You've done it before.",
+            "persuade": "Just a matter-- You just gotta do it."
+        }
+    },
+    "d54_u30": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, yeah. I'm not getting any younger than I was before",
+        "therapist_prev_utt": "Mm-hmm. Well, I think you know what to do. You've done it before. Yeah. Just a matter-- You just gotta do it.",
+        "client_utt": "I've gotta make time. I've gotta make time.",
+        "client_mov": "change-medium",
+        "therapist_utt": "Yeah. And so that might mean, you know, like giving up an hour's sleep, getting up an hour earlier in the day, and going there and getting it done then. That's what I do.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d54_u34": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I've gotta make time. I've gotta make time.",
+        "therapist_prev_utt": "Yeah. And so that might mean, you know, like giving up an hour's sleep, getting up an hour earlier in the day, and going there and getting it done then. That's what I do.",
+        "client_utt": "All right.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "So when I see you next time, you know, that's what I'd like you to do is to, uh, experiment with getting up an hour earlier and, um-- You know, 'cause, uh, getting healthier is more important than sleep, you know. I mean, I know sleep is important, but-- And then bring that list back that we talked about.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d56_u0": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "",
+        "client_utt": "",
+        "client_mov": "",
+        "therapist_utt": "Hi, Mrs. Smith. I'm Denise. I'm the social worker here at the clinic work that's working with Dr. Fields and the rest of the team. And, um, I know you were here to see Dr. Fields today, and I-I just wanted to let you know, I usually work with people who are similar to- have situations similar to you, and that have gone back home from rehab. And, uh, so I'd like to find out a little bit if you would, if that's okay, about how it's been going since you got home.",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": "I'd like to find out a little bit if you would, if that's okay, about how it's been going since you got home."
+        }
+    },
+    "d56_u4": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "Hi, Mrs. Smith. I'm Denise. I'm the social worker here at the clinic work that's working with Dr. Fields and the rest of the team. And, um, I know you were here to see Dr. Fields today, and I-I just wanted to let you know, I usually work with people who are similar to- have situations similar to you, and that have gone back home from rehab. And, uh, so I'd like to find out a little bit if you would, if that's okay, about how it's been going since you got home.",
+        "client_utt": "Yeah. Um, I'm glad to be there.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Yeah. What are you really glad about?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d56_u8": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah. Um, I'm glad to be there.",
+        "therapist_prev_utt": "Yeah. What are you really glad about?",
+        "client_utt": "Uh, well, I'm glad to see my dog, he's very cute, and it just feels good to be home. Yeah. And my garden is coming along, and my neighbors have stuff-- It's-it's good. It's good to be home.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "I know, I-I understand that it was really-- That was your goal. That was a really important thing for you to be able to get home and it sounds like you've been able to really en- enjoy parts of it, and I know you've been going to the- both the physical therapy and the Tai Chi and how's-how's that going?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": "I know, I-I understand that it was really-- That was your goal. That was a really important thing for you to be able to get home and it sounds like you've been able to really en- enjoy parts of it, and I know you've been going to the- both the physical therapy and the Tai Chi",
+            "question-open-focusing": "how's-how's that going?"
+        }
+    },
+    "d56_u10": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Uh, well, I'm glad to see my dog, he's very cute, and it just feels good to be home. Yeah. And my garden is coming along, and my neighbors have stuff-- It's-it's good. It's good to be home.",
+        "therapist_prev_utt": "I know, I-I understand that it was really-- That was your goal. That was a really important thing for you to be able to get home and it sounds like you've been able to really en- enjoy parts of it, and I know you've been going to the- both the physical therapy and the Tai Chi and how's-how's that going?",
+        "client_utt": "Well, um. I-I didn't get- go to physical therapy this week, and the- or Tai Chi, actually.",
+        "client_mov": "sustain-low",
+        "therapist_utt": "So, I'm wondering if something happened that that led you not to go. You look a little, um, down.",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": "I'm wondering if something happened that that led you not to go."
+        }
+    },
+    "d56_u12": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, um. I-I didn't get- go to physical therapy this week, and the- or Tai Chi, actually.",
+        "therapist_prev_utt": "So, I'm wondering if something happened that that led you not to go. You look a little, um, down.",
+        "client_utt": "Yeah. Well, um. Actually, I-I had a little semi fall, I didn't fall down, I didn't fall down completely but I-I did-- I guess I still had the wobblies and I was hoping that the physical therapy and the Tai Chi would be- get me further along than it has, and I-I still don't have the balance. So, I'm thinking that maybe I was pushing too hard, that maybe I should cut back, you know, and kind of not try so hard to-to keep moving like that.",
+        "client_mov": "sustain-low",
+        "therapist_utt": "Mm. So you've been working really hard through this whole thing, you worked really hard to get home. And you- you've continued to work really hard with both the physical therapy and the Tai Chi and taking care of your house and doing all those things. And you had this fall or semi-fall, and you're feeling like maybe- maybe you were pushing too hard?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d56_u22": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah. Well, um. Actually, I-I had a little semi fall, I didn't fall down, I didn't fall down completely but I-I did-- I guess I still had the wobblies and I was hoping that the physical therapy and the Tai Chi would be- get me further along than it has, and I-I still don't have the balance. So, I'm thinking that maybe I was pushing too hard, that maybe I should cut back, you know, and kind of not try so hard to-to keep moving like that.",
+        "therapist_prev_utt": "Mm. So you've been working really hard through this whole thing, you worked really hard to get home. And you- you've continued to work really hard with both the physical therapy and the Tai Chi and taking care of your house and doing all those things. And you had this fall or semi-fall, and you're feeling like maybe- maybe you were pushing too hard?",
+        "client_utt": "So I cut back, and I don't know if I should really even continue the Tai Chi because it's-it's very demanding.",
+        "client_mov": "sustain-low",
+        "therapist_utt": "Yeah, yeah. It's a lot of work.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d56_u24": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "So I cut back, and I don't know if I should really even continue the Tai Chi because it's-it's very demanding.",
+        "therapist_prev_utt": "Yeah, yeah. It's a lot of work.",
+        "client_utt": "Uh, it's beautiful and-and- but, um, yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "What are you concerned about?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d56_u28": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Uh, it's beautiful and-and- but, um, yeah.",
+        "therapist_prev_utt": "What are you concerned about?",
+        "client_utt": "That I'll- that I'll fall again. I'll really fall and hurt myself, and this way, if I don't move around so much, there's less chance that I will.",
+        "client_mov": "sustain-high",
+        "therapist_utt": "Yeah, yeah, yeah. And- so you don't want to hurt yourself.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d56_u30": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "That I'll- that I'll fall again. I'll really fall and hurt myself, and this way, if I don't move around so much, there's less chance that I will.",
+        "therapist_prev_utt": "Yeah, yeah, yeah. And- so you don't want to hurt yourself.",
+        "client_utt": "No.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "And what are- what are your concerns about-- It doesn't sound like you-you feel like you hurt yourself in this fall.",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": "what are your concerns about",
+            "reflection-complex": "It doesn't sound like you-you feel like you hurt yourself in this fall."
+        }
+    },
+    "d56_u34": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "No.",
+        "therapist_prev_utt": "And what are- what are your concerns about-- It doesn't sound like you-you feel like you hurt yourself in this fall.",
+        "client_utt": "No, I didn't- it was just more scary, and it was like a-a signal that maybe I'm doing too much. Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Yeah. And, what are you concerned will happen if-if you get hurt or if something-",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d56_u36": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "No, I didn't- it was just more scary, and it was like a-a signal that maybe I'm doing too much. Yeah.",
+        "therapist_prev_utt": "Yeah. And, what are you concerned will happen if-if you get hurt or if something-",
+        "client_utt": "Well, yeah, if I- if I lose my balance and fall down, I could- anything, you know, really get hurt, and then-then I wouldn't be able to be home anymore, and that's not what I want. I want to stay home. So I want to do what I have to do to-to-to stay home.",
+        "client_mov": "sustain-medium",
+        "therapist_utt": "And it feels like the only way that you can really stay safe and not fall is to not do anything to kind of just hunker down.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d56_u42": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, yeah, if I- if I lose my balance and fall down, I could- anything, you know, really get hurt, and then-then I wouldn't be able to be home anymore, and that's not what I want. I want to stay home. So I want to do what I have to do to-to-to stay home.",
+        "therapist_prev_utt": "And it feels like the only way that you can really stay safe and not fall is to not do anything to kind of just hunker down.",
+        "client_utt": "Yes, you've put it very well, hunker down- Watch the TV and pet my dog. I-I, you know, not to that extreme, but yeah, I think- I think maybe, um, yeah, I was-was going- pushing too hard. And I'm not sure about the Tai Chi anymore. I-I think the physical therapy, I can understand that, but I'm not so sure about the Tai Chi.",
+        "client_mov": "sustain-low",
+        "therapist_utt": "Yeah. So the physical therapy is can- you can kind of still see that it's helping you to build your strength, which might have probably helped you break your fall this time.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d56_u46": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yes, you've put it very well, hunker down- Watch the TV and pet my dog. I-I, you know, not to that extreme, but yeah, I think- I think maybe, um, yeah, I was-was going- pushing too hard. And I'm not sure about the Tai Chi anymore. I-I think the physical therapy, I can understand that, but I'm not so sure about the Tai Chi.",
+        "therapist_prev_utt": "Yeah. So the physical therapy is can- you can kind of still see that it's helping you to build your strength, which might have probably helped you break your fall this time.",
+        "client_utt": "Right, right.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Um, I'm wondering what you remember about what-what Dr. Fields said about the Tai Chi in relationship to falls. Did she talk with you about that?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d56_u50": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Right, right.",
+        "therapist_prev_utt": "Um, I'm wondering what you remember about what-what Dr. Fields said about the Tai Chi in relationship to falls. Did she talk with you about that?",
+        "client_utt": "She did. Sh-- Yeah, that's right, that's right. She said that they did studies and that they found that it was really preventative. I think she's- I forget the-the percentage, but yeah, she was really enthusiastic and she does it herself.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Yeah. So you're feeling a little betrayed like it didn't-- \"Look, and I did this, I was doing my Tai Chi, and all of a sudden, I- here, look at this, I fall.\"",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d56_u54": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "She did. Sh-- Yeah, that's right, that's right. She said that they did studies and that they found that it was really preventative. I think she's- I forget the-the percentage, but yeah, she was really enthusiastic and she does it herself.",
+        "therapist_prev_utt": "Yeah. So you're feeling a little betrayed like it didn't-- \"Look, and I did this, I was doing my Tai Chi, and all of a sudden, I- here, look at this, I fall.\"",
+        "client_utt": "That's a strong word, isn't it, \"betrayed\". Um, wow. A little, but-but I-I know, I know that it's true. I mean, my friend who does Tai Chi, she just- she loves it. Maybe it's just not for me, you know.",
+        "client_mov": "neutral-low",
+        "therapist_utt": "So you're just starting to question a little bit about whether or not it might be what is useful and, you know, it-it does really come down to what works for you and what-wh-what you decide will help you stay safe.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d56_u58": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "That's a strong word, isn't it, \"betrayed\". Um, wow. A little, but-but I-I know, I know that it's true. I mean, my friend who does Tai Chi, she just- she loves it. Maybe it's just not for me, you know.",
+        "therapist_prev_utt": "So you're just starting to question a little bit about whether or not it might be what is useful and, you know, it-it does really come down to what works for you and what-wh-what you decide will help you stay safe.",
+        "client_utt": "Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "And I'd like to work with you as I know Dr. Fields would, to-to help build a plan that will help you feel as safe as you can in your home and to keep you there and to keep you feeling safe. What do you think about that?",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": "And I'd like to work with you as I know Dr. Fields would, to-to help build a plan that will help you feel as safe as you can in your home and to keep you there and to keep you feeling safe.",
+            "question-open-focusing": "What do you think about that?"
+        }
+    },
+    "d56_u66": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah.",
+        "therapist_prev_utt": "And I'd like to work with you as I know Dr. Fields would, to-to help build a plan that will help you feel as safe as you can in your home and to keep you there and to keep you feeling safe. What do you think about that?",
+        "client_utt": "Absolutely, that- because I don't- now I'm-I'm feeling really a little frightened that what if- what if I fall down and-and-and nobody comes around and I'm lying there for two days, you know. I may have heard about that. So, um, 'cause I am alone.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "So it really kinda strikes you that you're- that you're there alone and this could happen and--",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "reflection-complex": "So it really kinda strikes you that you're- that you're there alone and this could happen and--",
+            "question-open-evoking": "What thoughts do you have about that? What have you heard that others have done, or what are- what are- what thoughts do you have?"
+        }
+    },
+    "d56_u72": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Absolutely, that- because I don't- now I'm-I'm feeling really a little frightened that what if- what if I fall down and-and-and nobody comes around and I'm lying there for two days, you know. I may have heard about that. So, um, 'cause I am alone.",
+        "therapist_prev_utt": "So it really kinda strikes you that you're- that you're there alone and this could happen and--",
+        "client_utt": "Well, I think that there's some things that could be done to-- I know people who live in-in residence, they have a cord they can pull, but how do they get to the cord? Um, is there any- anything else that I could do just to communicate if something does happen?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Yeah, yeah. I know what's worked for a lot of the-the folks that I've worked with is there's like- it's called a lifeline and they can wear it around their neck and it's hooked up and- so that if you need help, you can push the button.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d56_u76": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, I think that there's some things that could be done to-- I know people who live in-in residence, they have a cord they can pull, but how do they get to the cord? Um, is there any- anything else that I could do just to communicate if something does happen?",
+        "therapist_prev_utt": "Yeah, yeah. I know what's worked for a lot of the-the folks that I've worked with is there's like- it's called a lifeline and they can wear it around their neck and it's hooked up and- so that if you need help, you can push the button.",
+        "client_utt": "I think I saw something like that on TV. Is it- does it really work?",
+        "client_mov": "neutral-low",
+        "therapist_utt": "It does really work.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d56_u78": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I think I saw something like that on TV. Is it- does it really work?",
+        "therapist_prev_utt": "It does really work.",
+        "client_utt": "'Cause you know that they sell so much stuff on TV, it's like you could-",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Right. Right.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d56_u80": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "'Cause you know that they sell so much stuff on TV, it's like you could-",
+        "therapist_prev_utt": "Right. Right.",
+        "client_utt": "It's crazy, it's crazy.",
+        "client_mov": "neutral-high",
+        "therapist_utt": "No, it is something that there's a couple of different of, uh, you know, a couple of different products out there, but it-it does- it can really help, uh, and-and it kind of gives- might give you this sense of security that you have at your fingertips.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d56_u88": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "It's crazy, it's crazy.",
+        "therapist_prev_utt": "No, it is something that there's a couple of different of, uh, you know, a couple of different products out there, but it-it does- it can really help, uh, and-and it kind of gives- might give you this sense of security that you have at your fingertips.",
+        "client_utt": "Yeah. I guess so, feeling a little scared, you know, about that happening and yeah, it's probably a signal to-to make some-some changes. Like I don't wanna go back to the hospital, right? I really don't. Do I have to?",
+        "client_mov": "change-high",
+        "therapist_utt": "We- we're gonna work with you to help you stay home as long as you possibly can and be safe.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d56_u90": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah. I guess so, feeling a little scared, you know, about that happening and yeah, it's probably a signal to-to make some-some changes. Like I don't wanna go back to the hospital, right? I really don't. Do I have to?",
+        "therapist_prev_utt": "We- we're gonna work with you to help you stay home as long as you possibly can and be safe.",
+        "client_utt": "Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "So what do you think that will take, um, because you're the one that really knows how you're feeling about in the house and how you're feeling about your safety. What do you think? The lifeline is a possibility, that's something you can consider.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d56_u94": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah.",
+        "therapist_prev_utt": "So what do you think that will take, um, because you're the one that really knows how you're feeling about in the house and how you're feeling about your safety. What do you think? The lifeline is a possibility, that's something you can consider.",
+        "client_utt": "That I will definitely- I definitely wanna do that. I definitely wanna do that.",
+        "client_mov": "change-high",
+        "therapist_utt": "Mm-hmm. What else do you think it would take for you to feel safe?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d56_u104": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "That I will definitely- I definitely wanna do that. I definitely wanna do that.",
+        "therapist_prev_utt": "Mm-hmm. What else do you think it would take for you to feel safe?",
+        "client_utt": "Well, I- maybe they-they-- When I first came home, they had somebody come and show me some things in-in the house, but maybe a refresher of that, and they told me that I should exercise and-and, um, I guess I could-- Maybe support, maybe I'm looking for-for maybe a buddy or something, some way that I could be reminded. I'm feeling a little, you know, I was moving along and things were feeling more positive, it's sort of like two steps forward and one step back, but now it's to step forward and three steps back. So, um, is there, yeah, like a support somehow? My daughter is very good and she calls me, but you know, she-she lives in Seattle, she lives far away. So- and I don't wanna impose on my neighbors or my friends.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "So you'd like to have a little bit more support and a little bit more connection maybe that that-that, um, that has to happen.",
+        "main_behaviour": "seek-collaboration",
+        "sub_behaviours": {
+            "reflection-complex": "So you'd like to have a little bit more support and a little bit more connection maybe that that-that, um, that has to happen.",
+            "seek-collaboration": "Would you like some suggestions about that?"
+        }
+    },
+    "d56_u110": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, I- maybe they-they-- When I first came home, they had somebody come and show me some things in-in the house, but maybe a refresher of that, and they told me that I should exercise and-and, um, I guess I could-- Maybe support, maybe I'm looking for-for maybe a buddy or something, some way that I could be reminded. I'm feeling a little, you know, I was moving along and things were feeling more positive, it's sort of like two steps forward and one step back, but now it's to step forward and three steps back. So, um, is there, yeah, like a support somehow? My daughter is very good and she calls me, but you know, she-she lives in Seattle, she lives far away. So- and I don't wanna impose on my neighbors or my friends.",
+        "therapist_prev_utt": "So you'd like to have a little bit more support and a little bit more connection maybe that that-that, um, that has to happen.",
+        "client_utt": "Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Um, so one of the things that- that we also have here, we-we have- we can get some case- what they call case management services and that might be someone who comes in and checks with you at home and helps you figure out some of the things that might need to be done like you were talking about, give you a little refresher on safety at home and, uh, and-and also might help you organize and connect up with other services that might be out there or do things, um, like that.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d56_u112": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah.",
+        "therapist_prev_utt": "Um, so one of the things that- that we also have here, we-we have- we can get some case- what they call case management services and that might be someone who comes in and checks with you at home and helps you figure out some of the things that might need to be done like you were talking about, give you a little refresher on safety at home and, uh, and-and also might help you organize and connect up with other services that might be out there or do things, um, like that.",
+        "client_utt": "Right.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "I don't know. What it- how does that sound to you?",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d56_u114": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Right.",
+        "therapist_prev_utt": "I don't know. What it- how does that sound to you?",
+        "client_utt": "Yeah, that would be good. Do you think I should try to go back to the Tai Chi?",
+        "client_mov": "change-medium",
+        "therapist_utt": "Yes. I was going to say the other thing that I would say- that I would consider because the senior center, and I know you were really active in the senior center before-",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d56_u116": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, that would be good. Do you think I should try to go back to the Tai Chi?",
+        "therapist_prev_utt": "Yes. I was going to say the other thing that I would say- that I would consider because the senior center, and I know you were really active in the senior center before-",
+        "client_utt": "Yes, great place.",
+        "client_mov": "change-medium",
+        "therapist_utt": "-and I'm wondering if you feel like there's support there. They have a lot of activities going on at the senior center that- and I- and I don't know what was in the Tai Chi included that might be- not only serve the purpose of the exercise but really help with some of that support.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d56_u118": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yes, great place.",
+        "therapist_prev_utt": "-and I'm wondering if you feel like there's support there. They have a lot of activities going on at the senior center that- and I- and I don't know what was in the Tai Chi included that might be- not only serve the purpose of the exercise but really help with some of that support.",
+        "client_utt": "Yeah. I guess I've kind of gone to the extreme. I tend to do that. Yeah. So, keep moving?",
+        "client_mov": "change-low",
+        "therapist_utt": "Yeah. It sounds so crazy, doesn't it? Like the- it- when it feels like inside, what you're- what I'm hearing from you is that it feels like inside like moving is unsafe.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d56_u120": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah. I guess I've kind of gone to the extreme. I tend to do that. Yeah. So, keep moving?",
+        "therapist_prev_utt": "Yeah. It sounds so crazy, doesn't it? Like the- it- when it feels like inside, what you're- what I'm hearing from you is that it feels like inside like moving is unsafe.",
+        "client_utt": "Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "And-and yet, we know we can't make perfect safety, but we know that the more you move and the more active that you stay, the less likely it is that you're going to fall and the more safe you're going to be.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d56_u122": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah.",
+        "therapist_prev_utt": "And-and yet, we know we can't make perfect safety, but we know that the more you move and the more active that you stay, the less likely it is that you're going to fall and the more safe you're going to be.",
+        "client_utt": "Really?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Yes.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d56_u124": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Really?",
+        "therapist_prev_utt": "Yes.",
+        "client_utt": "Oh, okay.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Can't prevent all of it but we can make it less likely.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d56_u130": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Oh, okay.",
+        "therapist_prev_utt": "Can't prevent all of it but we can make it less likely.",
+        "client_utt": "Okay. Okay. Okay. I-I'm willing to start again, so to speak. Yeah. It's scary.",
+        "client_mov": "sustain-medium",
+        "therapist_utt": "Yeah. Takes a lot. Takes a lot. And you're the only one that'll- that can know what it is you're willing to work through that fear for.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d56_u132": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Okay. Okay. Okay. I-I'm willing to start again, so to speak. Yeah. It's scary.",
+        "therapist_prev_utt": "Yeah. Takes a lot. Takes a lot. And you're the only one that'll- that can know what it is you're willing to work through that fear for.",
+        "client_utt": "Well, I'm willing to work through my fears and difficulties to be in my little house with my little dog and my little garden. I've been there for- since my husband and I got married, and that's where we lived, and I don't want to give it up yet.",
+        "client_mov": "change-medium",
+        "therapist_utt": "Mm-hmm. And that's a strong enough motivator for you and gives you enough purpose that you're willing to like kind of push through that fear that even though it's there and that, that sense of concern about being safe.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d56_u138": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, I'm willing to work through my fears and difficulties to be in my little house with my little dog and my little garden. I've been there for- since my husband and I got married, and that's where we lived, and I don't want to give it up yet.",
+        "therapist_prev_utt": "Mm-hmm. And that's a strong enough motivator for you and gives you enough purpose that you're willing to like kind of push through that fear that even though it's there and that, that sense of concern about being safe.",
+        "client_utt": "I am. And I feel like I have some help.",
+        "client_mov": "change-low",
+        "therapist_utt": "Yeah. Yeah. Well, we can definitely talk about it when you come in again like again, and-and-",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d56_u146": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I am. And I feel like I have some help.",
+        "therapist_prev_utt": "Yeah. Yeah. Well, we can definitely talk about it when you come in again like again, and-and-",
+        "client_utt": "So, am I being a baby?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Not being a baby. This is a pretty normal- this is very normal. Absolutely. It's an absolutely normal thing to feel that, and especially when you've suffered something that you have and suffered to it, the stroke and the trying to get rehabbed and trying to find a way to get back home and going through the wobblies, this is perfectly normal.",
+        "main_behaviour": "affirm",
+        "sub_behaviours": {
+            "affirm": ""
+        }
+    },
+    "d56_u148": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "So, am I being a baby?",
+        "therapist_prev_utt": "Not being a baby. This is a pretty normal- this is very normal. Absolutely. It's an absolutely normal thing to feel that, and especially when you've suffered something that you have and suffered to it, the stroke and the trying to get rehabbed and trying to find a way to get back home and going through the wobblies, this is perfectly normal.",
+        "client_utt": "Really?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Yes. And actually, you-you have really demonstrated to me anyway, a lot of strength and courage because you have continued to persevere and work through this and not everybody does. And you have found a way to get home and you seem really committed to staying home. So you-you've got a lot of strength there that you're working with.",
+        "main_behaviour": "affirm",
+        "sub_behaviours": {
+            "affirm": ""
+        }
+    },
+    "d56_u150": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Really?",
+        "therapist_prev_utt": "Yes. And actually, you-you have really demonstrated to me anyway, a lot of strength and courage because you have continued to persevere and work through this and not everybody does. And you have found a way to get home and you seem really committed to staying home. So you-you've got a lot of strength there that you're working with.",
+        "client_utt": "Thank you. Thank you.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "And we can work together to make sure that-- And-and Dr. Fields too, I know, is very interested in that. We can work together to do what we can to keep you there.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d56_u152": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Thank you. Thank you.",
+        "therapist_prev_utt": "And we can work together to make sure that-- And-and Dr. Fields too, I know, is very interested in that. We can work together to do what we can to keep you there.",
+        "client_utt": "Well, and she- she's not going to throw me back into the hospital?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Not yet.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d56_u158": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, and she- she's not going to throw me back into the hospital?",
+        "therapist_prev_utt": "Not yet.",
+        "client_utt": "Not yet? Okay. Yeah. I was sort of- I-I was sort of hesitant to tell you about this, but, um, uh, I'm sort of glad I did. I'm very glad I did.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "I'm really glad you did too. I really appreciate it because that's the only way that we can work together to help you feel safer. And I hope you're going away home today feeling safer.",
+        "main_behaviour": "affirm",
+        "sub_behaviours": {
+            "affirm": ""
+        }
+    },
+    "d56_u164": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Not yet? Okay. Yeah. I was sort of- I-I was sort of hesitant to tell you about this, but, um, uh, I'm sort of glad I did. I'm very glad I did.",
+        "therapist_prev_utt": "I'm really glad you did too. I really appreciate it because that's the only way that we can work together to help you feel safer. And I hope you're going away home today feeling safer.",
+        "client_utt": "Yeah. So the-the caseworker is gonna be able to come and refresh me?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "We'll get you hooked up.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d56_u172": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah. So the-the caseworker is gonna be able to come and refresh me?",
+        "therapist_prev_utt": "We'll get you hooked up.",
+        "client_utt": "I mean, that alone, to know that I have communication that I w- that was my biggest fear that something would happen and I wouldn't have any any way to tell anybody.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Good. Well, you've got some good plans and we'll go check it out and make sure they happen.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d58_u2": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "",
+        "client_utt": "Hi.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Hi. You were saying over the phone, uh, you want to talk about exercise?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d58_u4": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Hi.",
+        "therapist_prev_utt": "Hi. You were saying over the phone, uh, you want to talk about exercise?",
+        "client_utt": "Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Okay, alright. Where would you like to start with that?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d58_u6": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah.",
+        "therapist_prev_utt": "Okay, alright. Where would you like to start with that?",
+        "client_utt": "Well, I'm, uh, I-I used to work out pretty good. I-I would go to the gym several times a week. I had kind of a schedule, um",
+        "client_mov": "neutral-low",
+        "therapist_utt": "That's really a lot. Very good.",
+        "main_behaviour": "affirm",
+        "sub_behaviours": {
+            "affirm": ""
+        }
+    },
+    "d58_u14": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, I'm, uh, I-I used to work out pretty good. I-I would go to the gym several times a week. I had kind of a schedule, um",
+        "therapist_prev_utt": "That's really a lot. Very good.",
+        "client_utt": "Yeah, well, you know, it really-- At-at one time, I was running-- I ran a half marathon. I was really into it. Well, and I-- But I was working at a different company, where I had a little bit different schedule, a little more free time than I have now, so I just don't have the time like I used to. And I-- And really, it's kind of an excuse, I guess, cause I-I could probably make the time, but it's-it's easier to just keep working or just being in bed or whatever.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "But that goal of the half-marathon, you know, it's really important that you were willing to put all the time into getting ready for it, which, from what I've heard from other people, is almost like a job in and of itself.",
+        "main_behaviour": "affirm",
+        "sub_behaviours": {
+            "affirm": ""
+        }
+    },
+    "d58_u16": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, well, you know, it really-- At-at one time, I was running-- I ran a half marathon. I was really into it. Well, and I-- But I was working at a different company, where I had a little bit different schedule, a little more free time than I have now, so I just don't have the time like I used to. And I-- And really, it's kind of an excuse, I guess, cause I-I could probably make the time, but it's-it's easier to just keep working or just being in bed or whatever.",
+        "therapist_prev_utt": "But that goal of the half-marathon, you know, it's really important that you were willing to put all the time into getting ready for it, which, from what I've heard from other people, is almost like a job in and of itself.",
+        "client_utt": "I-it was. A-and it was huge for me cause I'd never really been a runner, you know, but it-it was very motivating, and-and",
+        "client_mov": "change-high",
+        "therapist_utt": "What'd you like about it?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d58_u20": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I-it was. A-and it was huge for me cause I'd never really been a runner, you know, but it-it was very motivating, and-and",
+        "therapist_prev_utt": "What'd you like about it?",
+        "client_utt": "I don't know. I guess there's kind of an adrenaline rush to it. Kinda almost like, you know, uh, kind of a high, I guess. So yeah-- That's-- I-I really enjoyed it. And I-I liked the feeling that I was doing something good for myself. I liked that, too. I-it kind of-- It so-- It gave me a little bit of self-esteem, I guess.",
+        "client_mov": "change-low",
+        "therapist_utt": "I-it a-almost, um, feels like you identified as being a runner, like an athlete?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d58_u22": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I don't know. I guess there's kind of an adrenaline rush to it. Kinda almost like, you know, uh, kind of a high, I guess. So yeah-- That's-- I-I really enjoyed it. And I-I liked the feeling that I was doing something good for myself. I liked that, too. I-it kind of-- It so-- It gave me a little bit of self-esteem, I guess.",
+        "therapist_prev_utt": "I-it a-almost, um, feels like you identified as being a runner, like an athlete?",
+        "client_utt": "I-I subscribed to the magazine a while.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Do you really?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d58_u28": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I-I subscribed to the magazine a while.",
+        "therapist_prev_utt": "Do you really?",
+        "client_utt": "I did, I lit it on fire but I did burn for a time.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Got into the culture?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d58_u30": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I did, I lit it on fire but I did burn for a time.",
+        "therapist_prev_utt": "Got into the culture?",
+        "client_utt": "I got into the whole culture. I was-- I-I felt as good as I've felt in many, many years. And now I've kind of let that all slide, and-- Well, I had a foot injury, too, which kind of started the whole problem.",
+        "client_mov": "change-low",
+        "therapist_utt": "Okay, alright. Cause it's tough, it's really, it is. I mean I've, um, I'm sure you've been told before by whomever, uh, diagnosed your foot injury, but if not, let me know if it gets so tough on your body let me know. So--",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d58_u34": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I got into the whole culture. I was-- I-I felt as good as I've felt in many, many years. And now I've kind of let that all slide, and-- Well, I had a foot injury, too, which kind of started the whole problem.",
+        "therapist_prev_utt": "Okay, alright. Cause it's tough, it's really, it is. I mean I've, um, I'm sure you've been told before by whomever, uh, diagnosed your foot injury, but if not, let me know if it gets so tough on your body let me know. So--",
+        "client_utt": "It-it is. And I-- it-it may be why I can't really run again, but I can certainly, you know, ride a stationary bike and do all the other things in a gym that you can do when you're not running, so, it just makes you to",
+        "client_mov": "change-low",
+        "therapist_utt": "Oh, and yet and at the same time you know your body well enough, and you-you're willing to pay attention to your doctor's advice about the running, right now, for you, not the best thing. Um, so, riding a stationary bike. Um, what else do you like to do that's cardiovascular?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": "Um, what else do you like to do that's cardiovascular?",
+            "affirm": "Oh, and yet and at the same time you know your body well enough, and you-you're willing to pay attention to your doctor's advice about the running, right now, for you, not the best thing. Um, so, riding a stationary bike. "
+        }
+    },
+    "d58_u36": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "It-it is. And I-- it-it may be why I can't really run again, but I can certainly, you know, ride a stationary bike and do all the other things in a gym that you can do when you're not running, so, it just makes you to",
+        "therapist_prev_utt": "Oh, and yet and at the same time you know your body well enough, and you-you're willing to pay attention to your doctor's advice about the running, right now, for you, not the best thing. Um, so, riding a stationary bike. Um, what else do you like to do that's cardiovascular?",
+        "client_utt": "Um, well, um, I like-- The bike is pretty good. Uh, even the uh, you know, the kind of a rolling machine is okay. And the uh, the elliptical. Any of that's fine. I-I really don't, uh-- I don't dislike any of it. Kind of once you get into the rhythm, yeah, it's fine",
+        "client_mov": "change-low",
+        "therapist_utt": "If you were to pick one of those, which one do you enjoy the most, um, would be most likely to do?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-closed-evoking": ""
+        }
+    },
+    "d58_u38": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Um, well, um, I like-- The bike is pretty good. Uh, even the uh, you know, the kind of a rolling machine is okay. And the uh, the elliptical. Any of that's fine. I-I really don't, uh-- I don't dislike any of it. Kind of once you get into the rhythm, yeah, it's fine",
+        "therapist_prev_utt": "If you were to pick one of those, which one do you enjoy the most, um, would be most likely to do?",
+        "client_utt": "Probably the elliptical.",
+        "client_mov": "change-low",
+        "therapist_utt": "The elliptical. Okay. Yeah. like kind of almost like running.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d58_u42": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Probably the elliptical.",
+        "therapist_prev_utt": "The elliptical. Okay. Yeah. like kind of almost like running.",
+        "client_utt": "Well, it is. It is without any of the impact, so it is true.",
+        "client_mov": "change-high",
+        "therapist_utt": "Okay. And-and what do you- do you-- Some folks, you know, put on music, kind of- kind of.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d58_u46": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, it is. It is without any of the impact, so it is true.",
+        "therapist_prev_utt": "Okay. And-and what do you- do you-- Some folks, you know, put on music, kind of- kind of.",
+        "client_utt": "Yeah, I do headphones. I got my headphones, and I got my, uh, kind of, if you know what I mean",
+        "client_mov": "neutral-low",
+        "therapist_utt": "Okay. Get your rocking out, running on the elliptical playlist.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d58_u48": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, I do headphones. I got my headphones, and I got my, uh, kind of, if you know what I mean",
+        "therapist_prev_utt": "Okay. Get your rocking out, running on the elliptical playlist.",
+        "client_utt": "Yeah",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "And, um, so you were-- You said that you've been going several times a week, which is really an extraordinary number, I-I think it's four, five times a week?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d58_u50": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah",
+        "therapist_prev_utt": "And, um, so you were-- You said that you've been going several times a week, which is really an extraordinary number, I-I think it's four, five times a week?",
+        "client_utt": "Yeah. I was going literally every other day, you know. And then, some days I would, you know, I'd run, and I'd go to the gym the next day, so I would-- I was very-- I don't really feel it necessary to get back to that level, but I need to do something cause I'm doing nothing right now.",
+        "client_mov": "change-medium",
+        "therapist_utt": "Nothing. Okay.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d58_u52": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah. I was going literally every other day, you know. And then, some days I would, you know, I'd run, and I'd go to the gym the next day, so I would-- I was very-- I don't really feel it necessary to get back to that level, but I need to do something cause I'm doing nothing right now.",
+        "therapist_prev_utt": "Nothing. Okay.",
+        "client_utt": "I should-- Or next to nothing. I walk to the grocery store or whatever's handy when I have time, but yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "So what ideas do you have about initially just getting started, and what-what would you do?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d58_u54": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I should-- Or next to nothing. I walk to the grocery store or whatever's handy when I have time, but yeah.",
+        "therapist_prev_utt": "So what ideas do you have about initially just getting started, and what-what would you do?",
+        "client_utt": "Well, if I could just get myself over there once, 'cause usually that's the hardest thing. It's just going there. So I think that's-- You know, I've thought about it a little bit, I think I just need to make that first trip over there and just kind of to take it easy that first time. Just show up 'cause I think that's really what I need to do. I just need to go over there.",
+        "client_mov": "change-medium",
+        "therapist_utt": "What would help you do that?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d58_u62": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, if I could just get myself over there once, 'cause usually that's the hardest thing. It's just going there. So I think that's-- You know, I've thought about it a little bit, I think I just need to make that first trip over there and just kind of to take it easy that first time. Just show up 'cause I think that's really what I need to do. I just need to go over there.",
+        "therapist_prev_utt": "What would help you do that?",
+        "client_utt": "Um, knowing that my schedule isn't gonna be too crazy that day where I could spare an hour or so, and-and just go do it. And then I-- kinda nice gonna be troublesome. Um, I don't know. I think- I think the time has just been the biggest thing, you know, and-and I-I guess the motivation really hasn't been there. I mean, you know, it's not like- I don't really have a goal. I don't really have a, you know I don't, other than maybe reducing my waistline, you know, I don't really have a-a set number like I'm gonna run a marathon and you know. You know, so I think the just running off the playlist. I-I guess maybe if I made a goal would helped too.",
+        "client_mov": "change-low",
+        "therapist_utt": "Mm-hmm- mm-hmm. So that-that-that half marathon was, uh, a very specific concrete thing and you could envision yourself, and you're ready for it and the day of and all that kinda stuff.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d58_u68": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Um, knowing that my schedule isn't gonna be too crazy that day where I could spare an hour or so, and-and just go do it. And then I-- kinda nice gonna be troublesome. Um, I don't know. I think- I think the time has just been the biggest thing, you know, and-and I-I guess the motivation really hasn't been there. I mean, you know, it's not like- I don't really have a goal. I don't really have a, you know I don't, other than maybe reducing my waistline, you know, I don't really have a-a set number like I'm gonna run a marathon and you know. You know, so I think the just running off the playlist. I-I guess maybe if I made a goal would helped too.",
+        "therapist_prev_utt": "Mm-hmm- mm-hmm. So that-that-that half marathon was, uh, a very specific concrete thing and you could envision yourself, and you're ready for it and the day of and all that kinda stuff.",
+        "client_utt": "Plus there's people who have done that countless times and you can go read what their regimen was so you get feedback too. And then did this from this day and so on.",
+        "client_mov": "change-medium",
+        "therapist_utt": "So sometimes-- almost sounds like, um, your feedback would be, uh, useful to you. Like some immediate feedback in terms of like, um, like",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d58_u79": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Plus there's people who have done that countless times and you can go read what their regimen was so you get feedback too. And then did this from this day and so on.",
+        "therapist_prev_utt": "So sometimes-- almost sounds like, um, your feedback would be, uh, useful to you. Like some immediate feedback in terms of like, um, like",
+        "client_utt": "That might not be be a bad idea. I think that'd be great. I-I never have really found anybody that like to exercise with the pace that I wanted to. They were all either going way too fast or not even moving at all. So it's kinda hard to meet up with somebody that can kind of maybe kind of give you a push might be a challenge.",
+        "client_mov": "change-low",
+        "therapist_utt": "There might be something challenge because you're such a social guy. And so to be able to be exercising and be talking and enjoying yourself- you like the music too, right?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d58_u81": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "That might not be be a bad idea. I think that'd be great. I-I never have really found anybody that like to exercise with the pace that I wanted to. They were all either going way too fast or not even moving at all. So it's kinda hard to meet up with somebody that can kind of maybe kind of give you a push might be a challenge.",
+        "therapist_prev_utt": "There might be something challenge because you're such a social guy. And so to be able to be exercising and be talking and enjoying yourself- you like the music too, right?",
+        "client_utt": "Yeah, that's right, well I-",
+        "client_mov": "neutral-high",
+        "therapist_utt": "And if you arrange to meet somebody there, you're very good at, uh, you know, uh, keeping the agreement.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d58_u83": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, that's right, well I-",
+        "therapist_prev_utt": "And if you arrange to meet somebody there, you're very good at, uh, you know, uh, keeping the agreement.",
+        "client_utt": "Okay, that's a great idea I hadn't thought of that-that's- I hadn't really, uh, I-I kinda dismissed that early on, I hadn't really even considered that, yeah.",
+        "client_mov": "change-low",
+        "therapist_utt": "And in for right now it just be, you'll be happy with getting there one time.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d58_u89": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Okay, that's a great idea I hadn't thought of that-that's- I hadn't really, uh, I-I kinda dismissed that early on, I hadn't really even considered that, yeah.",
+        "therapist_prev_utt": "And in for right now it just be, you'll be happy with getting there one time.",
+        "client_utt": "If I could get there-- I know if I could get there-- if I could pick, you know, uh, these are the days I'm going to go to the gym and I know these things last time. So if I- if I could-- I mean, I wanna get there three times a week. I wanna get there on Saturdays or Sundays and Tuesdays and Fridays, or something like that, then I could probably",
+        "client_mov": "change-low",
+        "therapist_utt": "And days that you know of on your less rigorous schedule that you're more likely to succeed. I really like how you're picking like three days a week instead of some days a week.",
+        "main_behaviour": "affirm",
+        "sub_behaviours": {
+            "affirm": ""
+        }
+    },
+    "d58_u91": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "If I could get there-- I know if I could get there-- if I could pick, you know, uh, these are the days I'm going to go to the gym and I know these things last time. So if I- if I could-- I mean, I wanna get there three times a week. I wanna get there on Saturdays or Sundays and Tuesdays and Fridays, or something like that, then I could probably",
+        "therapist_prev_utt": "And days that you know of on your less rigorous schedule that you're more likely to succeed. I really like how you're picking like three days a week instead of some days a week.",
+        "client_utt": "Right, yeah. Well, it's just not-",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Very clear you understand the whole idea of giving yourself a day off in between.",
+        "main_behaviour": "affirm",
+        "sub_behaviours": {
+            "affirm": ""
+        }
+    },
+    "d58_u93": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Right, yeah. Well, it's just not-",
+        "therapist_prev_utt": "Very clear you understand the whole idea of giving yourself a day off in between.",
+        "client_utt": "Oh yeah, yeah, it doesn't do any good to just try to injure your- injure yourself especially when you're a bit normal like me.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Okay, yeah, I know that, yeah, yeah. Okay, so. So, um, so are you sure you wanna try to start out with the- that initial",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d58_u95": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Oh yeah, yeah, it doesn't do any good to just try to injure your- injure yourself especially when you're a bit normal like me.",
+        "therapist_prev_utt": "Okay, yeah, I know that, yeah, yeah. Okay, so. So, um, so are you sure you wanna try to start out with the- that initial",
+        "client_utt": "You gotta get over there.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "When you find someone to go with, great, if not, you get your own your own music and uh, I'll be- I'll be trying just to-to see um, what is like for you, having actually done that",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+        "d61_u0": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "",
+        "client_utt": "",
+        "client_mov": "",
+        "therapist_utt": "Hi Mrs. Smith, my name is Terri, I'm one of the nurses who works with Dr. Fields.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d61_u2": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "Hi Mrs. Smith, my name is Terri, I'm one of the nurses who works with Dr. Fields.",
+        "client_utt": "Well, I remember you. Yeah, we met once before.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Yes, I think when you were in last time.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d61_u4": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Well, I remember you. Yeah, we met once before.",
+        "therapist_prev_utt": "Yes, I think when you were in last time.",
+        "client_utt": "Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "And I know that, uh, Dr. Fields talked with you last time about maybe trying a tai chi class to see how that would go, and I wanted to-to check in with you and see how tai chi went.",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d61_u12": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Yeah.",
+        "therapist_prev_utt": "And I know that, uh, Dr. Fields talked with you last time about maybe trying a tai chi class to see how that would go, and I wanted to-to check in with you and see how tai chi went.",
+        "client_utt": "Well, I went once. Yeah and, um, it was very-very beautiful to see and the instructor was very nice, but I felt kind of self-conscious because I'm still in my walker. And I had to sit in the chair. I couldn't, you know, do what they were doing. So, it's-- it was-- I simply felt self-conscious.",
+        "client_mov": "sustain-low",
+        "therapist_utt": "Uh-huh. So, you thought it was beautiful and you liked the instructor, but you were a little self-conscious because you were in a chair?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d61_u14": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Well, I went once. Yeah and, um, it was very-very beautiful to see and the instructor was very nice, but I felt kind of self-conscious because I'm still in my walker. And I had to sit in the chair. I couldn't, you know, do what they were doing. So, it's-- it was-- I simply felt self-conscious.",
+        "therapist_prev_utt": "Uh-huh. So, you thought it was beautiful and you liked the instructor, but you were a little self-conscious because you were in a chair?",
+        "client_utt": "A lot self-conscious.",
+        "client_mov": "sustain-medium",
+        "therapist_utt": "A lot self-conscious, uh-huh.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d61_u16": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "A lot self-conscious.",
+        "therapist_prev_utt": "A lot self-conscious, uh-huh.",
+        "client_utt": "Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "What were you hoping to achieve with the, um, by going to tai chi?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d61_u18": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Yeah.",
+        "therapist_prev_utt": "What were you hoping to achieve with the, um, by going to tai chi?",
+        "client_utt": "Well, like Dr. Fields told me, it helps with balance, and I'm still having the wobblies. So, I was really hoping that I could get to the point where I could benefit from what they had to offer. Um, yeah, mostly my balance, mostly my balance.",
+        "client_mov": "neutral-low",
+        "therapist_utt": "Uh-huh. So, you're hoping that it would help with balance, but you didn't see the- maybe the results you were looking for?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d61_u20": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Well, like Dr. Fields told me, it helps with balance, and I'm still having the wobblies. So, I was really hoping that I could get to the point where I could benefit from what they had to offer. Um, yeah, mostly my balance, mostly my balance.",
+        "therapist_prev_utt": "Uh-huh. So, you're hoping that it would help with balance, but you didn't see the- maybe the results you were looking for?",
+        "client_utt": "Not yet.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Not yet.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d61_u22": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Not yet.",
+        "therapist_prev_utt": "Not yet.",
+        "client_utt": "Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Uh-huh. What is your overall goal? What are you working towards?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d61_u26": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Yeah.",
+        "therapist_prev_utt": "Uh-huh. What is your overall goal? What are you working towards?",
+        "client_utt": "I wanna go home. Yes, I really do.",
+        "client_mov": "change-high",
+        "therapist_utt": "Mm-hmm, and what is it that's important to you about getting home?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d61_u32": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "I wanna go home. Yes, I really do.",
+        "therapist_prev_utt": "Mm-hmm, and what is it that's important to you about getting home?",
+        "client_utt": "Everything. I want to be with my little dog. He's really so cute, and I miss my garden. And I just miss being independent, going to sleep when I want to sleep and getting up when I want to get up and-and, uh, cooking for myself. The independence. Sure I miss being independent.",
+        "client_mov": "change-high",
+        "therapist_utt": "Uh-huh. So, you're wanting to get home to your dog, your garden, back to your life, your independence?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d61_u36": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Everything. I want to be with my little dog. He's really so cute, and I miss my garden. And I just miss being independent, going to sleep when I want to sleep and getting up when I want to get up and-and, uh, cooking for myself. The independence. Sure I miss being independent.",
+        "therapist_prev_utt": "Uh-huh. So, you're wanting to get home to your dog, your garden, back to your life, your independence?",
+        "client_utt": "Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "What do you think you need to do in order to be able to achieve that goal of getting home?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d61_u40": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Yeah.",
+        "therapist_prev_utt": "What do you think you need to do in order to be able to achieve that goal of getting home?",
+        "client_utt": "Well, they told me that I need to be able to walk down the hallway and back, even with the walker, being secure and not with the wobblies. And I haven't gotten there yet.",
+        "client_mov": "sustain-medium",
+        "therapist_utt": "And do you agree that that's what you need to do in order to be able to get home?",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d61_u46": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Well, they told me that I need to be able to walk down the hallway and back, even with the walker, being secure and not with the wobblies. And I haven't gotten there yet.",
+        "therapist_prev_utt": "And do you agree that that's what you need to do in order to be able to get home?",
+        "client_utt": "I-I don't want to fall. I-I've had friends that had that happen. So, um, I-I agree a little, with some hesitation, but I do agree.",
+        "client_mov": "sustain-medium",
+        "therapist_utt": "Uh-huh, and tell me how your physical therapy is going?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d61_u52": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "I-I don't want to fall. I-I've had friends that had that happen. So, um, I-I agree a little, with some hesitation, but I do agree.",
+        "therapist_prev_utt": "Uh-huh, and tell me how your physical therapy is going?",
+        "client_utt": "Oh, it's better. It still hurts. It- it's-- I'm getting better. I'm-I'm getting better. It's not quite as painful. Yeah, so-",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "So, it sounds like, um, you can see that you're making some progress in physical therapy and that you were hoping that the tai chi would help you with the wobblies. Uh-huh?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d61_u56": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Oh, it's better. It still hurts. It- it's-- I'm getting better. I'm-I'm getting better. It's not quite as painful. Yeah, so-",
+        "therapist_prev_utt": "So, it sounds like, um, you can see that you're making some progress in physical therapy and that you were hoping that the tai chi would help you with the wobblies. Uh-huh?",
+        "client_utt": "Yeah.",
+        "client_mov": "change-medium",
+        "therapist_utt": "And so, are you wanting to go back to tai chi?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-closed-evoking": ""
+        }
+    },
+    "d61_u58": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Yeah.",
+        "therapist_prev_utt": "And so, are you wanting to go back to tai chi?",
+        "client_utt": "Um, yes-yes I-I do because I-- my friend, I think I told you, really, really loves it and I just, I wish I could go back, and yes I do. I'm not making much sense, but I do.",
+        "client_mov": "change-low",
+        "therapist_utt": "Uh-huh. I think it's important, um, that you know that you're the one who has to make the decision about whether or not tai chi works for you.",
+        "main_behaviour": "emphasize-autonomy",
+        "sub_behaviours": {
+            "emphasize-autonomy": ""
+        }
+    },
+    "d61_u62": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Um, yes-yes I-I do because I-- my friend, I think I told you, really, really loves it and I just, I wish I could go back, and yes I do. I'm not making much sense, but I do.",
+        "therapist_prev_utt": "Uh-huh. I think it's important, um, that you know that you're the one who has to make the decision about whether or not tai chi works for you.",
+        "client_utt": "Oh, I don't really know yet after just one time. Yeah. It's-it's-- I can't make that-- It wouldn't be fair for me to say it does or doesn't. It didn't that one time, but you know.",
+        "client_mov": "neutral-low",
+        "therapist_utt": "So, you haven't seen the results that you want yet but because Dr. Fields has recommended it and your friend has and it sounds like you like the instructor it sounds like you'd like to try and give it another chance?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d61_u70": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Oh, I don't really know yet after just one time. Yeah. It's-it's-- I can't make that-- It wouldn't be fair for me to say it does or doesn't. It didn't that one time, but you know.",
+        "therapist_prev_utt": "So, you haven't seen the results that you want yet but because Dr. Fields has recommended it and your friend has and it sounds like you like the instructor it sounds like you'd like to try and give it another chance?",
+        "client_utt": "Yeah, I would.",
+        "client_mov": "change-medium",
+        "therapist_utt": "So, what has to happen in order for you to get to tai chi again?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d61_u74": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Yeah, I would.",
+        "therapist_prev_utt": "So, what has to happen in order for you to get to tai chi again?",
+        "client_utt": "Well, I'd have to make the arrangements again, that was a little complicated, and, um, I'd have to get my head straight about feeling self-conscious, because I-I know that nobody's really looking at me, but I have to convince myself. Yeah, and the arrangement, arrangements a little complicated.",
+        "client_mov": "sustain-low",
+        "therapist_utt": "Uh-huh. So, how confident are you on a scale of 1 to 10 with one being not at all confident and 10 being very confident that you can make the arrangements in order to get to tai chi.",
+        "main_behaviour": "question-ruler",
+        "sub_behaviours": {
+            "question-ruler": ""
+        }
+    },
+    "d61_u78": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Well, I'd have to make the arrangements again, that was a little complicated, and, um, I'd have to get my head straight about feeling self-conscious, because I-I know that nobody's really looking at me, but I have to convince myself. Yeah, and the arrangement, arrangements a little complicated.",
+        "therapist_prev_utt": "Uh-huh. So, how confident are you on a scale of 1 to 10 with one being not at all confident and 10 being very confident that you can make the arrangements in order to get to tai chi.",
+        "client_utt": "That I can make the arrangement? Five.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Five.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d61_u82": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "That I can make the arrangement? Five.",
+        "therapist_prev_utt": "Five.",
+        "client_utt": "I-I mean, I know I can, but it's really difficult.",
+        "client_mov": "sustain-high",
+        "therapist_utt": "Uh-huh. What is it that makes it a five instead of a one, no confidence?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d61_u90": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "I-I mean, I know I can, but it's really difficult.",
+        "therapist_prev_utt": "Uh-huh. What is it that makes it a five instead of a one, no confidence?",
+        "client_utt": "That I'm doing it by myself. And I would really fe-- If I could have some sup-- Like if somebody could help me do it. My-my daughter can't visit that often and yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "So, in order for you to feel more confident, you would like some help in making those arrangements?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d61_u94": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "That I'm doing it by myself. And I would really fe-- If I could have some sup-- Like if somebody could help me do it. My-my daughter can't visit that often and yeah.",
+        "therapist_prev_utt": "So, in order for you to feel more confident, you would like some help in making those arrangements?",
+        "client_utt": "I would.",
+        "client_mov": "change-medium",
+        "therapist_utt": "And is that something that your daughter can do for you?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d61_u96": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "I would.",
+        "therapist_prev_utt": "And is that something that your daughter can do for you?",
+        "client_utt": "Well, she's-- she could, but I'd have to wait at least a week.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Okay. Um, so is that something that you'd like us to help you with?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d61_u100": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Well, she's-- she could, but I'd have to wait at least a week.",
+        "therapist_prev_utt": "Okay. Um, so is that something that you'd like us to help you with?",
+        "client_utt": "I would. Yeah, yeah. Is that possible?",
+        "client_mov": "change-medium",
+        "therapist_utt": "Sure we can make those arrangements with the rehab center. They have a van and-and they've done this for other patients so we can certainly make those arrangements if you'd like.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d61_u104": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "I would. Yeah, yeah. Is that possible?",
+        "therapist_prev_utt": "Sure we can make those arrangements with the rehab center. They have a van and-and they've done this for other patients so we can certainly make those arrangements if you'd like.",
+        "client_utt": "That would- that would be good. And then as far as feeling self-confident, I'd have to do that myself.",
+        "client_mov": "change-medium",
+        "therapist_utt": "Okay. So, are there any other barriers or obstacles in the way to you getting to tai chi?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d61_u110": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "That would- that would be good. And then as far as feeling self-confident, I'd have to do that myself.",
+        "therapist_prev_utt": "Okay. So, are there any other barriers or obstacles in the way to you getting to tai chi?",
+        "client_utt": "Um, I can't think of any. That's-that's the main thing the arrangements.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Well, it sounds like you can see that you're making some progress in your physical therapy.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d61_u112": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Um, I can't think of any. That's-that's the main thing the arrangements.",
+        "therapist_prev_utt": "Well, it sounds like you can see that you're making some progress in your physical therapy.",
+        "client_utt": "Yes.",
+        "client_mov": "change-medium",
+        "therapist_utt": "And that you're wanting to give tai chi another chance, and that if we can help make arrangements for you to get there with the van to the rehab center, that you'll give it another chance.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d61_u116": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "Yes.",
+        "therapist_prev_utt": "And that you're wanting to give tai chi another chance, and that if we can help make arrangements for you to get there with the van to the rehab center, that you'll give it another chance.",
+        "client_utt": "That's true.",
+        "client_mov": "change-high",
+        "therapist_utt": "Well, um, before you leave today, we'll go ahead and, um, I'll call the rehab center and make those arrangements.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d61_u118": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "That's true.",
+        "therapist_prev_utt": "Well, um, before you leave today, we'll go ahead and, um, I'll call the rehab center and make those arrangements.",
+        "client_utt": "You would?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Sure. I'm-I'm happy to do that.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d61_u120": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "You would?",
+        "therapist_prev_utt": "Sure. I'm-I'm happy to do that.",
+        "client_utt": "That would really help.",
+        "client_mov": "change-high",
+        "therapist_utt": "And then when you come back in, I know you've got another follow up appointment with Dr. Fields, I'd like to check back with you then and see how class went the second time.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d61_u124": {
+        "topic": "increasing activity; taking medicine / following medical procedure",
+        "client_prev_utt": "That would really help.",
+        "therapist_prev_utt": "And then when you come back in, I know you've got another follow up appointment with Dr. Fields, I'd like to check back with you then and see how class went the second time.",
+        "client_utt": "Yeah. Thank you.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Well, thank you very much for coming in today Mrs. Smith and I look forward to hearing about the progress that you're making.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d77_u0": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "",
+        "client_utt": "",
+        "client_mov": "",
+        "therapist_utt": "Hi, Mrs. Smith. It's really nice to see you again. I see you're back to follow up on the stroke you had. How are things going for you at the rehab facility?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d77_u2": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "Hi, Mrs. Smith. It's really nice to see you again. I see you're back to follow up on the stroke you had. How are things going for you at the rehab facility?",
+        "client_utt": "Kind of slow.",
+        "client_mov": "neutral-low",
+        "therapist_utt": "Kind of slow?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d77_u4": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Kind of slow.",
+        "therapist_prev_utt": "Kind of slow?",
+        "client_utt": "Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "What kind of things have you been in your rehab?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d77_u6": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah.",
+        "therapist_prev_utt": "What kind of things have you been in your rehab?",
+        "client_utt": "Oh, they have me doing all kinds of things in different machines and stuff. Yeah, it hurts.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "It hurts? Oh, I'm sorry to hear that. Where are you having pain?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d77_u8": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Oh, they have me doing all kinds of things in different machines and stuff. Yeah, it hurts.",
+        "therapist_prev_utt": "It hurts? Oh, I'm sorry to hear that. Where are you having pain?",
+        "client_utt": "Well, just about every joint like especially my knees. They're really-- They have me doing some leg things that-that-that is it really necessary?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Well, you know, I understand that pain is hard to work through but a lot of time when you're having rehab after a stroke, that pain is telling you that your muscles and joints are starting to work again. So you can kind of think of it as a positive way to, you know, know that your-your body's getting back to normal. But what are your goals for the long term?",
+        "main_behaviour": "question",
+        "sub_behaviours": {
+            "give-information": "Well, you know, I understand that pain is hard to work through but a lot of time when you're having rehab after a stroke, that pain is telling you that your muscles and joints are starting to work again. So you can kind of think of it as a positive way to, you know, know that your-your body's getting back to normal.",
+            "question-open-evoking": "But what are your goals for the long term?"
+        }
+    },
+    "d77_u12": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, just about every joint like especially my knees. They're really-- They have me doing some leg things that-that-that is it really necessary?",
+        "therapist_prev_utt": "Well, you know, I understand that pain is hard to work through but a lot of time when you're having rehab after a stroke, that pain is telling you that your muscles and joints are starting to work again. So you can kind of think of it as a positive way to, you know, know that your-your body's getting back to normal. But what are your goals for the long term?",
+        "client_utt": "I wanna go home.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Oh, of course, of course. And what are the things that you'd like to be able to do once you get home?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d77_u14": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I wanna go home.",
+        "therapist_prev_utt": "Oh, of course, of course. And what are the things that you'd like to be able to do once you get home?",
+        "client_utt": "Everything. I wanna- I wanna, play with my dog. I miss my dog. I wanna cook for myself. I'm a very independent person and I wanna do things for myself.",
+        "client_mov": "neutral-high",
+        "therapist_utt": "Yeah, yeah. And so that's a very important goal to be able to get back home, to be able to get back to your independence. Have you thought about what it might take to get there?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "affirm": "And so that's a very important goal to be able to get back home, to be able to get back to your independence.",
+            "question-closed-evoking": "Have you thought about what it might take to get there?"
+        }
+    },
+    "d77_u16": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Everything. I wanna- I wanna, play with my dog. I miss my dog. I wanna cook for myself. I'm a very independent person and I wanna do things for myself.",
+        "therapist_prev_utt": "Yeah, yeah. And so that's a very important goal to be able to get back home, to be able to get back to your independence. Have you thought about what it might take to get there?",
+        "client_utt": "Um, I guess the rehab.",
+        "client_mov": "neutral-low",
+        "therapist_utt": "Mm-hmm. Yeah, you're absolutely right. And it's also going to be very important that once you're home, you're able to continue on a regular activity program. Have you thought about what that might look like?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "affirm": "Yeah, you're absolutely right. And it's also going to be very important that once you're home, you're able to continue on a regular activity program.",
+            "question-closed-focusing": "Have you thought about what that might look like?"
+        }
+    },
+    "d77_u18": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Um, I guess the rehab.",
+        "therapist_prev_utt": "Mm-hmm. Yeah, you're absolutely right. And it's also going to be very important that once you're home, you're able to continue on a regular activity program. Have you thought about what that might look like?",
+        "client_utt": "Not really.",
+        "client_mov": "neutral-low",
+        "therapist_utt": "Not really, okay. Well, have you ever heard of something called Tai Chi? Is that a familiar term to you?",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d77_u20": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Not really.",
+        "therapist_prev_utt": "Not really, okay. Well, have you ever heard of something called Tai Chi? Is that a familiar term to you?",
+        "client_utt": "Oh, yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "You've heard of it?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d77_u24": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Oh, yeah.",
+        "therapist_prev_utt": "You've heard of it?",
+        "client_utt": "Uh, I have. I have a friend who, uh, does it and she just raves about it. She loves it.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Well, you know, Tai Chi is one of the best ways to get your balance back after you've had something like a stroke. And it's also really good for preventing falls. And if you wanna be home and you wanna be doing the things you wanna do and going for walks with your dog, it's very important to make sure that you don't fall 'cause that would cause more problems down the road.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d77_u26": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Uh, I have. I have a friend who, uh, does it and she just raves about it. She loves it.",
+        "therapist_prev_utt": "Well, you know, Tai Chi is one of the best ways to get your balance back after you've had something like a stroke. And it's also really good for preventing falls. And if you wanna be home and you wanna be doing the things you wanna do and going for walks with your dog, it's very important to make sure that you don't fall 'cause that would cause more problems down the road.",
+        "client_utt": "Absolutely. I do not want to fall, for sure.",
+        "client_mov": "change-high",
+        "therapist_utt": "So what do you think about Tai Chi? Is that something you think you might be able to try sometime?",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d77_u30": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Absolutely. I do not want to fall, for sure.",
+        "therapist_prev_utt": "So what do you think about Tai Chi? Is that something you think you might be able to try sometime?",
+        "client_utt": "Well, I-I hadn't really thought about it, but yeah I guess, I guess. Like I said, my friend talks about it and-and it's very pretty. I've seen pictures, you know.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Yeah, yeah, yeah. Well, it's not that easy to get started. You do certainly have to have some motivation to want to do it. Um, and when you first start, oftentimes you do feel a little wobbly or a little insecure.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d77_u32": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, I-I hadn't really thought about it, but yeah I guess, I guess. Like I said, my friend talks about it and-and it's very pretty. I've seen pictures, you know.",
+        "therapist_prev_utt": "Yeah, yeah, yeah. Well, it's not that easy to get started. You do certainly have to have some motivation to want to do it. Um, and when you first start, oftentimes you do feel a little wobbly or a little insecure.",
+        "client_utt": "Well, I don't see how I could do it. I-I'm still in a walker, you know.",
+        "client_mov": "sustain-medium",
+        "therapist_utt": "Yeah, yeah, I understand. So there are lots of places around that have it. Your local senior center would have it. And what I recommend is that you start by doing it in a chair. Just sitting in the chair.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d77_u34": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, I don't see how I could do it. I-I'm still in a walker, you know.",
+        "therapist_prev_utt": "Yeah, yeah, I understand. So there are lots of places around that have it. Your local senior center would have it. And what I recommend is that you start by doing it in a chair. Just sitting in the chair.",
+        "client_utt": "I could?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "You could. You can talk to the instructor and that way you won't fall, you'll feel confident and you'll start to learn some of the moves. And then gradually over time, as you get a little bit better at doing the moves in a chair, you can start to stand up, use the chair to lean on, and then eventually, you'll be able to get to the point where you can do it on your own.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d77_u36": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I could?",
+        "therapist_prev_utt": "You could. You can talk to the instructor and that way you won't fall, you'll feel confident and you'll start to learn some of the moves. And then gradually over time, as you get a little bit better at doing the moves in a chair, you can start to stand up, use the chair to lean on, and then eventually, you'll be able to get to the point where you can do it on your own.",
+        "client_utt": "And you really recommend this?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "You know, it cuts your risk of falls in half. It also helps to reduce pain although that's not a short-term benefit, you do have to stick with it for at least three to six months to start have it help reduce your pain. But it does have a number of things that I think would get you to your goals of being home and able to play with your dog and doing your own cooking and things like that.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d77_u38": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "And you really recommend this?",
+        "therapist_prev_utt": "You know, it cuts your risk of falls in half. It also helps to reduce pain although that's not a short-term benefit, you do have to stick with it for at least three to six months to start have it help reduce your pain. But it does have a number of things that I think would get you to your goals of being home and able to play with your dog and doing your own cooking and things like that.",
+        "client_utt": "You do Tai Chi?",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "I do Tai Chi. I do it three days a week and it's really helped my balance as well.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d77_u40": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "You do Tai Chi?",
+        "therapist_prev_utt": "I do Tai Chi. I do it three days a week and it's really helped my balance as well.",
+        "client_utt": "Oh, okay. Well, yeah. Um, listen, anything that's going to get me home and if you do it and you recommend it, I'll try it.",
+        "client_mov": "change-medium",
+        "therapist_utt": "All right. Well, I'm delighted. It's a pleasure to see you again. I hope your rehab continues to go well and we can talk some more about this at our next visit.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    },
+    "d93_u0": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "",
+        "client_utt": "",
+        "client_mov": "",
+        "therapist_utt": "So there are a lot of different directions that we could take. Um, you've mentioned wanting to make changes in your physical activity. You've mentioned wanting to make changes in your eating habits and also just wanting more body confidence. Um, what- what's on your mind is as far as a- as a change topic for the rest of our session today?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "persuade": "So there are a lot of different directions that we could take.",
+            "reflection-complex": "Um, you've mentioned wanting to make changes in your physical activity. You've mentioned wanting to make changes in your eating habits and also just wanting more body confidence.",
+            "question-open-evoking": "Um, what- what's on your mind is as far as a- as a change topic for the rest of our session today?"
+        }
+    },
+    "d93_u2": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "So there are a lot of different directions that we could take. Um, you've mentioned wanting to make changes in your physical activity. You've mentioned wanting to make changes in your eating habits and also just wanting more body confidence. Um, what- what's on your mind is as far as a- as a change topic for the rest of our session today?",
+        "client_utt": "I think the activity piece is the kind of low-hanging fruit that I see. Um, I feel like it's gonna be harder for me to change some of my nutrition habits right out the gate, but if I can get into maybe an activity routine, that that could be good to help maybe some of the other changes happen later.",
+        "client_mov": "change-low",
+        "therapist_utt": "Yeah. Okay. So physical activity is feeling like the easiest change to look at first.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d93_u4": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I think the activity piece is the kind of low-hanging fruit that I see. Um, I feel like it's gonna be harder for me to change some of my nutrition habits right out the gate, but if I can get into maybe an activity routine, that that could be good to help maybe some of the other changes happen later.",
+        "therapist_prev_utt": "Yeah. Okay. So physical activity is feeling like the easiest change to look at first.",
+        "client_utt": "Yeah, I think so.",
+        "client_mov": "neutral-low",
+        "therapist_utt": "Great. So tell me a little bit more about your motivators for getting started in being more physically active. I know you shared energy levels and I know you've shared, um, that you'd like to see a boost in your mood and feeling less irritable and stressed. Any other benefits that really make you wanna make this change right now?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "reflection-complex": "I know you shared energy levels and I know you've shared, um, that you'd like to see a boost in your mood and feeling less irritable and stressed.",
+            "question-open-evoking": "So tell me a little bit more about your motivators for getting started in being more physically active. Any other benefits that really make you wanna make this change right now?"
+        }
+    },
+    "d93_u6": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, I think so.",
+        "therapist_prev_utt": "Great. So tell me a little bit more about your motivators for getting started in being more physically active. I know you shared energy levels and I know you've shared, um, that you'd like to see a boost in your mood and feeling less irritable and stressed. Any other benefits that really make you wanna make this change right now?",
+        "client_utt": "Yeah, I think just to feeling like physically stronger, um, like physically more able. Uh, last night I like struggled with the jar of salsa, like opening it. So I think that just stuff like that, um, you know, would be in addition to mood and being more productive and energy and all that stuff. Um, yeah, that that would be a definite end goal for me too. And then really to like, I think if I am more active, I think my body image or my body confidence would improve also.",
+        "client_mov": "change-low",
+        "therapist_utt": "Yeah. So you're wanting to feel stronger so that you can open jars and other things and- and also just have a better sense of confidence. Great. So on a scale from zero to 10, zero being not at all ready to make a change in the area of physical activity, and 10 being let's- let's do this. I'm excited. I'm ready. Um, where- where do you fall on that scale?",
+        "main_behaviour": "question-ruler",
+        "sub_behaviours": {
+            "reflection-simple": "Yeah. So you're wanting to feel stronger so that you can open jars and other things and- and also just have a better sense of confidence.",
+            "question-ruler": "Great. So on a scale from zero to 10, zero being not at all ready to make a change in the area of physical activity, and 10 being let's- let's do this. I'm excited. I'm ready. Um, where- where do you fall on that scale?"
+        }
+    },
+    "d93_u10": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, I think just to feeling like physically stronger, um, like physically more able. Uh, last night I like struggled with the jar of salsa, like opening it. So I think that just stuff like that, um, you know, would be in addition to mood and being more productive and energy and all that stuff. Um, yeah, that that would be a definite end goal for me too. And then really to like, I think if I am more active, I think my body image or my body confidence would improve also.",
+        "therapist_prev_utt": "Yeah. So you're wanting to feel stronger so that you can open jars and other things and- and also just have a better sense of confidence. Great. So on a scale from zero to 10, zero being not at all ready to make a change in the area of physical activity, and 10 being let's- let's do this. I'm excited. I'm ready. Um, where- where do you fall on that scale?",
+        "client_utt": "Hmm, I'd say I'm about an eight.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Okay. So you're feeling fairly motivated. Uh, why didn't you pick a six?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "reflection-simple": "Okay. So you're feeling fairly motivated.",
+            "question-open-evoking": "Uh, why didn't you pick a six?"
+        }
+    },
+    "d93_u14": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Hmm, I'd say I'm about an eight.",
+        "therapist_prev_utt": "Okay. So you're feeling fairly motivated. Uh, why didn't you pick a six?",
+        "client_utt": "Well, like I said, I just, I've identified like a lot of things that I think would be good. Um, if I were to be more active and I definitely wanna have that improved mood and energy, um, and feel better about myself. Um, so yeah, all of those things I think are what's really driving that- that rating.",
+        "client_mov": "change-high",
+        "therapist_utt": "Okay. You're noticing there- there are too many great benefits to being physically active and, um, today you've mentioned energy, mood, strength and body confidence. Am I missing anything else?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d93_u18": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Well, like I said, I just, I've identified like a lot of things that I think would be good. Um, if I were to be more active and I definitely wanna have that improved mood and energy, um, and feel better about myself. Um, so yeah, all of those things I think are what's really driving that- that rating.",
+        "therapist_prev_utt": "Okay. You're noticing there- there are too many great benefits to being physically active and, um, today you've mentioned energy, mood, strength and body confidence. Am I missing anything else?",
+        "client_utt": "I don't think so.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Okay. Those are the big ones for you.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d93_u20": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I don't think so.",
+        "therapist_prev_utt": "Okay. Those are the big ones for you.",
+        "client_utt": "Yeah.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "Fantastic. Well, um, now we can start looking at it if you're interested in how that might look and what activities you might end up, um, choosing.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d105_u0": {
+        "topic": "weight loss",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "",
+        "client_utt": "",
+        "client_mov": "",
+        "therapist_utt": ". So, um, tell me about the exercise.",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d105_u2": {
+        "topic": "weight loss",
+        "client_prev_utt": "",
+        "therapist_prev_utt": ". So, um, tell me about the exercise.",
+        "client_utt": "Well, um, since we spoke last, I've been to the gym a couple of times.",
+        "client_mov": "change-low",
+        "therapist_utt": "You have?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d105_u4": {
+        "topic": "weight loss",
+        "client_prev_utt": "Well, um, since we spoke last, I've been to the gym a couple of times.",
+        "therapist_prev_utt": "You have?",
+        "client_utt": "I have.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "That's fantastic.",
+        "main_behaviour": "affirm",
+        "sub_behaviours": {
+            "affirm": ""
+        }
+    },
+    "d105_u6": {
+        "topic": "weight loss",
+        "client_prev_utt": "I have.",
+        "therapist_prev_utt": "That's fantastic.",
+        "client_utt": "Yeah, and actually, my pants feel a little better too. I'm very pleased with it.",
+        "client_mov": "change-high",
+        "therapist_utt": "So, what else have you noticed other than your-your pants are fitting better?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d105_u10": {
+        "topic": "weight loss",
+        "client_prev_utt": "Yeah, and actually, my pants feel a little better too. I'm very pleased with it.",
+        "therapist_prev_utt": "So, what else have you noticed other than your-your pants are fitting better?",
+        "client_utt": "Um, I do feel better. My back-",
+        "client_mov": "change-high",
+        "therapist_utt": "Your-- my what?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d105_u14": {
+        "topic": "weight loss",
+        "client_prev_utt": "Um, I do feel better. My back-",
+        "therapist_prev_utt": "Your-- my what?",
+        "client_utt": "Well, my back doesn't hurt nearly so much. And, um, but it seems like it's, um-- but it's still hard. I'd like to go more often or I-I guess that I'm-- I just need to be a little more patient with myself because it's, um, I'm not, uh, I'm not-- I wanna be able to like spend more time at the gym but right now, it's um, not, um-- Well, I guess I need to build up to it.",
+        "client_mov": "change-low",
+        "therapist_utt": "Mm-hmm. So and what would you-- What would- What would help you get to building up to it? Spending more time there.",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d105_u22": {
+        "topic": "weight loss",
+        "client_prev_utt": "Well, my back doesn't hurt nearly so much. And, um, but it seems like it's, um-- but it's still hard. I'd like to go more often or I-I guess that I'm-- I just need to be a little more patient with myself because it's, um, I'm not, uh, I'm not-- I wanna be able to like spend more time at the gym but right now, it's um, not, um-- Well, I guess I need to build up to it.",
+        "therapist_prev_utt": "Mm-hmm. So and what would you-- What would- What would help you get to building up to it? Spending more time there.",
+        "client_utt": "Um, well, I guess just sticking with it and not getting, um, sidetracked. Like last week, I-I didn't get there at all until like Thursday during the week,so it was- it was a frustrating week like for the gym that way. I was kinda busy with some other things, but, um-",
+        "client_mov": "neutral-low",
+        "therapist_utt": "Mm-hmm. But you made it-- You made it one day instead of zero days.",
+        "main_behaviour": "affirm",
+        "sub_behaviours": {
+            "affirm": ""
+        }
+    },
+    "d105_u26": {
+        "topic": "weight loss",
+        "client_prev_utt": "Um, well, I guess just sticking with it and not getting, um, sidetracked. Like last week, I-I didn't get there at all until like Thursday during the week,so it was- it was a frustrating week like for the gym that way. I was kinda busy with some other things, but, um-",
+        "therapist_prev_utt": "Mm-hmm. But you made it-- You made it one day instead of zero days.",
+        "client_utt": "Yeah, and actually, I made it again on Saturday too. So.",
+        "client_mov": "change-high",
+        "therapist_utt": "That's fantastic. Even with this, you know, pretty horrendous schedule going on.",
+        "main_behaviour": "affirm",
+        "sub_behaviours": {
+            "affirm": ""
+        }
+    },
+    "d105_u30": {
+        "topic": "weight loss",
+        "client_prev_utt": "Yeah, and actually, I made it again on Saturday too. So.",
+        "therapist_prev_utt": "That's fantastic. Even with this, you know, pretty horrendous schedule going on.",
+        "client_utt": "Yeah. It's been a little-little hectic, you know. And, uh-- But, I-I don't like it too much because there's all these younger guys that can lift a lot more weight than me or they can stay on the treadmill longer and it-it-it's a little discouraging, you know. 'Cause I don't know if you've noticed, I'm not buff and they are. And it's-it's a little discouraging to think how much work it's gonna take to get, you know, kinda back towards that.",
+        "client_mov": "sustain-low",
+        "therapist_utt": "So you-you'd like to get buffed?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-closed-focusing": ""
+        }
+    },
+    "d105_u32": {
+        "topic": "weight loss",
+        "client_prev_utt": "Yeah. It's been a little-little hectic, you know. And, uh-- But, I-I don't like it too much because there's all these younger guys that can lift a lot more weight than me or they can stay on the treadmill longer and it-it-it's a little discouraging, you know. 'Cause I don't know if you've noticed, I'm not buff and they are. And it's-it's a little discouraging to think how much work it's gonna take to get, you know, kinda back towards that.",
+        "therapist_prev_utt": "So you-you'd like to get buffed?",
+        "client_utt": "No, but, um, when-when I'm not at the gym, and I am my normal rational self, I realize that I'm, you know, way, way past the age of where I would really even want to do that, let alone want to spend the time it takes. But then while I'm at the gym, and I see the buff young guys, you know, lifting a lot of weight and all that stuff, then you know, the-- I don't know, the urge to be buff comes up in me.",
+        "client_mov": "change-low",
+        "therapist_utt": "So, but for right now, it sounds like the-- just having the pants fit better sounds really, you know, like it's making you feel good about yourself and",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d105_u36": {
+        "topic": "weight loss",
+        "client_prev_utt": "No, but, um, when-when I'm not at the gym, and I am my normal rational self, I realize that I'm, you know, way, way past the age of where I would really even want to do that, let alone want to spend the time it takes. But then while I'm at the gym, and I see the buff young guys, you know, lifting a lot of weight and all that stuff, then you know, the-- I don't know, the urge to be buff comes up in me.",
+        "therapist_prev_utt": "So, but for right now, it sounds like the-- just having the pants fit better sounds really, you know, like it's making you feel good about yourself and",
+        "client_utt": "It is.",
+        "client_mov": "change-medium",
+        "therapist_utt": "What other positive things have you noticed about the exercise?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d105_u38": {
+        "topic": "weight loss",
+        "client_prev_utt": "It is.",
+        "therapist_prev_utt": "What other positive things have you noticed about the exercise?",
+        "client_utt": "Well, I noticed-- Well, I-I still need to work on my diet a lot. I haven't-- I-I'd like to say that by working out at the gym, I have, uh, I've -I've modified my diet, but I haven't very much. I've gotten a little bit better with that, but I'd like to do a lot more.",
+        "client_mov": "change-low",
+        "therapist_utt": "In what way have you gotten a little bit better?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d105_u40": {
+        "topic": "weight loss",
+        "client_prev_utt": "Well, I noticed-- Well, I-I still need to work on my diet a lot. I haven't-- I-I'd like to say that by working out at the gym, I have, uh, I've -I've modified my diet, but I haven't very much. I've gotten a little bit better with that, but I'd like to do a lot more.",
+        "therapist_prev_utt": "In what way have you gotten a little bit better?",
+        "client_utt": "Um, a little bit less junk food. Um, like at times, when I'm like I feel like, \"Oh, I think I'll just go have a candy bar,\" or some worthless thing like that I'll actually have second thoughts before I do it.",
+        "client_mov": "change-low",
+        "therapist_utt": "So you're at the second thought part. And what do you think would-- might take you, uh, over to actually doing it if you wanted to?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d105_u44": {
+        "topic": "weight loss",
+        "client_prev_utt": "Um, a little bit less junk food. Um, like at times, when I'm like I feel like, \"Oh, I think I'll just go have a candy bar,\" or some worthless thing like that I'll actually have second thoughts before I do it.",
+        "therapist_prev_utt": "So you're at the second thought part. And what do you think would-- might take you, uh, over to actually doing it if you wanted to?",
+        "client_utt": "Well, I think, uh, when I really start seeing some results at the gym, it's kinda, uh, I think the way it works in my mind is if I've worked out really hard and I've- and I've-- say I've lost a pound that week you know, and then as I'm looking at that double or triple fudge four-decker of ice cream Sunday thing, you know, that somebody is eating, I would say, \"Wow, that would be about two hours on the treadmill.\" Then-then that would be probably-- the-- that would keep me from actually ordering one of those.",
+        "client_mov": "change-medium",
+        "therapist_utt": "Oh, okay. The payoff just wouldn't be worth that two hours of treadmill versus that double fudgy browny thingy.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-complex": ""
+        }
+    },
+    "d105_u46": {
+        "topic": "weight loss",
+        "client_prev_utt": "Well, I think, uh, when I really start seeing some results at the gym, it's kinda, uh, I think the way it works in my mind is if I've worked out really hard and I've- and I've-- say I've lost a pound that week you know, and then as I'm looking at that double or triple fudge four-decker of ice cream Sunday thing, you know, that somebody is eating, I would say, \"Wow, that would be about two hours on the treadmill.\" Then-then that would be probably-- the-- that would keep me from actually ordering one of those.",
+        "therapist_prev_utt": "Oh, okay. The payoff just wouldn't be worth that two hours of treadmill versus that double fudgy browny thingy.",
+        "client_utt": "Right, decadent-- Why do they put the word decadent in food?",
+        "client_mov": "change-medium",
+        "therapist_utt": "'Cause it is decadent, it's lovely.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "give-information": ""
+        }
+    },
+    "d124_u0": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "",
+        "client_utt": "",
+        "client_mov": "",
+        "therapist_utt": "Okay. So what ideas do you have, Natalie, for, um, getting started in adding more physical activity?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d124_u3": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "",
+        "therapist_prev_utt": "Okay. So what ideas do you have, Natalie for, um, getting started in adding more physical activity?",
+        "client_utt": "So, um, I do think that that would be an option. Um, I did enjoy doing yoga in the past. I, um, I don't care for swimming, uh, because it requires a lot of extra prep time, and like, I don't- chlorine in my hair just doesn't really go very well usually. Um, but I really like walking, um, weightlifting, running is okay. Um, that was more at my, like, peak activity level, so I don't think I could start out running now, but I'd like to work up to it.",
+        "client_mov": "change-low",
+        "therapist_utt": "Great. It sounds like there are a lot of activities that you do like and I'm hearing a theme of climate control, being important to you and you've already been researching gyms. Tell me more about that.",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "reflection-simple": "Great. It sounds like there are a lot of activities that you do like and I'm hearing a theme of climate control, being important to you and you've already been researching gyms.",
+            "question-open-focusing": "Tell me more about that."
+        }
+    },
+    "d124_u9": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "So, um, I do think that that would be an option. Um, I did enjoy doing yoga in the past. I, um, I don't care for swimming, uh, because it requires a lot of extra prep time, and like, I don't- chlorine in my hair just doesn't really go very well usually. Um, but I really like walking, um, weightlifting, running is okay. Um, that was more at my, like, peak activity level, so I don't think I could start out running now, but I'd like to work up to it.",
+        "therapist_prev_utt": "Great. It sounds like there are a lot of activities that you do like and I'm hearing a theme of climate control, being important to you and you've already been researching gyms. Tell me more about that.",
+        "client_utt": "Yeah. So I just- on my phone, if I'm like in the grocery store, I'm kind of just looking through, and on Google, I'll type in like \"Gyms in the area\" and I'll look and see what's there. And, um, I don't ever want to sign up to learn more 'cause I feel like then they just keep emailing you forever. So at this point, I'm just trying to kind of figure out what I can, based on their website as far as cost goes, but that, um, month to month is kind of really important for me. Just like I mentioned, I don't want to be paying for six months or a year out.",
+        "client_mov": "sustain-medium",
+        "therapist_utt": "Right. Okay. So you're looking for some-something that's reasonably priced and that you don't have to sign a contract and you're right. It's hard to tell what the cost is just from looking on the website. And I completely agree about wanting to avoid the sales pitch um, element of it. What seems like a logical next step based on-- You've kind of already gotten the ball rolling. What feels like a logical next step?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "reflection-simple": "Right. Okay. So you're looking for some-something that's reasonably priced and that you don't have to sign a contract and you're right. It's hard to tell what the cost is just from looking on the website. And I completely agree about wanting to avoid the sales pitch um, element of it. ",
+            "question-open-evoking": "What seems like a logical next step based on-- You've kind of already gotten the ball rolling. What feels like a logical next step?"
+        }
+    },
+    "d124_u17": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah. So I just- on my phone, if I'm like in the grocery store, I'm kind of just looking through, and on Google, I'll type in like \"Gyms in the area\" and I'll look and see what's there. And, um, I don't ever want to sign up to learn more 'cause I feel like then they just keep emailing you forever. So at this point, I'm just trying to kind of figure out what I can, based on their website as far as cost goes, but that, um, month to month is kind of really important for me. Just like I mentioned, I don't want to be paying for six months or a year out.",
+        "therapist_prev_utt": "Right. Okay. So you're looking for some-something that's reasonably priced and that you don't have to sign a contract and you're right. It's hard to tell what the cost is just from looking on the website. And I completely agree about wanting to avoid the sales pitch um, element of it. What seems like a logical next step based on-- You've kind of already gotten the ball rolling. What feels like a logical next step?",
+        "client_utt": "Yeah, I think, um, you know, I've kind of looked around and seen what I- what's available to me. Um, I think the next step would be to maybe go visit one place and just see, like, what equipment they have. Um, I also think too, I'd like to be outside when the weather permits. I like to walk. I just- I don't like rain or snow or cold, like, um, I don't like doing things when I'm just not in a climate that's enjoyable. So if there is, uh, decent weather, I think going outside and, you know, getting some steps in or just walking would be a good first start for me.",
+        "client_mov": "change-low",
+        "therapist_utt": "Okay. So maybe visiting a gym and then also choosing a non-gym activity to sort of get started when the weather's permitting.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d124_u19": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, I think, um, you know, I've kind of looked around and seen what I- what's available to me. Um, I think the next step would be to maybe go visit one place and just see, like, what equipment they have. Um, I also think too, I'd like to be outside when the weather permits. I like to walk. I just- I don't like rain or snow or cold, like, um, I don't like doing things when I'm just not in a climate that's enjoyable. So if there is, uh, decent weather, I think going outside and, you know, getting some steps in or just walking would be a good first start for me.",
+        "therapist_prev_utt": "Okay. So maybe visiting a gym and then also choosing a non-gym activity to sort of get started when the weather's permitting.",
+        "client_utt": "Right. Yeah.",
+        "client_mov": "change-medium",
+        "therapist_utt": "I have one, um, idea that is jumping into my mind as you're talking. Is it okay if I share that?",
+        "main_behaviour": "seek-collaboration",
+        "sub_behaviours": {
+            "seek-collaboration": ""
+        }
+    },
+    "d124_u21": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Right. Yeah.",
+        "therapist_prev_utt": "I have one, um, idea that is jumping into my mind as you're talking. Is it okay if I share that?",
+        "client_utt": "Sure. Yeah.",
+        "client_mov": "neutral-high",
+        "therapist_utt": "I'm wondering about the price of the YMCA compared to other gyms. Uh, is that one that you have an interest in or have looked at already?",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d124_u23": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Sure. Yeah.",
+        "therapist_prev_utt": "I'm wondering about the price of the YMCA compared to other gyms. Uh, is that one that you have an interest in or have looked at already?",
+        "client_utt": "I don't know that I've looked closely at that. I don't know much about their pricing or anything like that.",
+        "client_mov": "neutral-low",
+        "therapist_utt": "Yes. And honestly, I don't either. I just suspect that it might be slightly cheaper than some of the more private gyms.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d124_u25": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I don't know that I've looked closely at that. I don't know much about their pricing or anything like that.",
+        "therapist_prev_utt": "Yes. And honestly, I don't either. I just suspect that it might be slightly cheaper than some of the more private gyms.",
+        "client_utt": "I agree.",
+        "client_mov": "neutral-medium",
+        "therapist_utt": "So something to look into if you're interested.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d124_u27": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I agree.",
+        "therapist_prev_utt": "So something to look into if you're interested.",
+        "client_utt": "Yeah, definitely.",
+        "client_mov": "change-high",
+        "therapist_utt": "And they-- I would suspect they'd be less sales pitch-oriented than a private gym. So it might be a safe place to explore first and to build some confidence in that conversation.",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "persuade": ""
+        }
+    },
+    "d124_u31": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, definitely.",
+        "therapist_prev_utt": "And they-- I would suspect they'd be less sales pitch-oriented than a private gym. So it might be a safe place to explore first and to build some confidence in that conversation.",
+        "client_utt": "Yeah, no, yeah. That's a good-good recommendation. I'll definitely check it out.",
+        "client_mov": "change-high",
+        "therapist_utt": "Okay. Great. So, um, in addition to exploring the gym possibility, what sounds like a logical next step for a non-gym activity to get started, some small goal that feels doable, um, and you have control over because it doesn't require the perfect weather or the perfect gym?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-open-evoking": ""
+        }
+    },
+    "d124_u35": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, no, yeah. That's a good-good recommendation. I'll definitely check it out.",
+        "therapist_prev_utt": "Okay. Great. So, um, in addition to exploring the gym possibility, what sounds like a logical next step for a non-gym activity to get started, some small goal that feels doable, um, and you have control over because it doesn't require the perfect weather or the perfect gym?",
+        "client_utt": "Yeah. I think, you know, finding ways to walk more would be good, um, even if that is inside somewhere. Uh, I've done the like trick of parking in the back of the parking lot and walking up to the store. Um, and like I've also been in Target and taken an extra lap, which is kind of dangerous too 'cause you might spend more money. Um, but I- I think if the weather's nice too, I would like to get outside and try to find a place to walk. Um, and two, I really did enjoy yoga, it's- it was good for my, like, flexibility and posture, and so I would be interested in maybe seeing too what classes are available in the area. I haven't looked at that at all.",
+        "client_mov": "change-low",
+        "therapist_utt": "Okay. So exploring some yoga classes. Is-is doing yoga in your living room appealing to you at all?",
+        "main_behaviour": "question-evoke",
+        "sub_behaviours": {
+            "question-closed-evoking": ""
+        }
+    },
+    "d124_u37": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah. I think, you know, finding ways to walk more would be good, um, even if that is inside somewhere. Uh, I've done the like trick of parking in the back of the parking lot and walking up to the store. Um, and like I've also been in Target and taken an extra lap, which is kind of dangerous too 'cause you might spend more money. Um, but I- I think if the weather's nice too, I would like to get outside and try to find a place to walk. Um, and two, I really did enjoy yoga, it's- it was good for my, like, flexibility and posture, and so I would be interested in maybe seeing too what classes are available in the area. I haven't looked at that at all.",
+        "therapist_prev_utt": "Okay. So exploring some yoga classes. Is-is doing yoga in your living room appealing to you at all?",
+        "client_utt": "Home workouts have never really worked for me in the past just because there's so many distractions, and I can, like, set the mat out there and everything and get everything ready, like bottled water, everything's good to go. And then it just sits there and I don't actually do it, whereas if I go somewhere else, I'm already there. And so I'm doing it.",
+        "client_mov": "change-high",
+        "therapist_utt": "That's great. It's important to know this about yourself, what works, and what doesn't work, and what you feel motivated to do. So, it sounds like we sort of have two small goals right now. One is to maybe visit the YMCA and-and find out how much that costs and the other goal being maybe just a walk, um, one time between now and the next time I see you. Um, and I say one time, you can, of course, go more than that, but just with snow in the forecast, it might be reasonable to start with a small goal like that and go for one nice day between now and a few weeks from now when I get to see you again. How do those two goals sound?",
+        "main_behaviour": "input",
+        "sub_behaviours": {
+            "affirm": "That's great. It's important to know this about yourself, what works, and what doesn't work, and what you feel motivated to do.",
+            "persuade": "So, it sounds like we sort of have two small goals right now. One is to maybe visit the YMCA and-and find out how much that costs and the other goal being maybe just a walk, um, one time between now and the next time I see you. Um, and I say one time, you can, of course, go more than that, but just with snow in the forecast, it might be reasonable to start with a small goal like that and go for one nice day between now and a few weeks from now when I get to see you again. How do those two goals sound?"
+        }
+    },
+    "d124_u41": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Home workouts have never really worked for me in the past just because there's so many distractions, and I can, like, set the mat out there and everything and get everything ready, like bottled water, everything's good to go. And then it just sits there and I don't actually do it, whereas if I go somewhere else, I'm already there. And so I'm doing it.",
+        "therapist_prev_utt": "That's great. It's important to know this about yourself, what works, and what doesn't work, and what you feel motivated to do. So, it sounds like we sort of have two small goals right now. One is to maybe visit the YMCA and-and find out how much that costs and the other goal being maybe just a walk, um, one time between now and the next time I see you. Um, and I say one time, you can, of course, go more than that, but just with snow in the forecast, it might be reasonable to start with a small goal like that and go for one nice day between now and a few weeks from now when I get to see you again. How do those two goals sound?",
+        "client_utt": "No, that sounds good. I-I definitely think, um, I'll walk probably more than one time in the next couple of weeks, but, um, I also have this app on my phone that tracks my steps, uh, and it was like built into the phone. It's nothing I downloaded or anything. So I can also use that to kind of see if I'm getting more active 'cause right now I think I'm averaging like 2,000 steps a day, so it's like a lot of sitting.",
+        "client_mov": "change-low",
+        "therapist_utt": "Okay. So you'd like to kind of get motivated with- with the use of an app and that might help you get started.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d124_u43": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "No, that sounds good. I-I definitely think, um, I'll walk probably more than one time in the next couple of weeks, but, um, I also have this app on my phone that tracks my steps, uh, and it was like built into the phone. It's nothing I downloaded or anything. So I can also use that to kind of see if I'm getting more active 'cause right now I think I'm averaging like 2,000 steps a day, so it's like a lot of sitting.",
+        "therapist_prev_utt": "Okay. So you'd like to kind of get motivated with- with the use of an app and that might help you get started.",
+        "client_utt": "Yeah, I think so.",
+        "client_mov": "change-low",
+        "therapist_utt": "Okay, fantastic. So, on a scale from 0 to 10, 10 being really confident, I can research a gym and go for one walk, and zero being not at all confident, how are you feeling about these two small goals?",
+        "main_behaviour": "question-ruler",
+        "sub_behaviours": {
+            "question-ruler": ""
+        }
+    },
+    "d124_u47": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, I think so.",
+        "therapist_prev_utt": "Okay, fantastic. So, on a scale from 0 to 10, 10 being really confident, I can research a gym and go for one walk, and zero being not at all confident, how are you feeling about these two small goals?",
+        "client_utt": "I think I'm at a 10. Yeah. I think that, like I said, I think I'll find ways to walk. Um, and I'm at a point now where I've done as much research, I've found out as much information, I think, as I can on the gyms that are local here. Um, but I will check out the- the Y to see if it maybe is a bit cheaper and also a bit more, like, welcoming and doesn't require a- like, a six-month contract or anything like that. So I feel like those would both be good starts. Yeah.",
+        "client_mov": "change-low",
+        "therapist_utt": "Wonderful. Are there any other barriers that would be helpful to sort of talk through?",
+        "main_behaviour": "question-focusing",
+        "sub_behaviours": {
+            "question-open-focusing": ""
+        }
+    },
+    "d124_u49": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "I think I'm at a 10. Yeah. I think that, like I said, I think I'll find ways to walk. Um, and I'm at a point now where I've done as much research, I've found out as much information, I think, as I can on the gyms that are local here. Um, but I will check out the- the Y to see if it maybe is a bit cheaper and also a bit more, like, welcoming and doesn't require a- like, a six-month contract or anything like that. So I feel like those would both be good starts. Yeah.",
+        "therapist_prev_utt": "Wonderful. Are there any other barriers that would be helpful to sort of talk through?",
+        "client_utt": "Um, well, if I'm trying to walk outside, the weather's always going to be one, but I, again, like I said, if I'm checking, uh, using the app on my phone to see my step count, I can maybe make more of a priority to walk indoors, um, and just find places inside that I could walk, even if it's just around the hallway or whatever that looks like-",
+        "client_mov": "change-low",
+        "therapist_utt": "Okay. So being creative with your indoor space is a-is a solution you've come up with yourself for there just aren't any good days, nice days outside.",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "reflection-simple": ""
+        }
+    },
+    "d124_u51": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Um, well, if I'm trying to walk outside, the weather's always going to be one, but I, again, like I said, if I'm checking, uh, using the app on my phone to see my step count, I can maybe make more of a priority to walk indoors, um, and just find places inside that I could walk, even if it's just around the hallway or whatever that looks like-",
+        "therapist_prev_utt": "Okay. So being creative with your indoor space is a-is a solution you've come up with yourself for there just aren't any good days, nice days outside.",
+        "client_utt": "Yeah, but hopefully there's one. So, yeah.",
+        "client_mov": "change-low",
+        "therapist_utt": "Great. Well, you came in today feeling pretty discouraged about your energy levels and your mood and, um, feeling lousy about your body in general. And, uh, today we've talked about a small-small step to get started and you're hoping to experience some mood boost and some energy as you get rolling here. Um, how are you feeling about today's session?",
+        "main_behaviour": "reflection",
+        "sub_behaviours": {
+            "summarise": ""
+        }
+    },
+    "d124_u53": {
+        "topic": "more exercise / increasing activity",
+        "client_prev_utt": "Yeah, but hopefully there's one. So, yeah.",
+        "therapist_prev_utt": "Great. Well, you came in today feeling pretty discouraged about your energy levels and your mood and, um, feeling lousy about your body in general. And, uh, today we've talked about a small-small step to get started and you're hoping to experience some mood boost and some energy as you get rolling here. Um, how are you feeling about today's session?",
+        "client_utt": "No, I feel really good. I think even coming in, I didn't have a like step-by-step idea of what I wanted to do next, but no, this has been helpful to know what those small steps are, and like you said, hopefully, I do start feeling better. Yeah.",
+        "client_mov": "change-high",
+        "therapist_utt": "Great. Well, I look forward to checking in with you, and thanks so much for coming in.",
+        "main_behaviour": "other",
+        "sub_behaviours": {}
+    }
+}

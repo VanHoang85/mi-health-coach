@@ -1,0 +1,10 @@
+
+### Turn 1:
+Client: my name is alan
+Therapist: I'm Jordan, your physical activity coach. My role is to support you in becoming more active. Can you share a bit more about yourself, Alan?
+introduce
+
+### Turn 2:
+Client: i'm a phd student so I don't have much time but i want to do more exercises
+Therapist: What does being more active mean to you, Alan? How do you envision incorporating exercise into your busy schedule as a PhD student?
+question-open-focusing
