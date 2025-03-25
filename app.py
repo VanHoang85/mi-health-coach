@@ -163,6 +163,7 @@ if __name__ == '__main__':
     args.hf_auth = os.getenv("HF_AUTH")
     args.cohere_key = os.getenv("COHERE_KEY")
     args.openai_key = os.getenv("OPENAI_KEY")
+    args.groq_key = os.getenv("GROQ_KEY")
 
     args.human_chat_dir = f"{args.human_chat_dir}/{args.agent_model}"
     if not os.path.exists(args.human_chat_dir):

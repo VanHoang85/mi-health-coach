@@ -60,12 +60,6 @@ class Agent:
     def load_api_key(self):
         os.environ["OPENAI_API_KEY"] = self.args.openai_key
         os.environ['GROQ_API_KEY'] = self.args.groq_key
-        if "mistral" in self.model_type:
-            os.environ['MISTRAL_API_KEY'] = self.args.mistral_key
-        elif "claude" in self.model_type:
-            os.environ["ANTHROPIC_API_KEY"] = self.args.anthropic_key
-        elif "gemini" in self.model_type:
-            os.environ["GEMINI_API_KEY"] = self.args.gemini_key
 
     def update_system_prompt(self, system_prompt: str):
         self.system_prompt = system_prompt
