@@ -1,5 +1,5 @@
 huggingface_hub==0.29.3
-gradio~=5.22.0
+gradio~=5.23.0
 huggingface-hub~=0.29.3
 litellm~=1.63.14
 llama-index-core~=0.12.25
