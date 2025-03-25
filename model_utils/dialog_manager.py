@@ -22,7 +22,6 @@ from data_utils.chat_prompts import (
 class MIDialogManager:
     def __init__(self, args):
         self.args = args
-        self.summarizer = Agent(args, model_type=args.summarizer_model)
         self.embedder = create_embedder(args.input_type, args.cohere_key, args.retrieval_model)
         self.dialog_retriever: VectorIndexRetriever = self.load_vector_db(args, self.embedder)
 
@@ -145,8 +144,7 @@ class MIDialogManager:
                                        candidates=candidates,
                                        mov_lang_behaviour=mov_lang_behaviour,
                                        rank_type=self.args.rerank_type,
-                                       embedder=self.embedder,
-                                       summarizer=self.summarizer)
+                                       embedder=self.embedder)
 
         retrieved_info = []
         for candidate in candidates:
@@ -182,12 +180,7 @@ class MIDialogManager:
                      mov_lang_behaviour: str,
                      candidates: Optional[list[NodeWithScore]],
                      rank_type: str,
-                     embedder,
-                     summarizer: Agent) -> Optional[list[NodeWithScore]]:
-
-        # rerank by comparing summary embeddings
-        if rank_type in ["all", "summary"]:
-            candidates = self.rank_by_summary(candidates, dialogue, embedder, summarizer)
+                     embedder) -> Optional[list[NodeWithScore]]:
 
         # rerank by mov behaviour
         if rank_type in ["all", "mov_behaviour"]:
@@ -198,30 +191,6 @@ class MIDialogManager:
     @staticmethod
     def filter_repeat_strategies(prev_strategies: list) -> list:
         return list(set(prev_strategies).intersection(set(list(NOT_TO_REPEAT_STRATEGIES.keys()))))
-
-    @staticmethod
-    def rank_by_summary(candidates: Optional[list[NodeWithScore]],
-                        dialogue: str,
-                        embedder,
-                        summarizer: Agent) -> Optional[list[NodeWithScore]]:
-
-        embedding_scores, ranked_list = [], []
-
-        # dialogue_summary = summarizer.send_message_to_llm(get_summary_prompt(dialogue))
-        dialogue_summary = summarizer.send_message(prompt=get_summary_prompt(dialogue), task="summarise")
-        dialogue_embedding = embedder.get_text_embedding(dialogue_summary)
-
-        for candidate in candidates:
-            candidate_embedding = embedder.get_text_embedding(candidate.metadata["conv_summary"])
-            score = util.cos_sim(dialogue_embedding, candidate_embedding)
-            embedding_scores.append(float(score))
-
-        # get sorted list of index by ascending
-        sorted_indexes = np.argsort(embedding_scores)
-        for idx in sorted_indexes[::-1]:  # loop in reverse
-            ranked_list.append(candidates[idx])
-
-        return ranked_list
 
     @staticmethod
     def rank_by_mov_lang(candidates: Optional[list[NodeWithScore]],
