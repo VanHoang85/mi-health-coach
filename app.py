@@ -1,6 +1,8 @@
 import os
 import time
 import json
+
+import huggingface_hub
 import torch
 import argparse
 import gradio
@@ -177,10 +179,11 @@ if __name__ == '__main__':
         else f"{args.mov_lang_db_name}_{args.therapist_utt_setting}"
 
     # get keys
-    args.hf_auth = os.getenv("HF_AUTH")
     args.cohere_key = os.getenv("COHERE_KEY")
     args.openai_key = os.getenv("OPENAI_KEY")
     args.groq_key = os.getenv("GROQ_KEY")
+    args.hf_auth = os.getenv("HF_AUTH")
+    huggingface_hub.login(token=args.hf_auth)
 
     # set output folder path
     args.human_chat_dir = f"{args.human_chat_dir}/{args.agent_model}"
