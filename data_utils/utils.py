@@ -6,6 +6,7 @@ from collections import Counter
 def save_data(path_to_data_file: str, data: dict):
     with open(path_to_data_file, 'w', encoding='utf-8') as file:
         json.dump(data, file, indent=4)
+        file.write("\n")
 
 
 def load_data(path_to_data_file: str):
@@ -244,7 +245,7 @@ class Conversation:
         self.save_conv_as_text(dir_path, file_name)
 
     def get_latest_conv(self) -> dict:
-        return self.conv_history[-1]
+        return self.conv_history[-2]
 
     def save_conv_as_text(self, dir_path: str, file_name: str):
         dialogue = {}
