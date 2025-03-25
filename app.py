@@ -18,7 +18,7 @@ from model_utils.user_agent import UserAgent
 def save_conv_json(data_to_save: dict, filename: str) -> None:
     CHAT_FILE_PATH = OUTPUT_CHAT_DIR / f"{filename}.json"
     with scheduler.lock:
-        with CHAT_FILE_PATH.open("w") as file:
+        with CHAT_FILE_PATH.open("a") as file:
             json.dump(data_to_save, file, indent=4)
 
 
@@ -70,7 +70,7 @@ def interaction(user_message: str, history: list):
         #                                client_info=client_agent.get_client_info())
 
         # save conv
-        conv_to_save = conversation.get_latest_conv(client_info=client_agent.get_client_info())
+        conv_to_save = conversation.get_latest_conv()
         save_conv_json(data_to_save=conv_to_save, filename=f"{args.exp_mode}_{client_agent.user_id}")
 
     # Start conversing...
