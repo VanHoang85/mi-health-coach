@@ -1,14 +1,25 @@
 import os
 import time
+import json
 import torch
 import argparse
 import gradio
+
+from pathlib import Path
+from huggingface_hub import CommitScheduler
 
 from data_utils.utils import Conversation
 from model_utils.mov_detector import MovDetector
 from model_utils.dialog_manager import MIDialogManager
 from model_utils.coach_agent import CoachAgent
 from model_utils.user_agent import UserAgent
+
+
+def save_conv_json(data_to_save: dict, filename: str) -> None:
+    CHAT_FILE_PATH = OUTPUT_CHAT_DIR / f"{filename}.json"
+    with scheduler.lock:
+        with CHAT_FILE_PATH.open("w") as file:
+            json.dump(data_to_save, file, indent=4)
 
 
 def remove_stop_phases(message) -> str:
@@ -54,9 +65,13 @@ def interaction(user_message: str, history: list):
         except KeyError:
             pass
 
-        conversation.save_conv_to_file(dir_path=args.human_chat_dir,
-                                       file_name=f"{args.exp_mode}_{client_agent.user_id}",
-                                       client_info=client_agent.get_client_info())
+        # conversation.save_conv_to_file(dir_path=args.human_chat_dir,
+        #                                file_name=f"{args.exp_mode}_{client_agent.user_id}",
+        #                                client_info=client_agent.get_client_info())
+
+        # save conv
+        conv_to_save = conversation.get_latest_conv(client_info=client_agent.get_client_info())
+        save_conv_json(data_to_save=conv_to_save, filename=f"{args.exp_mode}_{client_agent.user_id}")
 
     # Start conversing...
     if conversation.is_terminated:
@@ -154,20 +169,30 @@ if __name__ == '__main__':
     parser.add_argument('--cpu_loading', action='store_true')
     args = parser.parse_args()
 
+    # set name for databases
     args.device = 'cuda' if torch.cuda.is_available() else 'cpu'
     args.strategy_db_name = f"{args.strategy_db_name}_{args.retrieval_model}"
     args.mov_lang_db_name = f"{args.mov_lang_db_name}_{args.retrieval_model}"
     args.mov_lang_db_name = f"{args.mov_lang_db_name}" if args.therapist_utt_setting == "default" \
         else f"{args.mov_lang_db_name}_{args.therapist_utt_setting}"
 
+    # get keys
     args.hf_auth = os.getenv("HF_AUTH")
     args.cohere_key = os.getenv("COHERE_KEY")
     args.openai_key = os.getenv("OPENAI_KEY")
     args.groq_key = os.getenv("GROQ_KEY")
 
+    # set output folder path
     args.human_chat_dir = f"{args.human_chat_dir}/{args.agent_model}"
-    if not os.path.exists(args.human_chat_dir):
-        os.makedirs(args.human_chat_dir)
+    OUTPUT_CHAT_DIR = Path(args.human_chat_dir)
+    OUTPUT_CHAT_DIR.mkdir(parents=True, exist_ok=True)
+
+    scheduler = CommitScheduler(
+        repo_id="ai-health-coach-chats",
+        repo_type="dataset",
+        folder_path=OUTPUT_CHAT_DIR,
+        path_in_repo="data"
+    )
 
     conversations: dict[str, Conversation] = {}
     clients: dict[str, UserAgent] = {}

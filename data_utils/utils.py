@@ -243,6 +243,18 @@ class Conversation:
         save_data(path_to_data_file=f"{dir_path}/{file_name}.json", data=data)
         self.save_conv_as_text(dir_path, file_name)
 
+    def get_latest_conv(self, client_info: dict) -> dict:
+        return {
+            "model_info": {
+                "agent_model": self.args.agent_model,
+                "retrieval_model": self.args.retrieval_model,
+                "mov_detector_model": self.args.mov_detector_model,
+                "rerank_type": self.args.rerank_type
+            },
+            "client_info": client_info,
+            "conversation_history": self.conv_history
+        }
+
     def save_conv_as_text(self, dir_path: str, file_name: str):
         dialogue = {}
         for utterance in self.conv_history:
