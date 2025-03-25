@@ -186,7 +186,7 @@ if __name__ == '__main__':
 
     demo = gradio.ChatInterface(interaction,
                                 chatbot=gradio.Chatbot(
-                                    # placeholder=welcome_message,
+                                    placeholder=welcome_message,
                                     type="messages",
                                     avatar_images=tuple((None, "./data/robot_avatar_head.png"))),
                                 stop_btn=False,
