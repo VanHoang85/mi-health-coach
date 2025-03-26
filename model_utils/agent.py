@@ -40,10 +40,21 @@ class Agent:
                                           top_p=self.args.top_p,
                                           # num_retries=self.args.num_retries,
                                           # stream_timeout=self.args.stream_timeout if "stream_timeout" in self.args else None,
-                                          # timeout=self.args.request_timeout if "request_timeout" in self.args else None,  # raise Timeout error if call takes longer than 10s
+                                          # request_timeout=self.args.request_timeout if "request_timeout" in self.args else None,  # raise Timeout error if call takes longer than 10s
                                           # fallbacks=self.args.fallback_models if "fallback_models" in self.args else None,
                                           stream=stream
                                           )  # may add fallback
+            if not stream:
+                response = response.choices[0].message.content
+                # if task == "strategy" and "Therapist:" in response and "Client:" in response:
+                #     print(response)
+                #     print("Retry generating...")
+                #
+                #     response = None
+                #     num_retry += 1
+                #     if num_retry >= 4:
+                #         sys.exit()
+                #     time.sleep(5)
         return response
 
     def load_api_key(self):
