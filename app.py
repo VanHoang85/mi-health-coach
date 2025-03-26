@@ -161,7 +161,7 @@ if __name__ == '__main__':
     parser.add_argument('--temperature', type=float, default=0.5)
     parser.add_argument('--top_p', type=float, default=0.9)
     parser.add_argument('--num_retries', type=int, default=2)
-    parser.add_argument('--request_timeout', type=int, default=60)  # in seconds
+    parser.add_argument('--request_timeout', type=int, default=180)  # in seconds
     parser.add_argument('--stream_timeout', type=int, default=5)
     parser.add_argument('--fallback_models', default=["gpt-4o-mini"])
     parser.add_argument('--do_sample', action='store_true')
