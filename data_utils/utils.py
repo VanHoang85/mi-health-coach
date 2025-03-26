@@ -245,7 +245,9 @@ class Conversation:
         self.save_conv_as_text(dir_path, file_name)
 
     def get_latest_conv(self) -> dict:
-        return self.conv_history[-2]
+        utts = self.conv_history[-2]
+        utts.update(self.conv_history[-1])
+        return utts
 
     def save_conv_as_text(self, dir_path: str, file_name: str):
         dialogue = {}
