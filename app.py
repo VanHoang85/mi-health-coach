@@ -67,11 +67,6 @@ def interaction(user_message: str, history: list):
         except KeyError:
             pass
 
-        # conversation.save_conv_to_file(dir_path=args.human_chat_dir,
-        #                                file_name=f"{args.exp_mode}_{client_agent.user_id}",
-        #                                client_info=client_agent.get_client_info())
-
-        # save conv
         conv_to_save = conversation.get_latest_conv()
         save_conv_json(data_to_save=conv_to_save, filename=f"{args.exp_mode}_{client_agent.user_id}")
 
@@ -161,7 +156,7 @@ if __name__ == '__main__':
     parser.add_argument('--temperature', type=float, default=0.5)
     parser.add_argument('--top_p', type=float, default=0.9)
     parser.add_argument('--num_retries', type=int, default=2)
-    parser.add_argument('--request_timeout', type=int, default=180)  # in seconds
+    parser.add_argument('--request_timeout', type=int, default=300)  # in seconds
     parser.add_argument('--stream_timeout', type=int, default=5)
     parser.add_argument('--fallback_models', default=["gpt-4o-mini"])
     parser.add_argument('--do_sample', action='store_true')
@@ -218,7 +213,7 @@ if __name__ == '__main__':
                                     type="messages",
                                     avatar_images=tuple((None, "./data/robot_avatar_head.png"))),
                                 stop_btn=False,
-                                # description="You will converse with a coaching chatbot on the topic of physical activity. The session will last for 15-25 turns. If you wish to end the chat at any time, just type \"bye\".",
+                                description="The session will last for 15-25 turns. If you wish to end the chat at any time, just type \"bye\".",
                                 title="Physical Activity CoachBot",
                                 type="messages",
                                 theme=gradio.themes.Citrus(text_size="lg"))
