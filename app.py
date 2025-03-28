@@ -213,7 +213,7 @@ if __name__ == '__main__':
                                     type="messages",
                                     avatar_images=tuple((None, "./data/robot_avatar_head.png"))),
                                 stop_btn=False,
-                                description="The session will last for 15-25 turns. If you wish to end the chat at any time, just type \"bye\".",
+                                description="The session will last for 22 turns maximum. If you want to end the chat earlier, just type \"bye\".",
                                 title="Physical Activity CoachBot",
                                 type="messages",
                                 theme=gradio.themes.Citrus(text_size="lg"))
