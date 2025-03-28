@@ -41,7 +41,7 @@ class Agent:
                                           # num_retries=self.args.num_retries,
                                           # stream_timeout=self.args.stream_timeout if "stream_timeout" in self.args else None,
                                           timeout=self.args.request_timeout if "request_timeout" in self.args else None,  # raise Timeout error if call takes longer than 10s
-                                          # fallbacks=self.args.fallback_models if "fallback_models" in self.args else None,
+                                          fallbacks=self.args.fallback_models if "fallback_models" in self.args else None,
                                           stream=stream
                                           )  # may add fallback
             if not stream:
