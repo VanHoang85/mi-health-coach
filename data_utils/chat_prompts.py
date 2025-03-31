@@ -116,7 +116,7 @@ PROMPT_TEMPLATE = {
 }
 
 ACTION_TEMPLATE = {
-    "with_clues": "{action_description}\nUse the following clue as a part of the response: \"{retrieved_clue}\". If you have used the clue before, do not simply repeat it again but phrase it in a slightly different way.",
+    "with_clues": "{action_description}\nUse the following clue as a part of the response: \"{retrieved_clue}\". Do not try to repeat the clue but phrase it or add more content to make the response coherent to client utterance and fit within the dialogue context.",
     "without_clues": "{action_description}"
 }
 
