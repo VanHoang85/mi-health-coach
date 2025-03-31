@@ -1,11 +1,12 @@
 import os
 import time
 import json
+import random
 
 import huggingface_hub
-import torch
 import argparse
 import gradio
+import torch
 
 from pathlib import Path
 from huggingface_hub import CommitScheduler
@@ -40,6 +41,9 @@ def interaction(user_message: str, history: list):
                                  is_human=True)
         clients[user_id] = client_agent
 
+        if len(args.exp_mode) == 0:
+            args.exp_mode = random.choice(["MI", "non-MI"])
+
         phase = "engaging" if args.exp_mode == "MI" else args.exp_mode
         conversation = Conversation(args=args, phase=phase)
         conversations[user_id] = conversation
@@ -49,17 +53,12 @@ def interaction(user_message: str, history: list):
         client_agent = clients[user_id]
         conversation = conversations[user_id]
 
-    current_turn = conversation.get_current_turn()
+    """
     if current_turn >= 1:
         # add coach message to conversation object
         prev_coach_message = history[-1]["content"]
         if len(conversation.conv_history[-1][f"Therapist_{current_turn}"]["utterance"]) == 0:
             conversation.conv_history[-1][f"Therapist_{current_turn}"]["utterance"] = f"{coach_agent.role}: {prev_coach_message}"
-
-        if current_turn >= args.start_planning:
-            conversation.check_phase_condition(prev_coach_message)
-        if current_turn >= args.start_focusing:
-            conversation.check_terminating_condition(prev_coach_message)
 
         print(f"{coach_agent.role}: {remove_stop_phases(prev_coach_message)}")
         try:
@@ -69,10 +68,11 @@ def interaction(user_message: str, history: list):
 
         conv_to_save = conversation.get_latest_conv()
         save_conv_json(data_to_save=conv_to_save, filename=f"{args.exp_mode}_{client_agent.user_id}")
+    """
 
     # Start conversing...
     if conversation.is_terminated:
-        coach_message = "The session has ended. Please close the window."
+        coach_message = "The session has ended. Please close the window and return to the survey."
 
     else:
         start = time.time()
@@ -91,10 +91,31 @@ def interaction(user_message: str, history: list):
         latency = (time.time() - start) / 60  # as minutes
         conversation.update_generation_latency(latency)
 
+        current_turn = conversation.get_current_turn()
+        if current_turn >= args.start_planning:
+            conversation.check_phase_condition(coach_message)
+        if current_turn >= args.start_focusing:
+            conversation.check_terminating_condition(coach_message)
+
+        # add coach message to conversation object
+        if len(conversation.conv_history[-1][f"Therapist_{current_turn}"]["utterance"]) == 0:
+            conversation.conv_history[-1][f"Therapist_{current_turn}"][
+                "utterance"] = f"{coach_agent.role}: {coach_message}"
+
+        print(f"{coach_agent.role}: {remove_stop_phases(coach_message)}")
+        try:
+            print(f"Actions: {conversation.conv_history[-1][f'Therapist_{current_turn}']['actions']}")
+        except KeyError:
+            pass
+
+        conv_to_save = conversation.get_latest_conv()
+        save_conv_json(data_to_save=conv_to_save, filename=f"{args.exp_mode}_{client_agent.user_id}")
+
     # for token_idx in range(len(coach_message)):
     #     yield coach_message[: token_idx + 1]
     partial_message = ""
     if isinstance(coach_message, str):
+        coach_message = remove_stop_phases(coach_message)
         for token_idx in range(len(coach_message)):
             partial_message += coach_message[token_idx]
             time.sleep(0.015)
@@ -111,7 +132,7 @@ def interaction(user_message: str, history: list):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--exp_mode', type=str, default='MI',
+    parser.add_argument('--exp_mode', type=str, default='',
                         choices=["MI", "auto-MI", "non-MI"])
     parser.add_argument('--agent_model', type=str, default="gpt-4o",  # main model: "gpt-4o"
                         choices=["gpt-4o", "gpt-4o-mini"])
@@ -181,7 +202,8 @@ if __name__ == '__main__':
     huggingface_hub.login(token=args.hf_auth)
 
     # set output folder path
-    args.human_chat_dir = f"{args.human_chat_dir}/{args.agent_model}"
+    # args.human_chat_dir = f"{args.human_chat_dir}/{args.agent_model}"
+    args.human_chat_dir = "data"
     OUTPUT_CHAT_DIR = Path(args.human_chat_dir)
     OUTPUT_CHAT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -204,7 +226,7 @@ if __name__ == '__main__':
                              dialog_manager=dialog_manager)
     welcome_message = ("<strong>You will converse with a coaching chatbot on the topic of physical activity."
                        "<br>If you wish to end the chat at anytime, just type \"bye\"."
-                       "<br>The session will last for 15-25 turns."
+                       "<br>The session will last for a maximum of 22 turns."
                        "<br><br>Please type in your nickname to start the session...</strong>")
 
     demo = gradio.ChatInterface(interaction,
