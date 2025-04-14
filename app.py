@@ -132,8 +132,8 @@ def interaction(user_message: str, history: list):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--exp_mode', type=str, default='',
-                        choices=["MI", "auto-MI", "non-MI"])
+    parser.add_argument('--exp_mode', type=str, default="MI",
+                        choices=["MI", "non-MI"])
     parser.add_argument('--agent_model', type=str, default="gpt-4o",  # main model: "gpt-4o"
                         choices=["gpt-4o", "gpt-4o-mini"])
     parser.add_argument('--retrieval_model', type=str, default='cohere',
