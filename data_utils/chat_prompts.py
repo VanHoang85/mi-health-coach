@@ -110,7 +110,7 @@ STAGE_OF_CHANGE = {
 }
 
 PROMPT_TEMPLATE = {
-    "MI": "Response using the following counselling strategies: {actions}. Try to make it fit into the context. \n{action_template}\nResponse in a calm, collected, and empathic manner like a professional coaching. Do not sound overexcited. Keep the answer concise and around 200 characters long if possible. The output should be a string of the therapist's response and nothing else. Do not generate any opening, closing, and explanations.",
+    "MI": "Response using all the following strategies: {actions}. Try to make it fit into the context. \n{action_template}\nResponse in a calm, collected, and empathic manner like a professional coaching. Do not sound overexcited. Keep the answer concise and around 200 characters long if possible. The output should be a string of the therapist's response and nothing else. Do not generate any opening, closing, and explanations.",
     "auto-MI": AUTO_MI_AGENT_ACTION_PROMPT,
     "non-MI": "Response in a calm, collected, and empathic manner like a professional coach. Do not sound overexcited. Keep the answer concise and around 200 characters long if possible. The output should be a string of the therapist's response and nothing else. Do not generate any opening, closing, and explanations."
 }

@@ -224,7 +224,7 @@ if __name__ == '__main__':
     coach_agent = CoachAgent(args,
                              role="Therapist",
                              dialog_manager=dialog_manager)
-    welcome_message = ("<strong>You will converse with a coaching chatbot on the topic of physical activity."
+    welcome_message = ("<strong>You will converse with Jordan, an AI coach, on the topic of physical activity."
                        "<br>If you wish to end the chat at anytime, just type \"bye\"."
                        "<br>The session will last for a maximum of 22 turns."
                        "<br><br>Please type in your nickname to start the session...</strong>")
@@ -236,7 +236,7 @@ if __name__ == '__main__':
                                     avatar_images=tuple((None, "./data/robot_avatar_head.png"))),
                                 stop_btn=False,
                                 description="The session will last for 22 turns maximum. If you want to end the chat earlier, just type \"bye\". Please go back to the survey after that.",
-                                title="Physical Activity CoachBot",
+                                title="Chat with Jordan, the Physical Activity CoachBot",
                                 type="messages",
                                 theme=gradio.themes.Citrus(text_size="lg"))
     demo.launch()
