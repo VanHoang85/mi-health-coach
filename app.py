@@ -42,7 +42,7 @@ def interaction(user_message: str, history: list):
         clients[user_id] = client_agent
 
         # if len(args.exp_mode) == 0:
-        args.exp_mode = random.choice(["MI", "non-MI"])
+        # args.exp_mode = random.choice(["MI", "non-MI"])
 
         phase = "engaging" if args.exp_mode == "MI" else args.exp_mode
         conversation = Conversation(args=args, phase=phase)
@@ -52,23 +52,6 @@ def interaction(user_message: str, history: list):
         user_id = history[0]["content"].split()[-1]
         client_agent = clients[user_id]
         conversation = conversations[user_id]
-
-    """
-    if current_turn >= 1:
-        # add coach message to conversation object
-        prev_coach_message = history[-1]["content"]
-        if len(conversation.conv_history[-1][f"Therapist_{current_turn}"]["utterance"]) == 0:
-            conversation.conv_history[-1][f"Therapist_{current_turn}"]["utterance"] = f"{coach_agent.role}: {prev_coach_message}"
-
-        print(f"{coach_agent.role}: {remove_stop_phases(prev_coach_message)}")
-        try:
-            print(f"Actions: {conversation.conv_history[-1][f'Therapist_{current_turn}']['actions']}")
-        except KeyError:
-            pass
-
-        conv_to_save = conversation.get_latest_conv()
-        save_conv_json(data_to_save=conv_to_save, filename=f"{args.exp_mode}_{client_agent.user_id}")
-    """
 
     # Start conversing...
     if conversation.is_terminated:
@@ -228,6 +211,7 @@ if __name__ == '__main__':
                        "<br>If you wish to end the chat at anytime, just type \"bye\"."
                        "<br>The session will last for a maximum of 22 turns."
                        "<br><br>Please type in your nickname to start the session...</strong>")
+    description = "The session will last for 22 turns maximum. If you want to end the chat earlier, just type \"bye\". Please go back to the survey after that."
 
     demo = gradio.ChatInterface(interaction,
                                 chatbot=gradio.Chatbot(
@@ -235,7 +219,7 @@ if __name__ == '__main__':
                                     type="messages",
                                     avatar_images=tuple((None, "./data/robot_avatar_head.png"))),
                                 stop_btn=False,
-                                description="The session will last for 22 turns maximum. If you want to end the chat earlier, just type \"bye\". Please go back to the survey after that.",
+                                description=description,
                                 title="Chat with Jordan, the Physical Activity CoachBot",
                                 type="messages",
                                 theme=gradio.themes.Citrus(text_size="lg"))
