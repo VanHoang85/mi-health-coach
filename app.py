@@ -1,15 +1,28 @@
 import os
+import io
 import time
 import json
-import random
+import wave
 
-import huggingface_hub
+import numpy as np
 import argparse
 import gradio
 import torch
 
 from pathlib import Path
+import huggingface_hub
 from huggingface_hub import CommitScheduler
+
+import tempfile
+from typing import IO
+from dataclasses import field
+from model_utils.audio_utils import run_vad
+from pydub import AudioSegment
+
+from groq import Groq
+from openai import OpenAI
+from elevenlabs import VoiceSettings, save
+from elevenlabs.client import ElevenLabs
 
 from data_utils.utils import Conversation
 from model_utils.mov_detector import MovDetector
@@ -18,11 +31,80 @@ from model_utils.coach_agent import CoachAgent
 from model_utils.user_agent import UserAgent
 
 
+class AppState:
+    stream: np.ndarray | None = None
+    sampling_rate: int = 0
+    pause_detected: bool = False
+    started_talking: bool = False
+    stopped: bool = False
+    history: list = field(default_factory=list)
+
+
+def determine_pause(audio: np.ndarray, sampling_rate: int, state: AppState) -> bool:
+    """
+    Take in the stream, determine if a pause happened
+    Source: https://huggingface.co/spaces/gradio/omni-mini/blob/eb027808c7bfe5179b46d9352e3fa1813a45f7c3/app.py#L98
+    """
+
+    temp_audio = audio
+
+    dur_vad, _, time_vad = run_vad(temp_audio, sampling_rate)
+    duration = len(audio) / sampling_rate
+
+    if dur_vad > 0.5 and not state.started_talking:
+        print("started talking")
+        state.started_talking = True
+        return False
+
+    print(f"duration_after_vad: {dur_vad:.3f} s, time_vad: {time_vad:.3f} s")
+
+    return (duration - dur_vad) > 1
+
+
+def start_recording_user(state: AppState):
+    if not state.stopped:
+        return gradio.Audio(recording=True)
+
+
+def process_audio(audio: tuple, state: AppState):
+    if state.stream is None:
+        state.stream = audio[1]
+        state.sampling_rate = audio[0]
+    else:
+        state.stream = np.concatenate((state.stream, audio[1]))
+
+    pause_detected = determine_pause(state.stream, state.sampling_rate, state)
+    state.pause_detected = pause_detected
+
+    if state.pause_detected and state.started_talking:
+        return gradio.Audio(recording=False), state
+    return None, state
+
+
 def save_conv_json(data_to_save: dict, filename: str) -> None:
-    CHAT_FILE_PATH = OUTPUT_CHAT_DIR / f"{filename}.json"
+    SPEAK_FILE_PATH = OUTPUT_SPEAK_DIR / f"{filename}.json"
     with scheduler.lock:
-        with CHAT_FILE_PATH.open("a") as file:
+        with SPEAK_FILE_PATH.open("a") as file:
             json.dump(data_to_save, file, indent=4)
+
+
+def save_audio_wav(audio_buffer: io.BytesIO, filename: str) -> None:
+    SPEAK_FILE_PATH = f"{args.human_speak_dir}/{filename}.wav"
+    with scheduler.lock:
+        with wave.open(SPEAK_FILE_PATH, mode="wb") as wav_file:
+            wav_file.setnchannels(1)  # mono
+            wav_file.setsampwidth(2)  # sample width in bytes
+            wav_file.setframerate(44100)  # sample rate
+            wav_file.writeframes(audio_buffer.getvalue())
+
+
+def save_audio_file(audio_buffer, filename: str) -> None:
+    SPEAK_FILE_PATH = f"{args.human_speak_dir}/{filename}.wav"
+    with scheduler.lock:
+        with open(SPEAK_FILE_PATH, "wb") as file:
+            for chunk in audio_buffer.getvalue():
+                if chunk:
+                    file.write(chunk)
 
 
 def remove_stop_phases(message) -> str:
@@ -32,85 +114,171 @@ def remove_stop_phases(message) -> str:
     return message
 
 
-def interaction(user_message: str, history: list):
-    if len(history) == 0:
+def speech_to_text(audio_filename) -> str:
+    with open(audio_filename, "rb") as file:
+        transcription = groq_client.audio.transcriptions.create(
+            file=file,  # Required audio file in .wav
+            model="distil-whisper-large-v3-en",  # Required model to use for transcription
+            prompt="Specify context or spelling",  # Optional
+            response_format="text",  # Optional
+            language="en",  # Optional
+            temperature=0.0  # Optional
+        )
+    return transcription.text
+
+
+def text_to_speech(text: str) -> IO[bytes]:
+    audio_response = eleven_lab_client.text_to_speech.convert(
+        voice_id="iP95p4xoKVk53GoZ742B",
+        output_format="mp3_22050_32",
+        text=text,
+        model_id="eleven_turbo_v2_5",
+        voice_settings=VoiceSettings(
+            stability=0.5,
+            similarity_boost=0.75,
+            style=0.0,
+            use_speaker_boost=True,
+            speed=1.0
+        )
+    )
+
+    # Create a BytesIO object to hold the audio data in memory
+    audio_stream = io.BytesIO()
+
+    # Write each chunk of audio data to the stream
+    for chunk in audio_response:
+        if chunk:
+            audio_stream.write(chunk)
+
+    # Reset stream position to the beginning
+    audio_stream.seek(0)
+
+    return audio_stream
+
+
+def spoken_interaction(state: AppState):
+    if not state.pause_detected and not state.started_talking:
+        return None, AppState()
+
+    audio_buffer = io.BytesIO()
+
+    # convert to wav
+    segment = AudioSegment(
+        state.stream.tobytes(),
+        frame_rate=state.sampling_rate,
+        sample_width=state.stream.dtype.itemsize,
+        channels=(1 if len(state.stream.shape) == 1 else state.stream.shape[1]),
+    )
+    segment.export(audio_buffer, format="wav")
+
+    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
+        f.write(audio_buffer.getvalue())
+
+    start = time.time()
+    user_message = speech_to_text(f.name)
+    latency = (time.time() - start) / 60  # as minutes
+
+    if len(state.history) == 0:
         user_id = user_message.split()[-1]
-        client_agent = UserAgent(args,  # Creating client agent
+        client_agent = UserAgent(args,
                                  role="Client",
-                                 user_id=user_id,
+                                 user_id=user_id,  # use the 1st user message, aka name
                                  is_human=True)
         clients[user_id] = client_agent
-
-        # if len(args.exp_mode) == 0:
-        # args.exp_mode = random.choice(["MI", "non-MI"])
 
         phase = "engaging" if args.exp_mode == "MI" else args.exp_mode
         conversation = Conversation(args=args, phase=phase)
         conversations[user_id] = conversation
 
     else:
-        user_id = history[0]["content"].split()[-1]
+        user_id = state.history[0]["content"]["text"].split()[-1]
         client_agent = clients[user_id]
         conversation = conversations[user_id]
 
-    # Start conversing...
     if conversation.is_terminated:
-        coach_message = "The session has ended. Please close the window and return to the survey."
+        # coach_response = "./data/end_chris.mp3"
+        # return None, coach_response, state
+        yield None, AppState(history=state.history)
 
-    else:
-        start = time.time()
-        client_response = client_agent.receive_and_response(mov_detector=mov_detector,
-                                                            conversation=conversation,
-                                                            user_message=user_message)
-        print(f"{client_agent.role}: {user_message}")
+    """
+    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
+        f.write(audio_buffer.getvalue())
+    """
 
-        coach_message = coach_agent.receive_and_response(mov_lang_level=client_response["mov_lang_level"],
-                                                         mov_lang_behaviour=client_response["mov_lang_behaviour"],
-                                                         stage_of_change=client_response["stage_of_change"],
-                                                         conversation=conversation,
-                                                         # stream=True
-                                                         )
+    client_response = client_agent.receive_and_response(mov_detector=mov_detector,
+                                                        conversation=conversation,
+                                                        user_message=user_message)
+    print(f"{client_agent.role}: {user_message}")
+    conversation.update_s2t_latency(latency=round(latency, 3))
 
-        latency = (time.time() - start) / 60  # as minutes
-        conversation.update_generation_latency(latency)
+    start = time.time()  # start generation latency
+    coach_message = coach_agent.receive_and_response(mov_lang_level=client_response["mov_lang_level"],
+                                                     mov_lang_behaviour=client_response["mov_lang_behaviour"],
+                                                     stage_of_change=client_response["stage_of_change"],
+                                                     conversation=conversation)
+    latency = (time.time() - start) / 60  # as minutes
+    conversation.update_generation_latency(latency=round(latency, 3))
 
-        current_turn = conversation.get_current_turn()
-        if current_turn >= args.start_planning:
-            conversation.check_phase_condition(coach_message)
-        if current_turn >= args.start_focusing:
-            conversation.check_terminating_condition(coach_message)
+    current_turn = conversation.get_current_turn()
+    if current_turn >= args.start_planning:
+        conversation.check_phase_condition(coach_message)
+    if current_turn >= args.start_focusing:
+        conversation.check_terminating_condition(coach_message)
 
-        # add coach message to conversation object
-        if len(conversation.conv_history[-1][f"Therapist_{current_turn}"]["utterance"]) == 0:
-            conversation.conv_history[-1][f"Therapist_{current_turn}"][
-                "utterance"] = f"{coach_agent.role}: {coach_message}"
+    # add coach message to conversation object
+    if len(conversation.conv_history[-1][f"Therapist_{current_turn}"]["utterance"]) == 0:
+        conversation.conv_history[-1][f"Therapist_{current_turn}"][
+            "utterance"] = f"{coach_agent.role}: {coach_message}"
 
-        print(f"{coach_agent.role}: {remove_stop_phases(coach_message)}")
-        try:
-            print(f"Actions: {conversation.conv_history[-1][f'Therapist_{current_turn}']['actions']}")
-        except KeyError:
-            pass
+    print(f"{coach_agent.role}: {remove_stop_phases(coach_message)}")
+    try:
+        print(f"Actions: {conversation.conv_history[-1][f'Therapist_{current_turn}']['actions']}")
+    except KeyError:
+        pass
 
-        conv_to_save = conversation.get_latest_conv()
-        save_conv_json(data_to_save=conv_to_save, filename=f"{args.exp_mode}_{client_agent.user_id}")
+    start = time.time()  # start t2s latency
+    coach_response = text_to_speech(remove_stop_phases(coach_message))
 
-    # for token_idx in range(len(coach_message)):
-    #     yield coach_message[: token_idx + 1]
-    partial_message = ""
-    if isinstance(coach_message, str):
-        coach_message = remove_stop_phases(coach_message)
-        for token_idx in range(len(coach_message)):
-            partial_message += coach_message[token_idx]
-            time.sleep(0.015)
-            yield partial_message
+    output_buffer = b""
+    for audio_bytes in coach_response:
+        output_buffer += audio_bytes
+        yield audio_bytes, state
 
-    else:  # do streaming
-        for chunk in coach_message:
-            content = chunk.choices[0].delta.content  # extract text from streamed litellm chunks
-            if content:
-                partial_message += content
-                time.sleep(0.015)
-                yield partial_message
+    """
+    for mp3_bytes in speaking(audio_buffer.getvalue()):
+        output_buffer += mp3_bytes
+        yield mp3_bytes, state
+    """
+
+    latency = (time.time() - start) / 60  # as minutes
+    conversation.update_t2s_latency(latency=round(latency, 3))
+
+    # save conversation messages
+    conv_to_save = conversation.get_latest_conv()
+    save_conv_json(data_to_save=conv_to_save, filename=f"{args.exp_mode}_{client_agent.user_id}")
+
+    user_audio_filename = f"{args.exp_mode}_{client_agent.user_id}_user_{conversation.current_turn}.wav"
+    save_audio_file(audio_buffer, user_audio_filename)  # save the user speaking
+
+    """
+    with tempfile.NamedTemporaryFile(suffix=".mp3", delete=False) as f:
+        f.write(output_buffer)
+
+    coach_audio_filename = f"{args.exp_mode}_{client_agent.user_id}_coach_{conversation.current_turn}.mp3"
+    save_audio_file(output_buffer, coach_audio_filename)  # save the coach speaking
+    """
+
+    state.history.append({"role": "user",
+                          "content": {"text": user_message,
+                                      "path": user_audio_filename,
+                                      "mime_type": "audio/wav"}})
+
+    state.history.append({"role": "assistant",
+                          "content": {"text": remove_stop_phases(coach_message),
+                                      "path": "",
+                                      "mime_type": "audio/mp3"}})
+
+    yield None, AppState(history=state.history)
 
 
 if __name__ == '__main__':
@@ -130,7 +298,8 @@ if __name__ == '__main__':
     parser.add_argument('--strategy_data', type=str, default='therapist_strategy/train_therapist.json')
     parser.add_argument('--strategy_test_data', type=str,
                         default='therapist_strategy/annomi_test_therapist.json')
-    parser.add_argument('--human_chat_dir', type=str, default='./outputs/human_chats')
+
+    parser.add_argument('--human_speak_dir', type=str, default='speech_data')
     parser.add_argument('--storage_dir', type=str, default='./chroma_storage')
     parser.add_argument('--mov_lang_db_name', type=str, default='mov_lang_db')
     parser.add_argument('--strategy_db_name', type=str, default='diag_strategy_db')
@@ -182,18 +351,22 @@ if __name__ == '__main__':
     args.openai_key = os.getenv("OPENAI_KEY")
     args.groq_key = os.getenv("GROQ_KEY")
     args.hf_auth = os.getenv("HF_AUTH")
+    args.eleven_lab_key = os.getenv("ELEVEN_LABS_KEY")
     huggingface_hub.login(token=args.hf_auth)
 
+    # create speech-to-text & text-to-speech endpoints
+    openai_client = OpenAI(api_key=args.openai_key)
+    groq_client = Groq(api_key=args.groq_key)
+    eleven_lab_client = ElevenLabs(api_key=args.eleven_lab_key)
+
     # set output folder path
-    # args.human_chat_dir = f"{args.human_chat_dir}/{args.agent_model}"
-    args.human_chat_dir = "data"
-    OUTPUT_CHAT_DIR = Path(args.human_chat_dir)
-    OUTPUT_CHAT_DIR.mkdir(parents=True, exist_ok=True)
+    OUTPUT_SPEAK_DIR = Path(args.human_speak_dir)
+    OUTPUT_SPEAK_DIR.mkdir(parents=True, exist_ok=True)
 
     scheduler = CommitScheduler(
         repo_id="ai-health-coach-chats",
         repo_type="dataset",
-        folder_path=OUTPUT_CHAT_DIR,
+        folder_path=OUTPUT_SPEAK_DIR,
         path_in_repo="data"
     )
 
@@ -213,14 +386,77 @@ if __name__ == '__main__':
                        "<br><br>Please type in your nickname to start the session...</strong>")
     description = "The session will last for 22 turns maximum. If you want to end the chat earlier, just type \"bye\". Please go back to the survey after that."
 
-    demo = gradio.ChatInterface(interaction,
-                                chatbot=gradio.Chatbot(
-                                    placeholder=welcome_message,
-                                    type="messages",
-                                    avatar_images=tuple((None, "./data/robot_avatar_head.png"))),
-                                stop_btn=False,
-                                description=description,
-                                title="Chat with Jordan, the Physical Activity CoachBot",
-                                type="messages",
-                                theme=gradio.themes.Citrus(text_size="lg"))
+    # alert(e.code);
+    js = """
+        <script>
+        function shortcuts(e) {
+        if (e.key == " " || e.code == "Space" || e.keyCode === 32) {
+            Array.from(document.querySelectorAll('button')).find(button => button.textContent.includes('Record') || button.textContent.includes('Stop')).click();
+        }
+        else {
+            }
+        }
+        document.addEventListener('keydown', shortcuts, false);
+        </script>
+        """
+
+    """
+    with gradio.Blocks(
+            head=js,
+            title="Chat with Jordan, the Physical Activity CoachBot",
+            description="The session will last for 22 turns maximum. If you want to end the chat earlier, just type \"bye\". Please go back to the survey after that.",
+            theme=gradio.themes.Citrus(text_size="lg")) as demo:
+        chatbot = gradio.Chatbot(
+            placeholder=welcome_message,
+            type="messages",
+            avatar_images=tuple((None, "./data/robot_avatar_head.png"))
+        )
+        audio_input = gradio.Audio(sources=["microphone"], type="filepath", interactive=True)
+        audio_output = gradio.Audio(autoplay=True, visible=False)  # , streaming=True
+        audio_input.stop_recording(interaction, [audio_input, chatbot], [audio_input, audio_output, chatbot])
+    """
+
+    with gradio.Blocks(
+            title="Chat with Jordan, the Physical Activity CoachBot",
+            description=description,
+            theme=gradio.themes.Citrus(text_size="lg")
+    ) as demo:
+        with gradio.Row():
+            with gradio.Column():
+                input_audio = gradio.Audio(
+                    label="Input Audio", sources=["microphone"], type="numpy", interactive=True
+                )
+            with gradio.Column():
+                chatbot = gradio.Chatbot(
+                    label="Conversation",
+                    type="messages",
+                    placeholder=welcome_message,
+                    avatar_images=tuple((None, "./data/robot_avatar_head.png"))
+                )
+                output_audio = gradio.Audio(label="Output Audio", streaming=True, autoplay=True, visible=False)
+        state = gradio.State(value=AppState())
+
+        stream = input_audio.stream(
+            process_audio,
+            [input_audio, state],
+            [input_audio, state],
+            stream_every=0.5,
+            time_limit=30,
+        )
+        respond = input_audio.stop_recording(
+            spoken_interaction,
+            [state],
+            [output_audio, state]
+        )
+        respond.then(lambda s: s.conversation, [state], [chatbot])
+
+        restart = output_audio.stop(
+            start_recording_user,
+            [state],
+            [input_audio]
+        )
+        cancel = gradio.Button("Stop Conversation", variant="stop")
+        cancel.click(lambda: (AppState(stopped=True), gradio.Audio(recording=False)), None,
+                     [state, input_audio], cancels=[respond, restart])
+
     demo.launch()
