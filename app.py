@@ -419,7 +419,7 @@ if __name__ == '__main__':
     with gradio.Blocks(
             title="Chat with Jordan, the Physical Activity CoachBot",
             # description=description,
-            theme=gradio.themes.Citrus(text_size="lg")
+            # theme=gradio.themes.Citrus(text_size="lg")
     ) as demo:
         with gradio.Row():
             with gradio.Column():
