@@ -421,14 +421,17 @@ if __name__ == '__main__':
             # description=description,
             # theme=gradio.themes.Citrus(text_size="lg")
     ) as demo:
-        input_audio = gradio.Audio(label="Input Audio", sources=["microphone"], type="numpy", interactive=True)
-        output_audio = gradio.Audio(label="Output Audio", streaming=True, autoplay=True, visible=False)
-        chatbot = gradio.Chatbot(
-            label="Conversation",
-            type="messages",
-            placeholder=welcome_message,
-            avatar_images=tuple((None, "./data/robot_avatar_head.png"))
-        )
+        with gradio.Row():
+            with gradio.Column():
+                input_audio = gradio.Audio(label="Input Audio", sources=["microphone"], type="numpy", interactive=True)
+            with gradio.Column():
+                output_audio = gradio.Audio(label="Output Audio", streaming=True, autoplay=True)
+                chatbot = gradio.Chatbot(
+                    label="Conversation",
+                    type="messages",
+                    placeholder=welcome_message,
+                    avatar_images=tuple((None, "./data/robot_avatar_head.png"))
+                )
         state = gradio.State(value=AppState())
 
         stream = input_audio.stream(
