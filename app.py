@@ -87,6 +87,7 @@ def text_to_speech(text: str) -> IO[bytes]:
         )
     )
 
+    """
     # Create a BytesIO object to hold the audio data in memory
     audio_stream = io.BytesIO()
 
@@ -99,6 +100,8 @@ def text_to_speech(text: str) -> IO[bytes]:
     audio_stream.seek(0)
 
     return audio_stream
+    """
+    return audio_response
 
 
 def spoken_interaction(user_response, history: list):
@@ -164,10 +167,12 @@ def spoken_interaction(user_response, history: list):
     start = time.time()  # start t2s latency
     coach_response = text_to_speech(remove_stop_phases(coach_message))
 
+    """
     output_buffer = b""
     for audio_bytes, message in zip(coach_response, coach_message):
         output_buffer += audio_bytes
         yield audio_bytes, message
+    """
 
     latency = (time.time() - start) / 60  # as minutes
     conversation.update_t2s_latency(latency=round(latency, 3))
@@ -308,7 +313,8 @@ if __name__ == '__main__':
     title = (
         """
         <center> 
-        <h1> Talk with Jordan, the Physical Activity CoachBot </h1>
+        <h2> Talk with Jordan, the Physical Activity CoachBot </h2>
+        <br> Press \"Record\" to start and \"Stop\" to stop the recording.
         <br> The session will last for 22 turns maximum. If you want to end the talk earlier, just say \"bye\". 
         <br> Please go back to the survey after that.
         </center>
