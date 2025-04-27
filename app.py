@@ -16,7 +16,8 @@ from huggingface_hub import CommitScheduler
 import tempfile
 from typing import IO
 from dataclasses import field
-from model_utils.audio_utils import run_vad
+# from model_utils.audio_utils import run_vad
+from audio_utils.vad import run_vad
 from pydub import AudioSegment
 
 from groq import Groq
