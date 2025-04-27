@@ -125,6 +125,7 @@ def speech_to_text(audio_filename) -> str:
             language="en",  # Optional
             temperature=0.0  # Optional
         )
+    print(transcription)
     return transcription.text
 
 
