@@ -191,7 +191,7 @@ def spoken_interaction(state: AppState):
         conversations[user_id] = conversation
 
     else:
-        user_id = "_".join(state.history[0]["content"]["text"].split()[-3])
+        user_id = "_".join(state.history[0]["content"].split()[-3])
         client_agent = clients[user_id]
         conversation = conversations[user_id]
 
@@ -266,19 +266,25 @@ def spoken_interaction(state: AppState):
 
     coach_audio_filename = f"{args.exp_mode}_{client_agent.user_id}_coach_{conversation.current_turn}.mp3"
     save_audio_file(output_buffer, coach_audio_filename)  # save the coach speaking
-    """
-
+    
     state.history.append({"role": "user",
                           "content": {
                               # "text": user_message,
-                                      "path": user_audio_filename,
+                                      "path": f.name,
                                       "mime_type": "audio/wav"}})
-
+    
     state.history.append({"role": "assistant",
                           "content": {
                               # "text": remove_stop_phases(coach_message),
-                                      "path": "",
+                                      "path": f.name,
                                       "mime_type": "audio/mp3"}})
+    """
+
+    state.history.append({"role": "user",
+                          "content": user_message})
+
+    state.history.append({"role": "assistant",
+                          "content": remove_stop_phases(coach_message)})
 
     yield None, AppState(history=state.history)
 
@@ -440,7 +446,7 @@ if __name__ == '__main__':
                     label="Conversation",
                     type="messages",
                     placeholder=welcome_message,
-                    avatar_images=tuple((None, "./data/robot_avatar_head.png"))
+                    # avatar_images=tuple((None, "./data/robot_avatar_head.png"))
                 )
                 output_audio = gradio.Audio(label="Output Audio", streaming=True, autoplay=True)
 
