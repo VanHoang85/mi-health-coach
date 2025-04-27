@@ -427,9 +427,9 @@ if __name__ == '__main__':
     with gradio.Blocks(
             # theme=gradio.themes.Citrus(text_size="lg")
     ) as demo:
+        gradio.HTML(title)
         with gradio.Row():
             with gradio.Column():
-                gradio.HTML(title)
                 input_audio = gradio.Audio(label="Input Audio", sources=["microphone"], type="numpy", interactive=True)
             with gradio.Column():
                 chatbot = gradio.Chatbot(
