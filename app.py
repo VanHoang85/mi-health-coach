@@ -269,12 +269,14 @@ def spoken_interaction(state: AppState):
     """
 
     state.history.append({"role": "user",
-                          "content": {"text": user_message,
+                          "content": {
+                              # "text": user_message,
                                       "path": user_audio_filename,
                                       "mime_type": "audio/wav"}})
 
     state.history.append({"role": "assistant",
-                          "content": {"text": remove_stop_phases(coach_message),
+                          "content": {
+                              # "text": remove_stop_phases(coach_message),
                                       "path": "",
                                       "mime_type": "audio/mp3"}})
 
