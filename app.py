@@ -13,11 +13,13 @@ from pathlib import Path
 import huggingface_hub
 from huggingface_hub import CommitScheduler
 
+import librosa
+import traceback
 import tempfile
 from typing import IO
 from dataclasses import field
 # from model_utils.audio_utils import run_vad
-from audio_utils.vad import run_vad
+from audio_utils.vad import get_speech_timestamps, collect_chunks, VadOptions
 from pydub import AudioSegment
 
 from groq import Groq
@@ -30,6 +32,36 @@ from model_utils.mov_detector import MovDetector
 from model_utils.dialog_manager import MIDialogManager
 from model_utils.coach_agent import CoachAgent
 from model_utils.user_agent import UserAgent
+
+
+def run_vad(ori_audio, sr):
+    _st = time.time()
+    try:
+        audio = ori_audio
+        audio = audio.astype(np.float32) / 32768.0
+        sampling_rate = 16000
+        if sr != sampling_rate:
+            audio = librosa.resample(audio, orig_sr=sr, target_sr=sampling_rate)
+
+        vad_parameters = {}
+        vad_parameters = VadOptions(**vad_parameters)
+        speech_chunks = get_speech_timestamps(audio, vad_parameters)
+        audio = collect_chunks(audio, speech_chunks)
+        duration_after_vad = audio.shape[0] / sampling_rate
+
+        if sr != sampling_rate:
+            # resample to original sampling rate
+            vad_audio = librosa.resample(audio, orig_sr=sampling_rate, target_sr=sr)
+        else:
+            vad_audio = audio
+        vad_audio = np.round(vad_audio * 32768.0).astype(np.int16)
+        vad_audio_bytes = vad_audio.tobytes()
+
+        return duration_after_vad, vad_audio_bytes, round(time.time() - _st, 4)
+    except Exception as e:
+        msg = f"[asr vad error] audio_len: {len(ori_audio)/(sr*2):.3f} s, trace: {traceback.format_exc()}"
+        print(msg)
+        return -1, ori_audio, round(time.time() - _st, 4)
 
 
 class AppState:
@@ -467,8 +499,8 @@ if __name__ == '__main__':
             process_audio,
             [input_audio, state],
             [input_audio, state],
-            stream_every=0.5,
-            time_limit=30,
+            stream_every=0.50,
+            time_limit=10,
         )
         respond = input_audio.stop_recording(
             spoken_interaction,
