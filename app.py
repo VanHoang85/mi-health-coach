@@ -21,7 +21,7 @@ from pydub import AudioSegment
 
 from groq import Groq
 from openai import OpenAI
-from elevenlabs import VoiceSettings, save
+from elevenlabs import VoiceSettings
 from elevenlabs.client import ElevenLabs
 
 from data_utils.utils import Conversation
@@ -416,11 +416,22 @@ if __name__ == '__main__':
         audio_input.stop_recording(interaction, [audio_input, chatbot], [audio_input, audio_output, chatbot])
     """
 
+    title = (
+        """
+        <center> 
+    
+        <h1> Talk with Jordan, the Physical Activity CoachBot </h1>
+        <b> text  📧<b>
+    
+        </center>
+        """
+    )
+
     with gradio.Blocks(
-            title="Chat with Jordan, the Physical Activity CoachBot",
-            # description=description,
             # theme=gradio.themes.Citrus(text_size="lg")
     ) as demo:
+        with gradio.Row():
+            gradio.HTML(title)
         with gradio.Row():
             with gradio.Column():
                 input_audio = gradio.Audio(label="Input Audio", sources=["microphone"], type="numpy", interactive=True)
