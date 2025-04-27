@@ -38,7 +38,7 @@ class AppState:
     pause_detected: bool = False
     started_talking: bool = False
     stopped: bool = False
-    history: list = field(default_factory=list)
+    history: list = []
 
 
 def determine_pause(audio: np.ndarray, sampling_rate: int, state: AppState) -> bool:
