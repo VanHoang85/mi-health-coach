@@ -34,7 +34,7 @@ from model_utils.coach_agent import CoachAgent
 from model_utils.user_agent import UserAgent
 
 
-def run_vad(ori_audio, sr):
+def run_vad(ori_audio: np.ndarray, sr):
     _st = time.time()
     try:
         audio = ori_audio
@@ -221,7 +221,10 @@ def spoken_interaction(state: AppState):
     user_message = speech_to_text(f.name)
     latency = (time.time() - start) / 60  # as minutes
 
-    if len(state.history) == 0:
+    state.history.append({"role": "user",
+                          "content": user_message})
+
+    if len(state.history) == 1:
         user_id = "_".join(user_message.split()[-3])
         client_agent = UserAgent(args,
                                  role="Client",
@@ -322,9 +325,6 @@ def spoken_interaction(state: AppState):
                                       "path": f.name,
                                       "mime_type": "audio/mp3"}})
     """
-
-    state.history.append({"role": "user",
-                          "content": user_message})
 
     state.history.append({"role": "assistant",
                           "content": remove_stop_phases(coach_message)})
