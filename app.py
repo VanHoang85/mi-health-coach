@@ -440,7 +440,7 @@ if __name__ == '__main__':
                     placeholder=welcome_message,
                     avatar_images=tuple((None, "./data/robot_avatar_head.png"))
                 )
-                output_audio = gradio.Audio(label="Output Audio", streaming=True, autoplay=True, visible=False)
+                output_audio = gradio.Audio(label="Output Audio", streaming=True, autoplay=True)
 
         state = gradio.State(value=AppState())
 
