@@ -432,7 +432,7 @@ if __name__ == '__main__':
 
         with gradio.Row():
             with gradio.Column():
-                input_audio = gradio.Audio(label="Input Audio", sources=["microphone"], type="numpy", interactive=True)
+                input_audio = gradio.Audio(label="Input Audio", sources=["microphone"], type="numpy")
             with gradio.Column():
                 chatbot = gradio.Chatbot(
                     label="Conversation",
