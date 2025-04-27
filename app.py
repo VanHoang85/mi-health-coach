@@ -175,7 +175,7 @@ def spoken_interaction(state: AppState):
         f.write(audio_buffer.getvalue())
 
     start = time.time()
-    user_message = speech_to_text(f.name)
+    user_message = speech_to_text(f.file)
     latency = (time.time() - start) / 60  # as minutes
 
     if len(state.history) == 0:
