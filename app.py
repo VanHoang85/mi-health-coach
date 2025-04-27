@@ -42,11 +42,11 @@ def save_audio_wav(audio_buffer: io.BytesIO, filename: str) -> None:
             wav_file.writeframes(audio_buffer.getvalue())
 
 
-def save_audio_file(audio_buffer, filename: str) -> None:
+def save_audio_file(audio_file, filename: str) -> None:
     SPEAK_FILE_PATH = f"{args.human_speak_dir}/{filename}.wav"
     with scheduler.lock:
         with open(SPEAK_FILE_PATH, "wb") as file:
-            for chunk in audio_buffer.getvalue():
+            for chunk in open(audio_file, "rb"):
                 if chunk:
                     file.write(chunk)
 
@@ -111,7 +111,7 @@ def spoken_interaction(user_response, history: list):
     latency = (time.time() - start) / 60  # as minutes
 
     if len(history) == 0:
-        user_id = "_".join(user_message.split()[-3])
+        user_id = "_".join(user_message.split(" ")[-3])
         client_agent = UserAgent(args,
                                  role="Client",
                                  user_id=user_id,  # use the 1st user message, aka name
@@ -123,7 +123,7 @@ def spoken_interaction(user_response, history: list):
         conversations[user_id] = conversation
 
     else:
-        user_id = "_".join(history[0]["content"].split()[-3])
+        user_id = "_".join(history[0]["content"].split(" ")[-3])
         client_agent = clients[user_id]
         conversation = conversations[user_id]
 
@@ -181,7 +181,7 @@ def spoken_interaction(user_response, history: list):
     conv_to_save = conversation.get_latest_conv()
     save_conv_json(data_to_save=conv_to_save, filename=f"{conversation.exp_mode}_{client_agent.user_id}")
 
-    user_audio_filename = f"{conversation.exp_mode}_{client_agent.user_id}_user_{conversation.current_turn}.wav"
+    user_audio_filename = f"{conversation.exp_mode}_{client_agent.user_id}_user_{conversation.current_turn}"
     save_audio_file(user_response, user_audio_filename)  # save the user speaking
 
     history.append(
