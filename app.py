@@ -87,7 +87,6 @@ def text_to_speech(text: str) -> IO[bytes]:
         )
     )
 
-    """
     # Create a BytesIO object to hold the audio data in memory
     audio_stream = io.BytesIO()
 
@@ -100,8 +99,8 @@ def text_to_speech(text: str) -> IO[bytes]:
     audio_stream.seek(0)
 
     return audio_stream
-    """
-    return audio_response
+
+    # return audio_response
 
 
 def spoken_interaction(user_response, history: list):
@@ -338,7 +337,7 @@ if __name__ == '__main__':
                     placeholder=welcome_message,
                     avatar_images=tuple((None, "./data/robot_avatar_head.png"))
                 )
-                output_audio = gradio.Audio(label="Output Audio", autoplay=True, visible=False)  # streaming=True,
+                output_audio = gradio.Audio(label="Output Audio", autoplay=True, streaming=True, visible=False)  #
 
         input_audio.stop_recording(
             spoken_interaction,
