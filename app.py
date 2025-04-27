@@ -381,9 +381,9 @@ if __name__ == '__main__':
                              role="Therapist",
                              dialog_manager=dialog_manager)
     welcome_message = ("<strong>You will converse with Jordan, an AI coach, on the topic of physical activity."
-                       "<br>If you wish to end the chat at anytime, just type \"bye\"."
+                       "<br>If you wish to end the chat at anytime, just say \"bye\"."
                        "<br>The session will last for a maximum of 22 turns."
-                       "<br><br>Please type in your nickname to start the session...</strong>")
+                       "<br><br>Press \"Record\" and say your nickname to start the session...</strong>")
     description = "The session will last for 22 turns maximum. If you want to end the chat earlier, just type \"bye\". Please go back to the survey after that."
 
     # alert(e.code);
