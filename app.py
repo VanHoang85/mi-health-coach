@@ -179,7 +179,7 @@ def spoken_interaction(state: AppState):
     latency = (time.time() - start) / 60  # as minutes
 
     if len(state.history) == 0:
-        user_id = user_message.split()[-1]
+        user_id = "_".join(user_message.split()[-3])
         client_agent = UserAgent(args,
                                  role="Client",
                                  user_id=user_id,  # use the 1st user message, aka name
@@ -191,7 +191,7 @@ def spoken_interaction(state: AppState):
         conversations[user_id] = conversation
 
     else:
-        user_id = state.history[0]["content"]["text"].split()[-1]
+        user_id = "_".join(state.history[0]["content"]["text"].split()[-3])
         client_agent = clients[user_id]
         conversation = conversations[user_id]
 
@@ -255,7 +255,7 @@ def spoken_interaction(state: AppState):
 
     # save conversation messages
     conv_to_save = conversation.get_latest_conv()
-    save_conv_json(data_to_save=conv_to_save, filename=f"{args.exp_mode}_{client_agent.user_id}")
+    save_conv_json(data_to_save=conv_to_save, filename=f"{conversation.exp_mode}_{client_agent.user_id}")
 
     user_audio_filename = f"{args.exp_mode}_{client_agent.user_id}_user_{conversation.current_turn}.wav"
     save_audio_file(audio_buffer, user_audio_filename)  # save the user speaking
