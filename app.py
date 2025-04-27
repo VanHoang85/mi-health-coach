@@ -115,6 +115,15 @@ def remove_stop_phases(message) -> str:
     return message
 
 
+def warm_up():
+    frames = b"\x00\x00" * 1024 * 2  # 1024 frames of 2 bytes each
+    dur, frames, tcost = run_vad(frames, 16000)
+    print(f"warm up done, time_cost: {tcost:.3f} s")
+
+
+warm_up()
+
+
 def speech_to_text(audio_filename) -> str:
     with open(audio_filename, "rb") as file:
         transcription = groq_client.audio.transcriptions.create(
