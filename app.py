@@ -111,7 +111,7 @@ def spoken_interaction(user_response, history: list):
     latency = (time.time() - start) / 60  # as minutes
 
     if len(history) == 0:
-        user_id = "_".join(user_message.split(" ")[-3])
+        user_id = "_".join(user_message.split()[-3:])
         client_agent = UserAgent(args,
                                  role="Client",
                                  user_id=user_id,  # use the 1st user message, aka name
@@ -123,7 +123,7 @@ def spoken_interaction(user_response, history: list):
         conversations[user_id] = conversation
 
     else:
-        user_id = "_".join(history[0]["content"].split(" ")[-3])
+        user_id = "_".join(history[0]["content"].split()[-3:])
         client_agent = clients[user_id]
         conversation = conversations[user_id]
 
