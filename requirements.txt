@@ -1,6 +1,6 @@
 huggingface_hub==0.29.3
 gradio~=5.26.0
-litellm~=1.67.2
+litellm==1.67.2
 llama-index-core~=0.12.25
 llama-index-vector-stores-chroma~=0.4.1
 llama-index-embeddings-cohere~=0.4.0
