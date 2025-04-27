@@ -128,7 +128,7 @@ def spoken_interaction(user_response, history: list):
         # coach_message = "The session has ended. Please close the window."
         # coach_response = open("./data/media/end_chris.mp3", "rb")
         coach_response = "./data/end_chris.mp3"
-        return None, coach_response, history
+        return coach_response, history
 
     client_response = client_agent.receive_and_response(mov_detector=mov_detector,
                                                         conversation=conversation,
@@ -167,7 +167,7 @@ def spoken_interaction(user_response, history: list):
     output_buffer = b""
     for audio_bytes, message in zip(coach_response, coach_message):
         output_buffer += audio_bytes
-        yield None, audio_bytes, message
+        yield audio_bytes, message
 
     latency = (time.time() - start) / 60  # as minutes
     conversation.update_t2s_latency(latency=round(latency, 3))
@@ -187,7 +187,7 @@ def spoken_interaction(user_response, history: list):
         gradio.ChatMessage(role="assistant",
                            content=remove_stop_phases(coach_message))
     )
-    return None, coach_response, history
+    return coach_response, history
 
 
 if __name__ == '__main__':
@@ -337,7 +337,7 @@ if __name__ == '__main__':
         input_audio.stop_recording(
             spoken_interaction,
             [input_audio, chatbot],
-            [input_audio, output_audio, chatbot]
+            [output_audio, chatbot]  # [input_audio, output_audio, chatbot]
         )
 
         # cancel = gradio.Button("Stop Conversation", variant="stop")
