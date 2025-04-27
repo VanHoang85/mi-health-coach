@@ -213,7 +213,7 @@ if __name__ == '__main__':
     parser.add_argument('--strategy_test_data', type=str,
                         default='therapist_strategy/annomi_test_therapist.json')
 
-    parser.add_argument('--human_speak_dir', type=str, default='speech_data')
+    parser.add_argument('--human_speak_dir', type=str, default='data/speech_data')
     parser.add_argument('--storage_dir', type=str, default='./chroma_storage')
     parser.add_argument('--mov_lang_db_name', type=str, default='mov_lang_db')
     parser.add_argument('--strategy_db_name', type=str, default='diag_strategy_db')
@@ -338,7 +338,7 @@ if __name__ == '__main__':
                     placeholder=welcome_message,
                     avatar_images=tuple((None, "./data/robot_avatar_head.png"))
                 )
-                output_audio = gradio.Audio(label="Output Audio", streaming=True, autoplay=True, visible=False)
+                output_audio = gradio.Audio(label="Output Audio", autoplay=True, visible=False)  # streaming=True,
 
         input_audio.stop_recording(
             spoken_interaction,
