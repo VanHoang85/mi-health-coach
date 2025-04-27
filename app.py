@@ -69,7 +69,7 @@ class AppState:
     stream: np.ndarray | None = None
     sampling_rate: int = 0
     pause_detected: bool = False
-    started_talking: bool = False
+    started_talking: bool = True
     stopped: bool = False
     history: list = []
 
