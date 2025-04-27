@@ -421,7 +421,6 @@ if __name__ == '__main__':
         <center> 
     
         <h1> Talk with Jordan, the Physical Activity CoachBot </h1>
-        <b> text  📧<b>
     
         </center>
         """
@@ -432,6 +431,7 @@ if __name__ == '__main__':
     ) as demo:
         with gradio.Row():
             gradio.HTML(title)
+
         with gradio.Row():
             with gradio.Column():
                 input_audio = gradio.Audio(label="Input Audio", sources=["microphone"], type="numpy", interactive=True)
@@ -442,7 +442,11 @@ if __name__ == '__main__':
                     placeholder=welcome_message,
                     avatar_images=tuple((None, "./data/robot_avatar_head.png"))
                 )
-                output_audio = gradio.Audio(label="Output Audio", streaming=True, autoplay=True)
+                output_audio = gradio.Audio(label="Output Audio", streaming=True, autoplay=True, visible=False)
+
+        with gradio.Row():
+            cancel = gradio.Button("Stop Conversation", variant="stop")
+
         state = gradio.State(value=AppState())
 
         stream = input_audio.stream(
@@ -464,7 +468,6 @@ if __name__ == '__main__':
             [state],
             [input_audio]
         )
-        cancel = gradio.Button("Stop Conversation", variant="stop")
         cancel.click(lambda: (AppState(stopped=True), gradio.Audio(recording=False)), None,
                      [state, input_audio], cancels=[respond, restart])
 
