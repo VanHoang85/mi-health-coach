@@ -165,9 +165,9 @@ def spoken_interaction(user_response, history: list):
     coach_response = text_to_speech(remove_stop_phases(coach_message))
 
     output_buffer = b""
-    for audio_bytes in coach_response:
+    for audio_bytes, message in zip(coach_response, coach_message):
         output_buffer += audio_bytes
-        yield audio_bytes
+        yield None, audio_bytes, message
 
     latency = (time.time() - start) / 60  # as minutes
     conversation.update_t2s_latency(latency=round(latency, 3))
@@ -289,11 +289,7 @@ if __name__ == '__main__':
     coach_agent = CoachAgent(args,
                              role="Therapist",
                              dialog_manager=dialog_manager)
-    welcome_message = ("<strong>You will converse with Jordan, an AI coach, on the topic of physical activity."
-                       "<br>The session will last for a maximum of 22 turns."
-                       # "<br>If you wish to end the chat at anytime, just say \"bye\"."
-                       "<br><br>Press \"Record\" and say your nickname to start the session...</strong>")
-    description = "The session will last for 22 turns maximum. If you want to end the talk earlier, just say \"bye\". Please go back to the survey after that."
+    welcome_message = "<strong>Press \"Record\" and say your nickname to start the session...</strong>"
 
     # alert(e.code);
     js = """
