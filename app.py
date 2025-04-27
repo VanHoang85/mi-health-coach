@@ -456,7 +456,7 @@ if __name__ == '__main__':
             [state],
             [output_audio, state]
         )
-        respond.then(lambda s: s.conversation, [state], [chatbot])
+        respond.then(lambda s: s.history, [state], [chatbot])
 
         restart = output_audio.stop(
             start_recording_user,
