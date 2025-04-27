@@ -129,13 +129,13 @@ def speech_to_text(audio_filename) -> str:
         transcription = groq_client.audio.transcriptions.create(
             file=file,  # Required audio file in .wav
             model="distil-whisper-large-v3-en",  # Required model to use for transcription
-            prompt="Specify context or spelling",  # Optional
+            # prompt="Specify context or spelling",  # Optional
             response_format="text",  # Optional
             language="en",  # Optional
             temperature=0.0  # Optional
         )
-    print(transcription)
-    return transcription.text
+    # print(transcription)
+    return transcription.strip()
 
 
 def text_to_speech(text: str) -> IO[bytes]:
