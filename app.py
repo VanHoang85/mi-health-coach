@@ -34,10 +34,11 @@ from model_utils.coach_agent import CoachAgent
 from model_utils.user_agent import UserAgent
 
 
-def run_vad(ori_audio: np.ndarray, sr):
+def run_vad(ori_audio, sr):
     _st = time.time()
     try:
-        audio = ori_audio
+        # audio = ori_audio
+        audio = np.frombuffer(ori_audio, dtype=np.int16)
         audio = audio.astype(np.float32) / 32768.0
         sampling_rate = 16000
         if sr != sampling_rate:
@@ -74,13 +75,9 @@ class AppState:
 
 
 def determine_pause(audio: np.ndarray, sampling_rate: int, state: AppState) -> bool:
-    """
-    Take in the stream, determine if a pause happened
-    Source: https://huggingface.co/spaces/gradio/omni-mini/blob/eb027808c7bfe5179b46d9352e3fa1813a45f7c3/app.py#L98
-    """
+    """ Take in the stream, determine if a pause happened """
 
     temp_audio = audio
-
     dur_vad, _, time_vad = run_vad(temp_audio, sampling_rate)
     duration = len(audio) / sampling_rate
 
@@ -90,18 +87,12 @@ def determine_pause(audio: np.ndarray, sampling_rate: int, state: AppState) -> b
         return False
 
     print(f"duration_after_vad: {dur_vad:.3f} s, time_vad: {time_vad:.3f} s")
-
     return (duration - dur_vad) > 1
-
-
-def start_recording_user(state: AppState):
-    if not state.stopped:
-        return gradio.Audio(recording=True)
 
 
 def process_audio(audio: tuple, state: AppState):
     if state.stream is None:
-        state.stream = audio[1]
+        state.stream = np.array(audio[1])
         state.sampling_rate = audio[0]
     else:
         state.stream = np.concatenate((state.stream, audio[1]))
@@ -112,6 +103,11 @@ def process_audio(audio: tuple, state: AppState):
     if state.pause_detected and state.started_talking:
         return gradio.Audio(recording=False), state
     return None, state
+
+
+def start_recording_user(state: AppState):
+    if not state.stopped:
+        return gradio.Audio(recording=True)
 
 
 def save_conv_json(data_to_save: dict, filename: str) -> None:
