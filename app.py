@@ -287,7 +287,7 @@ if __name__ == '__main__':
         """
         <center> 
         <h2> Talk with Jordan, the Physical Activity CoachBot </h2>
-        <br> Press \"Record\" to start and \"Stop\" to stop the recording.
+        Press \"Record\" to start and \"Stop\" to stop the recording. Or use the whitespace keyboard to start and stop each turn. 
         <br> The session will last for 22 turns maximum. If you want to end the talk earlier, just say \"bye\". 
         <br> Please go back to the survey after that.
         </center>
