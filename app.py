@@ -1,8 +1,7 @@
 import os
-import io
 import time
 import json
-import wave
+import tempfile
 
 import argparse
 import gradio
@@ -12,7 +11,6 @@ from pathlib import Path
 import huggingface_hub
 from huggingface_hub import CommitScheduler
 
-from typing import IO
 from groq import Groq
 from openai import OpenAI
 from elevenlabs import VoiceSettings
@@ -30,16 +28,6 @@ def save_conv_json(data_to_save: dict, filename: str) -> None:
     with scheduler.lock:
         with SPEAK_FILE_PATH.open("a") as file:
             json.dump(data_to_save, file, indent=4)
-
-
-def save_audio_wav(audio_buffer: io.BytesIO, filename: str) -> None:
-    SPEAK_FILE_PATH = f"{args.human_speak_dir}/{filename}.wav"
-    with scheduler.lock:
-        with wave.open(SPEAK_FILE_PATH, mode="wb") as wav_file:
-            wav_file.setnchannels(1)  # mono
-            wav_file.setsampwidth(2)  # sample width in bytes
-            wav_file.setframerate(44100)  # sample rate
-            wav_file.writeframes(audio_buffer.getvalue())
 
 
 def save_audio_file(audio_file, filename: str) -> None:
@@ -72,7 +60,8 @@ def speech_to_text(audio_filename) -> str:
     return transcription.strip()
 
 
-def text_to_speech(text: str) -> IO[bytes]:
+def text_to_speech(text: str):
+    # https://elevenlabs.io/docs/cookbooks/text-to-speech/streaming
     audio_response = eleven_lab_client.text_to_speech.convert(
         voice_id="iP95p4xoKVk53GoZ742B",
         output_format="mp3_22050_32",
@@ -86,21 +75,7 @@ def text_to_speech(text: str) -> IO[bytes]:
             speed=1.0
         )
     )
-
-    # Create a BytesIO object to hold the audio data in memory
-    audio_stream = io.BytesIO()
-
-    # Write each chunk of audio data to the stream
-    for chunk in audio_response:
-        if chunk:
-            audio_stream.write(chunk)
-
-    # Reset stream position to the beginning
-    audio_stream.seek(0)
-
-    return audio_stream
-
-    # return audio_response
+    return audio_response
 
 
 def spoken_interaction(user_response, history: list):
@@ -166,12 +141,11 @@ def spoken_interaction(user_response, history: list):
     start = time.time()  # start t2s latency
     coach_response = text_to_speech(remove_stop_phases(coach_message))
 
-    """
-    output_buffer = b""
-    for audio_bytes, message in zip(coach_response, coach_message):
-        output_buffer += audio_bytes
-        yield audio_bytes, message
-    """
+    # write 2 file
+    with tempfile.NamedTemporaryFile(suffix=".mp3", delete=False) as file:
+        for chunk in coach_response:
+            if chunk:
+                file.write(chunk)
 
     latency = (time.time() - start) / 60  # as minutes
     conversation.update_t2s_latency(latency=round(latency, 3))
@@ -191,7 +165,7 @@ def spoken_interaction(user_response, history: list):
         gradio.ChatMessage(role="assistant",
                            content=remove_stop_phases(coach_message))
     )
-    return coach_response, history
+    return file.name, history
 
 
 if __name__ == '__main__':
@@ -337,7 +311,7 @@ if __name__ == '__main__':
                     placeholder=welcome_message,
                     avatar_images=tuple((None, "./data/robot_avatar_head.png"))
                 )
-                output_audio = gradio.Audio(label="Output Audio", autoplay=True, streaming=True, visible=False)  #
+                output_audio = gradio.Audio(label="Output Audio", type="filepath", autoplay=True, visible=False)  # streaming=True,
 
         input_audio.stop_recording(
             spoken_interaction,
