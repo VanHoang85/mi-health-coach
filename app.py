@@ -105,7 +105,7 @@ def spoken_interaction(user_response, history: list):
         # coach_message = "The session has ended. Please close the window."
         # coach_response = open("./data/media/end_chris.mp3", "rb")
         coach_response = "./data/end_chris.mp3"
-        return coach_response, history
+        return None, coach_response, history
 
     client_response = client_agent.receive_and_response(mov_detector=mov_detector,
                                                         conversation=conversation,
@@ -165,7 +165,7 @@ def spoken_interaction(user_response, history: list):
         gradio.ChatMessage(role="assistant",
                            content=remove_stop_phases(coach_message))
     )
-    return file.name, history
+    return None, file.name, history
 
 
 if __name__ == '__main__':
@@ -316,7 +316,7 @@ if __name__ == '__main__':
         input_audio.stop_recording(
             spoken_interaction,
             [input_audio, chatbot],
-            [output_audio, chatbot]  # [input_audio, output_audio, chatbot]
+            [input_audio, output_audio, chatbot]  # [input_audio, output_audio, chatbot]
         )
 
         # cancel = gradio.Button("Stop Conversation", variant="stop")
