@@ -41,7 +41,7 @@ def interaction(user_message: str, history: list):
                                  is_human=True)
         clients[user_id] = client_agent
 
-        # args.exp_mode = random.choice(["MI", "non-MI"])
+        args.exp_mode = random.choice(["MI", "non-MI"])
         phase = "engaging" if args.exp_mode == "MI" else args.exp_mode
 
         conversation = Conversation(args=args, phase=phase)
@@ -200,7 +200,7 @@ if __name__ == '__main__':
     clients: dict[str, UserAgent] = {}
 
     mov_detector = MovDetector(args=args)
-    dialog_manager = MIDialogManager(args=args) if args.exp_mode == "MI" else None
+    dialog_manager = MIDialogManager(args=args)
 
     # Creating coaching agent
     coach_agent = CoachAgent(args,

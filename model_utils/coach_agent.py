@@ -83,16 +83,6 @@ class CoachAgent(Agent):
                                  actions=predictions["actions"],
                                  retrieved_clue=predictions["therapist_texts"],
                                  candidate_ids=predictions["candidate_ids"])
-
-        """
-        if conversation.get_current_turn() >= self.args.start_planning:
-            conversation.check_phase_condition(agent_message)
-        if conversation.get_current_turn() >= self.args.start_focusing:
-            conversation.check_terminating_condition(agent_message)
-        """
-
-        # print(f"{self.role}: {agent_message}")
-        # print(f"Actions: {predictions['actions']}")
         return agent_message
 
     def generate_non_auto_mi_response(self,
@@ -123,11 +113,4 @@ class CoachAgent(Agent):
 
         conversation.update_conv(message="" if stream else agent_message,
                                  role=self.role)
-
-        """
-        if conversation.get_current_turn() >= self.args.start_focusing:
-            conversation.check_terminating_condition(agent_message)
-        """
-
-        # print(f"{self.role}: {agent_message}")
         return agent_message
