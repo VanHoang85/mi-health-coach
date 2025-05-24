@@ -41,7 +41,7 @@ def interaction(user_message: str, history: list):
                                  is_human=True)
         clients[user_id] = client_agent
 
-        args.exp_mode = random.choices(["MI", "non-MI"], weights=(0, 100))[0]
+        args.exp_mode = random.choices(["MI", "non-MI"], weights=(100, 0))[0]
         phase = "engaging" if args.exp_mode == "MI" else args.exp_mode
 
         conversation = Conversation(args=args, phase=phase)
