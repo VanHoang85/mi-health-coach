@@ -17,7 +17,7 @@ groq~=0.23.1
 openai~=1.76.0
 elevenlabs~=1.57.0
 deepgram-sdk~=3.11.0
-huggingface-hub~=0.29.3
+huggingface-hub==0.29.3
 librosa~=0.11.0
 onnxruntime~=1.21.1
 pydub~=0.25.1
