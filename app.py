@@ -184,7 +184,6 @@ if __name__ == '__main__':
     huggingface_hub.login(token=args.hf_auth)
 
     # set output folder path
-    # args.human_chat_dir = f"{args.human_chat_dir}/{args.agent_model}"
     args.human_chat_dir = "data"
     OUTPUT_CHAT_DIR = Path(args.human_chat_dir)
     OUTPUT_CHAT_DIR.mkdir(parents=True, exist_ok=True)
