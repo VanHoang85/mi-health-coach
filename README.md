@@ -1,5 +1,5 @@
 ---
-title: Mi Health Coach
+title: MI Health Coach
 emoji: 💬
 colorFrom: yellow
 colorTo: purple
@@ -8,7 +8,7 @@ sdk_version: 6.3.0
 app_file: app.py
 pinned: false
 license: mit
-short_description: MI-aware health coaching agent to promote physical activity
+short_description: LLM-based MI-aware health coach to promote physical activity
 ---
 
-An example chatbot using [Gradio](https://gradio.app), [`huggingface_hub`](https://huggingface.co/docs/huggingface_hub/v0.22.2/en/index), and the [Hugging Face Inference API](https://huggingface.co/docs/api-inference/index).
+An example AI coach using [Gradio](https://gradio.app), [`huggingface_hub`](https://huggingface.co/docs/huggingface_hub/v0.22.2/en/index), and the [Hugging Face Inference API](https://huggingface.co/docs/api-inference/index).
