@@ -11,7 +11,7 @@ license: mit
 short_description: LLM-based MI-aware health coach to promote physical activity
 ---
 
-## An LLM-Based Motivation-Aware Framework For AI Coaching For Behaviour Change.
+### An LLM-Based Motivation-Aware Framework For AI Coaching For Behaviour Change.
 
 The AI coach interface is built using [Gradio](https://gradio.app), [`huggingface_hub`](https://huggingface.co/docs/huggingface_hub/v0.22.2/en/index), and the [Hugging Face Inference API](https://huggingface.co/docs/api-inference/index).
 
