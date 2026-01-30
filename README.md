@@ -15,9 +15,9 @@ short_description: LLM-based MI-aware health coach to promote physical activity
 
 The AI coach interface is built using [Gradio](https://gradio.app), [`huggingface_hub`](https://huggingface.co/docs/huggingface_hub/v0.22.2/en/index), and the [Hugging Face Inference API](https://huggingface.co/docs/api-inference/index).
 
-<img width="600" alt="Overview of our MI-Aware Coaching System." src="https://github.com/VanHoang85/mi-health-coach/data/system_overview.png">
+<img width="600" alt="Overview of our MI-Aware Coaching System." src="data/system_overview.png">
 
-BIBTEX Citation
+### Citation
 
 ```
 @inproceedings{hoang_aicoach_2026,
