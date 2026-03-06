@@ -17,6 +17,11 @@ The AI coach interface is built using [Gradio](https://gradio.app), [`huggingfac
 
 ![Overview of our MI-Aware Coaching System.](data/system_overview.png)
 
+This repo includes the code and data we use to implement the AI coach as described in the paper. 
+
+Please contact us if you want to get the human-AI interactive data and questionnaire responses we collected during the experiments.
+
+
 ### Citation
 
 ```
